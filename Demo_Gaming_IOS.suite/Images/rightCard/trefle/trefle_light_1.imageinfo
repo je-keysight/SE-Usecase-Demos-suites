@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-02-18 19:25:08 +0000";
+    CaptureHost = "IOS-Iphone8";
+    CaptureScreenSize = (
+        "1334",
+        "750");
+    HasAlpha = 1;
+    HotSpotX = 15;
+    HotSpotY = 14;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 666;
+    OriginalLocationY = 627;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "rightCard/t_light";
+    tags = ();
+}
