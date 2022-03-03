@@ -1,0 +1,20 @@
+﻿to initiate
+	Connect "IOS-Iphone8"
+
+	LaunchApp "com.zynga.livepoker.700"
+	
+	Repeat until ImageFound("homepage")
+		
+		if ImageFound(Image:"closeAdd",waitFor:3)
+			Click Image:"closeAdd"
+		end if
+		
+		if ImageFound("LoginwithZyngaPoker")
+			Run AFunctions.Login "seb.morgant@gmail.com", "boubou87"
+		end if
+		
+		Log "Loading"
+	End Repeat
+	
+	CaptureScreen
+end initiate
