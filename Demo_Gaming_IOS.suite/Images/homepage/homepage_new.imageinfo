@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2022-02-22 18:02:31 +0000";
+    CaptureHost = "IOS-Iphone8";
+    CaptureScreenSize = (
+        1334,
+        750);
+    HasAlpha = 1;
+    HotSpotX = 30;
+    HotSpotY = 60;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 20;
+    OriginalLocationY = 632;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "homepage/homepage_new";
+    tags = ();
+}

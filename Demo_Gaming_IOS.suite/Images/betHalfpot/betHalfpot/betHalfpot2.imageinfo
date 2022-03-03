@@ -1,0 +1,18 @@
+﻿{
+    CaptureDate = "2022-02-22 18:32:24 +0000";
+    CaptureHost = "IOS-Iphone8";
+    CaptureScreenSize = (
+        1334,
+        750);
+    HasAlpha = 1;
+    HotSpotX = 52;
+    HotSpotY = 5;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 983;
+    OriginalLocationY = 318;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+}

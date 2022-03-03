@@ -1,0 +1,21 @@
+﻿{
+    CaptureDate = "2022-02-21 09:34:33 +0000";
+    CaptureHost = "IOS-Iphone8";
+    CaptureScreenSize = (
+        "1334",
+        "750");
+    HasAlpha = 1;
+    HotSpotX = 18;
+    HotSpotY = 50;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1060;
+    OriginalLocationY = 623;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "leftCard/trefle/Call";
+    tags = ();
+}
