@@ -1,0 +1,53 @@
+{
+  "lastmodifieddate" : 1645554281.9521019,
+  "ocrcapturestring" : "All In",
+  "testlocationdata" : [
+    {
+      "name" : "AllIn.png",
+      "sutinfo" : {
+        "device" : "iPhone10,4",
+        "os" : "OSX",
+        "device_os_version" : "iOS 15.1",
+        "os_version" : "12.2.1",
+        "version" : "6.0",
+        "type" : "iOS Gateway",
+        "device_type" : "iPhone 8"
+      },
+      "connectionname" : "IOS-Iphone8",
+      "connectionportnum" : 5905,
+      "capturedocrtext" : "All In",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Smoothed for Text",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_56",
+        "HotSpot" : "[32,19]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "connectionserverid" : "192.168.0.112",
+      "capturerect" : [
+        1225,
+        624,
+        57,
+        28
+      ]
+    }
+  ],
+  "createddate" : 1645552079.7470489,
+  "lastfoundlocation" : [
+    1225,
+    624,
+    57,
+    28
+  ],
+  "originalcapturelocation" : [
+    1225,
+    624,
+    57,
+    28
+  ],
+  "lastfounddate" : 1645610305.056855,
+  "name" : "Bet\/AllIn"
+}

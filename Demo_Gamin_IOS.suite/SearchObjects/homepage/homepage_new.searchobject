@@ -1,0 +1,53 @@
+{
+  "lastmodifieddate" : 1645552951.555959,
+  "ocrcapturestring" : "£1",
+  "testlocationdata" : [
+    {
+      "name" : "homepage\/homepage_new.png",
+      "sutinfo" : {
+        "device" : "iPhone10,4",
+        "os" : "OSX",
+        "device_os_version" : "iOS 15.1",
+        "os_version" : "12.2.1",
+        "version" : "6.0",
+        "type" : "iOS Gateway",
+        "device_type" : "iPhone 8"
+      },
+      "connectionname" : "IOS-Iphone8",
+      "connectionportnum" : 5905,
+      "capturedocrtext" : "£1",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Tolerant of Background",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_45",
+        "HotSpot" : "[30,60]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "connectionserverid" : "192.168.0.112",
+      "capturerect" : [
+        20,
+        632,
+        99,
+        99
+      ]
+    }
+  ],
+  "createddate" : 1645552951.555958,
+  "lastfoundlocation" : [
+    20,
+    632,
+    99,
+    99
+  ],
+  "originalcapturelocation" : [
+    20,
+    632,
+    99,
+    99
+  ],
+  "lastfounddate" : 1645625460.1723461,
+  "name" : "homepage\/homepage_new"
+}
