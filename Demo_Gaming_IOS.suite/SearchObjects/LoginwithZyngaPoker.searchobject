@@ -1,0 +1,53 @@
+{
+  "lastmodifieddate" : 1645212128.0703511,
+  "ocrcapturestring" : "Login with Zynga Poker",
+  "testlocationdata" : [
+    {
+      "name" : "LoginwithZyngaPoker.png",
+      "sutinfo" : {
+        "device" : "iPhone10,4",
+        "os" : "OSX",
+        "device_os_version" : "iOS 15.1",
+        "os_version" : "12.2.1",
+        "version" : "6.0",
+        "type" : "iOS Gateway",
+        "device_type" : "iPhone 8"
+      },
+      "connectionname" : "IOS-Iphone8",
+      "connectionportnum" : 5905,
+      "capturedocrtext" : "Login with Zynga Poker",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Smoothed for Text",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_68",
+        "HotSpot" : "[88,30]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "connectionserverid" : "192.168.0.112",
+      "capturerect" : [
+        658,
+        569,
+        177,
+        61
+      ]
+    }
+  ],
+  "createddate" : 1645210733.7950201,
+  "lastfoundlocation" : [
+    658,
+    569,
+    177,
+    61
+  ],
+  "originalcapturelocation" : [
+    658,
+    569,
+    177,
+    61
+  ],
+  "lastfounddate" : 1645211524.912384,
+  "name" : "LoginwithZyngaPoker"
+}

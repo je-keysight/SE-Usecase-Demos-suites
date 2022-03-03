@@ -1,0 +1,51 @@
+{
+  "lastmodifieddate" : 1645435312.4214821,
+  "testlocationdata" : [
+    {
+      "name" : "leftCard\/carreau\/carreau_light_2.png",
+      "sutinfo" : {
+        "device" : "iPhone10,4",
+        "os" : "OSX",
+        "device_os_version" : "iOS 15.1",
+        "os_version" : "12.2.1",
+        "version" : "6.0",
+        "type" : "iOS Gateway",
+        "device_type" : "iPhone 8"
+      },
+      "connectionname" : "IOS-Iphone8",
+      "connectionportnum" : 5905,
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Tolerant of Background",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_45",
+        "HotSpot" : "[20,13]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "connectionserverid" : "192.168.0.112",
+      "capturerect" : [
+        581,
+        638,
+        40,
+        26
+      ]
+    }
+  ],
+  "createddate" : 1645435312.4214821,
+  "lastfoundlocation" : [
+    581,
+    638,
+    40,
+    26
+  ],
+  "originalcapturelocation" : [
+    581,
+    638,
+    40,
+    26
+  ],
+  "lastfounddate" : 1645435550.4968162,
+  "name" : "leftCard\/carreau\/carreau_light_2"
+}

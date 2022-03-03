@@ -1,0 +1,53 @@
+{
+  "lastmodifieddate" : 1645551851.777108,
+  "ocrcapturestring" : "Fold",
+  "testlocationdata" : [
+    {
+      "name" : "Fold\/Fold_new.png",
+      "sutinfo" : {
+        "device" : "iPhone10,4",
+        "os" : "OSX",
+        "device_os_version" : "iOS 15.1",
+        "os_version" : "12.2.1",
+        "version" : "6.0",
+        "type" : "iOS Gateway",
+        "device_type" : "iPhone 8"
+      },
+      "connectionname" : "IOS-Iphone8",
+      "connectionportnum" : 5905,
+      "capturedocrtext" : "Fold",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Smoothed for Text",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_64",
+        "HotSpot" : "[24,14]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "connectionserverid" : "192.168.0.112",
+      "capturerect" : [
+        884,
+        623,
+        45,
+        29
+      ]
+    }
+  ],
+  "createddate" : 1645551851.777107,
+  "lastfoundlocation" : [
+    884,
+    623,
+    45,
+    29
+  ],
+  "originalcapturelocation" : [
+    884,
+    623,
+    45,
+    29
+  ],
+  "lastfounddate" : 1645625516.5065379,
+  "name" : "Fold\/Fold_new"
+}

@@ -1,0 +1,11 @@
+﻿to joinTable
+	Click {Image:"JOINTABLE"}
+	Drag "stake"
+	Drop "drop"
+	
+	If ImageFound(Image:"FastGame", waitFor:3)
+		Click "GameSpeed"
+	End If
+	
+	Click "PlayNow"
+end joinTable

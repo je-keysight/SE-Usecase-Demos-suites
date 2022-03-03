@@ -1,0 +1,53 @@
+{
+  "lastmodifieddate" : 1645551953.296314,
+  "ocrcapturestring" : "Raise",
+  "testlocationdata" : [
+    {
+      "name" : "Raise\/Raise_new.png",
+      "sutinfo" : {
+        "device" : "iPhone10,4",
+        "os" : "OSX",
+        "device_os_version" : "iOS 15.1",
+        "os_version" : "12.2.1",
+        "version" : "6.0",
+        "type" : "iOS Gateway",
+        "device_type" : "iPhone 8"
+      },
+      "connectionname" : "IOS-Iphone8",
+      "connectionportnum" : 5905,
+      "capturedocrtext" : "Raise",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Smoothed for Text",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_55",
+        "HotSpot" : "[32,19]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "connectionserverid" : "192.168.0.112",
+      "capturerect" : [
+        1225,
+        624,
+        57,
+        28
+      ]
+    }
+  ],
+  "createddate" : 1645551953.296313,
+  "lastfoundlocation" : [
+    1225,
+    624,
+    57,
+    28
+  ],
+  "originalcapturelocation" : [
+    1225,
+    624,
+    57,
+    28
+  ],
+  "lastfounddate" : 1645625643.815413,
+  "name" : "Raise\/Raise_new"
+}

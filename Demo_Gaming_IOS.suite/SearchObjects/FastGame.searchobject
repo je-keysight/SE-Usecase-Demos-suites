@@ -1,0 +1,53 @@
+{
+  "lastmodifieddate" : 1645441646.5122871,
+  "ocrcapturestring" : "Fast",
+  "testlocationdata" : [
+    {
+      "name" : "FastGame.png",
+      "sutinfo" : {
+        "device" : "iPhone10,4",
+        "os" : "OSX",
+        "device_os_version" : "iOS 15.1",
+        "os_version" : "12.2.1",
+        "version" : "6.0",
+        "type" : "iOS Gateway",
+        "device_type" : "iPhone 8"
+      },
+      "connectionname" : "IOS-Iphone8",
+      "connectionportnum" : 5905,
+      "capturedocrtext" : "Fast",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Smoothed for Text",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_28",
+        "HotSpot" : "[22,11]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "connectionserverid" : "192.168.0.112",
+      "capturerect" : [
+        479,
+        509,
+        44,
+        23
+      ]
+    }
+  ],
+  "createddate" : 1645441646.5122859,
+  "lastfoundlocation" : [
+    479,
+    509,
+    44,
+    23
+  ],
+  "originalcapturelocation" : [
+    479,
+    509,
+    44,
+    23
+  ],
+  "lastfounddate" : 1646339856.210624,
+  "name" : "FastGame"
+}
