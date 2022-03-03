@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-02-18 21:37:34 +0000";
+    CaptureHost = "IOS-Iphone8";
+    CaptureScreenSize = (
+        "1334",
+        "750");
+    HasAlpha = 1;
+    HotSpotX = 13;
+    HotSpotY = 12;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 599;
+    OriginalLocationY = 621;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "leftCard/coeur/coeur_dark";
+    tags = ();
+}
