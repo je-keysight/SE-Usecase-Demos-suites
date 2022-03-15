@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-03-15 14:29:23 +0000";
+    CaptureHost = "SUT - Web APP";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 51;
+    HotSpotY = 12;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1432;
+    OriginalLocationY = 264;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "login";
+    tags = ();
+}

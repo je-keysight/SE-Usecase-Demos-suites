@@ -1,0 +1,48 @@
+{
+  "lastmodifieddate" : 1647354563.2872391,
+  "ocrcapturestring" : "O Login",
+  "testlocationdata" : [
+    {
+      "connectionserverid" : "18.134.142.108",
+      "sutinfo" : {
+        "type" : "Unknown RDP"
+      },
+      "connectionname" : "SUT - Web APP",
+      "connectionportnum" : 3389,
+      "connectiontype" : "RDP",
+      "capturedocrtext" : "O Login",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Smoothed for Text",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_64",
+        "HotSpot" : "[51,12]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "name" : "login.png",
+      "capturerect" : [
+        1432,
+        264,
+        69,
+        19
+      ]
+    }
+  ],
+  "createddate" : 1647354563.2872391,
+  "lastfoundlocation" : [
+    1432,
+    264,
+    69,
+    19
+  ],
+  "originalcapturelocation" : [
+    1432,
+    264,
+    69,
+    19
+  ],
+  "lastfounddate" : 1647354617.4052801,
+  "name" : "login"
+}

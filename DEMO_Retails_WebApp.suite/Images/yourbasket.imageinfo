@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-03-15 13:29:27 +0000";
+    CaptureHost = "SUT - Web APP";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 39;
+    HotSpotY = 11;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 296;
+    OriginalLocationY = 291;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "yourbasket";
+    tags = ();
+}
