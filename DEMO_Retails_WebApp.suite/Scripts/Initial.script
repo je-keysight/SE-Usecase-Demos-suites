@@ -4,11 +4,12 @@
 	waitfor 30, "windowslogo"
 	typetext windowskey,"r"
 	typetext "chrome" && url && "-incognito --start-maximized",returnkey
-	waitfor 20, "refresh"
+	waitfor 20, "chrome/refresh"
 	if imagefound (4, "chrome/maximize")
 		click foundimagelocation()
 		MoveTo [200,200]
 		waitfor 20, "chrome/minimize"
 	end if
 	WaitFor 20, "logo"
+	return false
 end openBrowser

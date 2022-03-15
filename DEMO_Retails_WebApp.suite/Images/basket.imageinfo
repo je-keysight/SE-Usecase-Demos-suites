@@ -1,0 +1,21 @@
+﻿{
+    CaptureDate = "2022-03-15 22:15:39 +0000";
+    CaptureHost = "SUT - Web APP";
+    CaptureScreenSize = (
+        "1920",
+        "1080");
+    CropRectangle = "3,9,22,29";
+    HasAlpha = 1;
+    HotSpotX = 13;
+    HotSpotY = 22;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1518;
+    OriginalLocationY = 131;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "basket3";
+    tags = ();
+}

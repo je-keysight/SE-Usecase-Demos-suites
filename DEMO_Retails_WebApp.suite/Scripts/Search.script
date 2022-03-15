@@ -1,0 +1,21 @@
+﻿to selectitem
+	Log "select random Item and go"
+	set objects to EveryImageLocation("Addtobasket")
+	put the number of items in objects into objects_nbr
+	Click  item random(1,objects_nbr) of objects
+end selectitem
+
+to addtobasket itemsincart
+	Log "select random Item and add to basket"
+	set objects to EveryImageLocation(text:"Add to basket")
+	put the number of items in objects into objects_nbr
+	Click  item random(1,objects_nbr) of objects
+	waitFor 10, "addedttobasket"
+	return (itemsincart +1)
+end addtobasket
+
+to basket
+	ScrollWheelUp 200
+	Click text:"Cart", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"0"
+	WaitFor 10, "yourbasket"
+end basket

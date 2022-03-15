@@ -1,0 +1,12 @@
+﻿to addtobasket itemsincart
+	Log "Add the item to the basket"
+	Click {text:"Add to basket"}
+	waitFor 10, text:"has been added to your basket"
+	return (itemsincart +1)
+end addtobasket
+
+to basket
+	ScrollWheelUp 200
+	Click "basket"
+	WaitFor 10, "yourbasket"
+end basket

@@ -1,6 +1,6 @@
 {
-  "lastmodifieddate" : 1647350050.2579188,
-  "ocrcapturestring" : "0",
+  "lastmodifieddate" : 1647373671.0355821,
+  "ocrcapturestring" : "Add to basket",
   "testlocationdata" : [
     {
       "connectionserverid" : "18.134.142.108",
@@ -10,39 +10,39 @@
       "connectionname" : "SUT - Web APP",
       "connectionportnum" : 3389,
       "connectiontype" : "RDP",
-      "capturedocrtext" : "0",
+      "capturedocrtext" : "Add to basket",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
-        "SearchType" : "Tolerant of Background",
+        "SearchType" : "Smoothed for Text",
         "Discrepancy" : "_0",
-        "Tolerance" : "_45",
-        "HotSpot" : "[8,10]",
+        "Tolerance" : "_43",
+        "HotSpot" : "[34,-282]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
-      "name" : "refresh\/refresh_incognito.png",
+      "name" : "Addtobasket.png",
       "capturerect" : [
-        522,
-        313,
-        16,
-        20
+        459,
+        811,
+        100,
+        14
       ]
     }
   ],
-  "createddate" : 1647350050.2579179,
+  "createddate" : 1647373671.0355821,
   "lastfoundlocation" : [
-    80,
-    43,
-    16,
-    20
+    459,
+    1011,
+    100,
+    14
   ],
   "originalcapturelocation" : [
-    522,
-    313,
-    16,
-    20
+    459,
+    811,
+    100,
+    14
   ],
-  "lastfounddate" : 1647383339.75317,
-  "name" : "refresh\/refresh_incognito"
+  "lastfounddate" : 1647383361.0375628,
+  "name" : "Addtobasket"
 }

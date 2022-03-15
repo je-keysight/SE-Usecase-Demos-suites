@@ -1,8 +1,9 @@
 {
-  "lastmodifieddate" : 1647350463.8909779,
+  "lastmodifieddate" : 1647382178.861949,
+  "ocrcapturestring" : "Add to basket s\/",
   "testlocationdata" : [
     {
-      "name" : "logo.png",
+      "name" : "addedttobasket.png",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
@@ -12,35 +13,35 @@
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
-        "SearchType" : "Precise to Pixel",
+        "SearchType" : "Smoothed for Text",
         "Discrepancy" : "_0",
-        "Tolerance" : "_1",
-        "HotSpot" : "[82,34]",
+        "Tolerance" : "_43",
+        "HotSpot" : "[59,8]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
       "connectionserverid" : "18.134.142.108",
       "capturerect" : [
-        297,
-        124,
-        200,
-        52
+        449,
+        810,
+        119,
+        17
       ]
     }
   ],
-  "createddate" : 1647350463.8909779,
+  "createddate" : 1647379407.1923289,
   "lastfoundlocation" : [
-    297,
-    124,
-    200,
-    52
+    449,
+    810,
+    119,
+    17
   ],
   "originalcapturelocation" : [
-    297,
-    124,
-    200,
-    52
+    449,
+    810,
+    119,
+    17
   ],
-  "lastfounddate" : 1647383329.1244321,
-  "name" : "logo"
+  "lastfounddate" : 1647379408.562294,
+  "name" : "addedttobasket"
 }

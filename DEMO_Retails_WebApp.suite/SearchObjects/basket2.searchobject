@@ -1,46 +1,47 @@
 {
-  "lastmodifieddate" : 1647350463.8909779,
+  "lastmodifieddate" : 1647382512.3441529,
   "testlocationdata" : [
     {
-      "name" : "logo.png",
+      "name" : "basket.png",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
       "connectionname" : "SUT - Web APP",
       "connectionportnum" : 3389,
+      "deleted" : true,
       "connectiontype" : "RDP",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
-        "SearchType" : "Precise to Pixel",
+        "SearchType" : "Tolerant of Background",
         "Discrepancy" : "_0",
-        "Tolerance" : "_1",
-        "HotSpot" : "[82,34]",
+        "Tolerance" : "_45",
+        "HotSpot" : "[20,17]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
       "connectionserverid" : "18.134.142.108",
       "capturerect" : [
-        297,
-        124,
-        200,
-        52
+        110,
+        941,
+        40,
+        34
       ]
     }
   ],
-  "createddate" : 1647350463.8909779,
+  "createddate" : 1647382445.0769601,
   "lastfoundlocation" : [
-    297,
-    124,
-    200,
-    52
+    110,
+    941,
+    40,
+    34
   ],
   "originalcapturelocation" : [
-    297,
-    124,
-    200,
-    52
+    110,
+    941,
+    40,
+    34
   ],
-  "lastfounddate" : 1647383329.1244321,
-  "name" : "logo"
+  "lastfounddate" : 1647382445.3001509,
+  "name" : "basket2"
 }

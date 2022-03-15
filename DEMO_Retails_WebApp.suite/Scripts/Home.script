@@ -1,4 +1,5 @@
 ﻿to basket
+	ScrollWheelUp 200
 	Click text:"Cart", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"0"
 	WaitFor 10, "yourbasket"
 end basket
@@ -14,8 +15,21 @@ to myaccount loggedin
 end myaccount
 
 to search searchterm
-	set searchterm to "jumper dress"
 	click text:"Search"
 	typetext searchterm,returnkey
-	WaitFor 15, "Filters"
+	waitFor 10, "chrome/refresh"
+	if ImageFound(text:"SEARCH RESULTS" ,waitFor:2)
+		return "searchResults"
+	else
+		return "itemView"
+	end if
+	
+	If ImageFound(text:"SEARCH RESULTS" ,waitFor:2) then
+		return "searchResults"
+	Else if ImageFound(text:"/product/" ,waitFor:2)
+		return "itemView"
+	Else
+		return false
+	End if
+	
 end search

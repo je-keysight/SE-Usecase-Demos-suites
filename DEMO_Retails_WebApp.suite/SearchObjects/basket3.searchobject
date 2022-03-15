@@ -1,46 +1,47 @@
 {
-  "lastmodifieddate" : 1647349588.03634,
+  "lastmodifieddate" : 1647382559.3781869,
   "testlocationdata" : [
     {
-      "name" : "windowslogo.png",
+      "connectionserverid" : "18.134.142.108",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
       "connectionname" : "SUT - Web APP",
       "connectionportnum" : 3389,
       "connectiontype" : "RDP",
+      "capturedocrtext" : "rsi Hill",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
         "SearchType" : "Tolerant of Background",
         "Discrepancy" : "_0",
         "Tolerance" : "_45",
-        "HotSpot" : "[12,8]",
+        "HotSpot" : "[13,22]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
-      "connectionserverid" : "18.134.142.108",
+      "name" : "basket.png",
       "capturerect" : [
-        15,
-        1171,
-        18,
-        18
+        1518,
+        131,
+        45,
+        33
       ]
     }
   ],
-  "createddate" : 1647349588.036339,
+  "createddate" : 1647382539.3325949,
   "lastfoundlocation" : [
-    15,
-    1051,
-    18,
-    18
+    1521,
+    140,
+    19,
+    20
   ],
   "originalcapturelocation" : [
-    15,
-    1171,
-    18,
-    18
+    1518,
+    131,
+    45,
+    33
   ],
-  "lastfounddate" : 1647383322.0527411,
-  "name" : "windowslogo"
+  "lastfounddate" : 1647383376.4956741,
+  "name" : "basket3"
 }
