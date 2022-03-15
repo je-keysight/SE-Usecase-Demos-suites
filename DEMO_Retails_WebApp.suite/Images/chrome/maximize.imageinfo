@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-03-15 13:15:32 +0000";
+    CaptureHost = "SUT - Web APP";
+    CaptureScreenSize = (
+        "1920",
+        "1200");
+    HasAlpha = 1;
+    HotSpotX = 8;
+    HotSpotY = 12;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1822;
+    OriginalLocationY = 16;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "chrome_resize";
+    tags = ();
+}

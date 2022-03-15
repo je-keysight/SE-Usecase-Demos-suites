@@ -1,0 +1,21 @@
+﻿to basket
+	Click text:"Cart", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"0"
+	WaitFor 10, "yourbasket"
+end basket
+
+to myaccount loggedin
+	click text:"My Account"
+	if loggedin equals "true" then
+		log "fill out later"		
+	Else
+		Click "login"
+	End if
+	wait 1
+end myaccount
+
+to search searchterm
+	set searchterm to "jumper dress"
+	click text:"Search"
+	typetext searchterm,returnkey
+	WaitFor 15, "Filters"
+end search

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>chrome/maximize.png</key>
+	<string>2022-03-15 13:18 +0000</string>
+	<key>chrome/minimize.png</key>
+	<string>2022-03-15 13:20 +0000</string>
+	<key>login.png</key>
+	<string>2022-03-15 14:30 +0000</string>
+	<key>logo.png</key>
+	<string>2022-03-15 13:21 +0000</string>
+	<key>refresh/refresh.png</key>
+	<string>2022-03-15 13:12 +0000</string>
+	<key>refresh/refresh_incognito.png</key>
+	<string>2022-03-15 13:14 +0000</string>
+	<key>windowslogo.png</key>
+	<string>2022-03-15 13:14 +0000</string>
+	<key>yourbasket.png</key>
+	<string>2022-03-15 13:29 +0000</string>
+</dict>
+</plist>

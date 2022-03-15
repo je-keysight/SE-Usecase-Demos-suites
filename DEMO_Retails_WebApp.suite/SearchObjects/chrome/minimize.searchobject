@@ -1,0 +1,48 @@
+{
+  "lastmodifieddate" : 1647350353.46661,
+  "ocrcapturestring" : "□",
+  "testlocationdata" : [
+    {
+      "connectionserverid" : "18.134.142.108",
+      "sutinfo" : {
+        "type" : "Unknown RDP"
+      },
+      "connectionname" : "SUT - Web APP",
+      "connectionportnum" : 3389,
+      "connectiontype" : "RDP",
+      "capturedocrtext" : "□",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Tolerant of Background",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_45",
+        "HotSpot" : "[11,14]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "name" : "chrome\/minimize.png",
+      "capturerect" : [
+        1843,
+        5,
+        18,
+        18
+      ]
+    }
+  ],
+  "createddate" : 1647350353.466609,
+  "lastfoundlocation" : [
+    1843,
+    5,
+    18,
+    18
+  ],
+  "originalcapturelocation" : [
+    1843,
+    5,
+    18,
+    18
+  ],
+  "lastfounddate" : 1647350404.2780499,
+  "name" : "chrome\/minimize"
+}

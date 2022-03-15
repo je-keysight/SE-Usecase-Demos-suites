@@ -1,0 +1,6 @@
+﻿Initial.openBrowser "http://3.8.203.160/"
+
+if imagefound (4, "Maximise")
+	click foundimagelocation()
+	waitfor 20, "Minimise"
+end if
