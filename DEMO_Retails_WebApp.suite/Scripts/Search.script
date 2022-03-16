@@ -1,5 +1,9 @@
 ﻿to selectitem
 	Log "select random Item and go"
+	If ImageFound("Addtobasket") is not true then
+		MoveTo [200,200]
+		ScrollWheelDown 2
+	end if
 	set objects to EveryImageLocation("Addtobasket")
 	put the number of items in objects into objects_nbr
 	Click  item random(1,objects_nbr) of objects

@@ -15,10 +15,13 @@ to myaccount loggedin
 end myaccount
 
 to search searchterm
+	
 	click text:"Search"
+	wait 2
 	typetext searchterm,returnkey
+	wait 2
 	waitFor 10, "chrome/refresh"
-	if ImageFound(text:"SEARCH RESULTS" ,waitFor:2)
+	if ImageFound(text:"SEARCH RESULTS" ,waitFor:10)
 		return "searchResults"
 	else
 		return "itemView"
