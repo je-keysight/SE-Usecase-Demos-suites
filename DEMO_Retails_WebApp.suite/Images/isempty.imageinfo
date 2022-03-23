@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-03-16 21:38:53 +0000";
+    CaptureHost = "SUT AWS";
+    CaptureScreenSize = (
+        1920,
+        1024);
+    HasAlpha = 1;
+    HotSpotX = 58;
+    HotSpotY = 13;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 294;
+    OriginalLocationY = 319;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "isempty";
+    tags = ();
+}
