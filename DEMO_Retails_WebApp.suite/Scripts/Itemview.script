@@ -3,6 +3,7 @@
 	Click {text:"Add to basket"}
 	waitFor 10, text:"has been added to your basket"
 	return (itemsincart +1)
+	CaptureScreen
 end addtobasket
 
 to basket
@@ -10,3 +11,22 @@ to basket
 	Click "basket"
 	WaitFor 10, "yourbasket"
 end basket
+
+to back
+	Click "chrome/back"
+	WaitFor 10, "chrome/refresh"
+end back
+
+to preCheck
+	if ImageFound(text:"Choose an option") then
+		Repeat with each item option of EveryImageLocation(text:"Choose an option")
+			Click option
+			wait 1
+			Click option + [0,50]
+			wait 1
+		End repeat
+	end if
+	
+	WaitFor 10, "addtobasket"
+	CaptureScreen
+end preCheck

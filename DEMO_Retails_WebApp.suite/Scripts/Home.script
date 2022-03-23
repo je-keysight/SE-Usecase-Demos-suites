@@ -1,8 +1,15 @@
 ﻿to basket
 	ScrollWheelUp 200
-	Click text:"Cart", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"0"
+	Click text:"Cart", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"0"pooo]p
 	WaitFor 10, "yourbasket"
 end basket
+
+to contactUs
+	ScrollWheelUp 200
+	Click (Text:"CONTACT US", contrastColor:(227,178,27), contrastTolerance:"99", WaitFor:8, contrast:"On")
+	
+	WaitFor 10.0, {Text:"CONTACT US", contrastColor:[255,93,41], contrastTolerance:"60", contrast:"On"}
+end contactUs
 
 to myaccount loggedin
 	click text:"My Account"
