@@ -1,0 +1,27 @@
+﻿to contactForm
+	repeat until ImageFound(text:"Your Name",waitFor:2, contrastColor:[130,134,141], contrastTolerance:"99", contrast:"On")
+		ScrollWheelDown 5
+		wait 1
+	end repeat
+	
+	Click text:"Your Name",waitFor:2, contrastColor:[130,134,141], contrastTolerance:"99", contrast:"On"
+	TypeText "John Doe"
+	
+	Click text:"Your Email",waitFor:2, contrastColor:[130,134,141], contrastTolerance:"99", contrast:"On"
+	TypeText "john.doe@example.com"
+	
+	Click text:"Subject",waitFor:2, contrastColor:[130,134,141], contrastTolerance:"99", contrast:"On"
+	TypeText "Contact subject"
+	
+	Click text:"Your Message",waitFor:2, contrastColor:[130,134,141], contrastTolerance:"99", contrast:"On"
+	TypeText "Message test"
+	
+	Click Text:"Send", contrastColor:[57,57,58], contrastTolerance:"45", WaitFor:2, contrast:"On"
+	CaptureScreen
+end contactForm
+
+to back
+	Click "chrome/back"
+	WaitFor 10, "chrome/refresh"
+	CaptureScreen
+end back

@@ -1,47 +1,48 @@
 {
-  "lastmodifieddate" : 1647382178.861949,
-  "ocrcapturestring" : "Add to basket s\/",
+  "lastmodifieddate" : 1649109415.325845,
+  "ocrcapturestring" : "Register",
   "testlocationdata" : [
     {
-      "name" : "addedttobasket.png",
+      "connectionserverid" : "52.56.118.62",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
-      "connectionname" : "SUT - Web APP",
+      "connectionname" : "SUT WebAPP",
       "connectionportnum" : 3389,
       "connectiontype" : "RDP",
+      "capturedocrtext" : "Register",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
         "SearchType" : "Smoothed for Text",
         "Discrepancy" : "_0",
         "Tolerance" : "_43",
-        "HotSpot" : "[59,8]",
+        "HotSpot" : "[29,11]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
-      "connectionserverid" : "18.134.142.108",
+      "name" : "Register_1.png",
       "capturerect" : [
-        449,
-        810,
-        119,
+        1028,
+        676,
+        58,
         17
       ]
     }
   ],
-  "createddate" : 1647379407.1923289,
+  "createddate" : 1649109415.325845,
   "lastfoundlocation" : [
-    1003,
-    1010,
-    17,
+    1028,
+    676,
+    58,
     17
   ],
   "originalcapturelocation" : [
-    449,
-    810,
-    119,
+    1028,
+    676,
+    58,
     17
   ],
-  "lastfounddate" : 1649110459.377008,
-  "name" : "addedttobasket"
+  "lastfounddate" : 1649109416.761487,
+  "name" : "Register_1"
 }

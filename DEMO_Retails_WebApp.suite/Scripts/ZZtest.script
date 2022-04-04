@@ -1,0 +1,4 @@
+﻿Run Initial.openBrowser "http://3.8.203.160", "removeitem"
+
+
+Run LoginOrRegister.register "test@eggplant.com", "Keysight123"

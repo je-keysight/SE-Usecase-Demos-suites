@@ -24,6 +24,12 @@ end addtobasket
 
 to basket
 	ScrollWheelUp 200
-	Click text:"Cart", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"0"
+	wait 1
+	Click text:"Cart", contrast:"On"
 	WaitFor 10, "yourbasket"
 end basket
+
+to back
+	Click "chrome/back"
+	WaitFor 10, "chrome/refresh"
+end back

@@ -1,0 +1,40 @@
+﻿to register username,password
+	set the SearchRectangle to [the RemoteScreenSize * [0.5,0],the RemoteScreenSize * [1,1]]
+
+	Click text:"Email address"
+	typetext username
+	Click text:"Password"
+	typetext password
+	
+	Click "Register_1"
+	
+	wait 3
+	
+	waitFor 5, Text:"My account", contrast:"On", contrastColor:[33,36,41], contrastTolerance:"45", caseSensitive:"Yes"
+
+	set the SearchRectangle to empty
+	
+	return True
+	CaptureScreen
+end register
+
+
+to login username,password
+	set the SearchRectangle to [the RemoteScreenSize * [0,0],the RemoteScreenSize * [0.5,1]]
+
+	Click text:"Username"
+	typetext username
+	Click text:"Password"
+	typetext password
+	
+	Click text:"Log in"
+	
+	wait 3
+	
+	waitFor 5, Text:"My account", contrast:"On", contrastColor:[33,36,41], contrastTolerance:"45", caseSensitive:"Yes"
+
+	set the SearchRectangle to empty
+	
+	return True
+	CaptureScreen
+end login

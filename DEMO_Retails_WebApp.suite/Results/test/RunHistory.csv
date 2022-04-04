@@ -1,3 +1,0 @@
-﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
-2022-03-15 13:12:46.659 +0000,"Failure",0:00:24,1,1,1,"20220315_131246.659/LogFile.txt","","Image Not Found -- waitfor Error - Unable To Find Any Image On Screen ""Refresh"" within 20.00 seconds",0
-2022-03-15 13:14:22.062 +0000,"Success",0:00:11,0,0,0,"20220315_131422.062/LogFile.txt","","",1

@@ -1,0 +1,7 @@
+﻿to navigate location, waitfor
+	Click {Text:location, WaitFor:8, caseSensitive:"Yes", contrast:"On", contrastColor:"#CEEDA", contrastTolerance:"45"}
+	if waitfor is not empty then
+		waitFor 10, text:waitfor
+	end if
+	
+end navigate

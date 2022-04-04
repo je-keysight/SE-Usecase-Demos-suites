@@ -1,46 +1,48 @@
 {
-  "lastmodifieddate" : 1647349588.03634,
+  "lastmodifieddate" : 1647899952.2321749,
+  "ocrcapturestring" : "<-",
   "testlocationdata" : [
     {
-      "name" : "windowslogo.png",
+      "connectionserverid" : "18.134.142.108",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
       "connectionname" : "SUT - Web APP",
       "connectionportnum" : 3389,
       "connectiontype" : "RDP",
+      "capturedocrtext" : "<-",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
         "SearchType" : "Tolerant of Background",
         "Discrepancy" : "_0",
         "Tolerance" : "_45",
-        "HotSpot" : "[12,8]",
+        "HotSpot" : "[9,13]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
-      "connectionserverid" : "18.134.142.108",
+      "name" : "chrome\/back.png",
       "capturerect" : [
-        15,
-        1171,
-        18,
-        18
+        12,
+        41,
+        22,
+        22
       ]
     }
   ],
-  "createddate" : 1647349588.036339,
+  "createddate" : 1647899952.2321739,
   "lastfoundlocation" : [
-    15,
-    1171,
-    18,
-    18
+    12,
+    41,
+    22,
+    22
   ],
   "originalcapturelocation" : [
-    15,
-    1171,
-    18,
-    18
+    12,
+    41,
+    22,
+    22
   ],
-  "lastfounddate" : 1649109648.2597599,
-  "name" : "windowslogo"
+  "lastfounddate" : 1649110461.3607831,
+  "name" : "chrome\/back"
 }

@@ -1,47 +1,48 @@
 {
-  "lastmodifieddate" : 1647382178.861949,
-  "ocrcapturestring" : "Add to basket s\/",
+  "lastmodifieddate" : 1648671516.878325,
+  "ocrcapturestring" : "Return to shop",
   "testlocationdata" : [
     {
-      "name" : "addedttobasket.png",
+      "connectionserverid" : "35.176.72.204",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
-      "connectionname" : "SUT - Web APP",
+      "connectionname" : "SUT WebAPP",
       "connectionportnum" : 3389,
       "connectiontype" : "RDP",
+      "capturedocrtext" : "Return to shop",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
         "SearchType" : "Smoothed for Text",
         "Discrepancy" : "_0",
         "Tolerance" : "_43",
-        "HotSpot" : "[59,8]",
+        "HotSpot" : "[54,11]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
-      "connectionserverid" : "18.134.142.108",
+      "name" : "Returntoshop.png",
       "capturerect" : [
-        449,
-        810,
-        119,
-        17
+        306,
+        442,
+        109,
+        23
       ]
     }
   ],
-  "createddate" : 1647379407.1923289,
+  "createddate" : 1648671516.878325,
   "lastfoundlocation" : [
-    1003,
-    1010,
-    17,
-    17
+    306,
+    442,
+    109,
+    23
   ],
   "originalcapturelocation" : [
-    449,
-    810,
-    119,
-    17
+    306,
+    442,
+    109,
+    23
   ],
-  "lastfounddate" : 1649110459.377008,
-  "name" : "addedttobasket"
+  "lastfounddate" : 1648671563.06352,
+  "name" : "Returntoshop"
 }

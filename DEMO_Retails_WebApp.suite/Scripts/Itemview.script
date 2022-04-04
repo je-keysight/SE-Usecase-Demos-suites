@@ -3,10 +3,32 @@
 	Click {text:"Add to basket"}
 	waitFor 10, text:"has been added to your basket"
 	return (itemsincart +1)
+	CaptureScreen
 end addtobasket
 
 to basket
 	ScrollWheelUp 200
 	Click "basket"
 	WaitFor 10, "yourbasket"
+	CaptureScreen
 end basket
+
+to back
+	Click "chrome/back"
+	WaitFor 10, "chrome/refresh"
+	CaptureScreen
+end back
+
+to preCheck
+	if ImageFound(text:"Choose an option",waitFor:3) then
+		Repeat with each item option of EveryImageLocation(text:"Choose an option")
+			Click option
+			wait 1
+			Click option + [0,50]
+			wait 1
+		End repeat
+	end if
+	
+	WaitFor 5, "addtobasket"
+	CaptureScreen
+end preCheck

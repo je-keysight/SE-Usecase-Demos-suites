@@ -1,0 +1,32 @@
+﻿to isEmpty isempty
+	if ImageFound(text:"Your basket is currently empty")
+		set isempty to True
+	else
+		set isempty to False
+	end if
+	return isempty
+	CaptureScreen
+end isEmpty
+
+to returnHome
+	Click "Returntoshop"
+	WaitFor 8.0, (Text:"SHOP", contrast:"On", contrastColor:(32,36,41), contrastTolerance:"45", caseSensitive:"Yes")
+	CaptureScreen
+end returnHome
+
+to removeItem
+	Click the first item of EveryImageLocation("removeitem")
+	CaptureScreen
+end removeItem
+
+to changeQuantity action
+	Click the first item of EveryImageLocation(Image:action & "Quantity")
+	wait 1
+	Click text:"Update basket"
+	CaptureScreen
+end changeQuantity
+
+to checkOut
+	Click {Text:"Proceed to checkout", contrastColor:[7,9,2], contrastTolerance:"45", contrast:"On"}
+	CaptureScreen
+end checkOut
