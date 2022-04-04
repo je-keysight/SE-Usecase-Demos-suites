@@ -1,0 +1,41 @@
+﻿to checkOut username
+	put split(username,"@") into value
+	set value to the first item of value
+	Checkout.checkField "First name", value
+	Checkout.checkField "Last name", value
+	
+	Click "CountryRegion"
+	Click text:"United Kingdom"
+	
+	Checkout.checkField "Street address", value
+	Checkout.checkField "Town / City", value
+	
+	Checkout.checkField "Postcode", "XX111XX"
+	Checkout.checkField "Phone", value
+	
+	Checkout.checkField "Phone", "111111111"
+	
+	Checkout.checkField "Email address", username
+	
+	Click text:"I have read and agree", caseSensitive: True
+	
+	Click text:"Place order", caseSensitive: True
+end checkOut
+
+to checkField fieldName, value
+	set the RemoteClipboard to empty
+	Repeat until ImageFound(text:fieldname, caseSensitive: True, waitFor:3)
+		ScrollWheelUp 5
+	End Repeat
+	Click FoundImageLocation()
+	--Click text:fieldName, caseSensitive: True
+	TypeText controlKey, "a"
+	wait 0.5
+	TypeText controlKey, "c"
+	if the RemoteClipboard is empty then
+		TypeText value
+	end if
+	wait 1
+end checkField
+
+Run Checkout.checkOut "test@eggplant.com"

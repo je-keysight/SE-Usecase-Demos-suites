@@ -10,15 +10,17 @@ to basket
 	ScrollWheelUp 200
 	Click "basket"
 	WaitFor 10, "yourbasket"
+	CaptureScreen
 end basket
 
 to back
 	Click "chrome/back"
 	WaitFor 10, "chrome/refresh"
+	CaptureScreen
 end back
 
 to preCheck
-	if ImageFound(text:"Choose an option") then
+	if ImageFound(text:"Choose an option",waitFor:3) then
 		Repeat with each item option of EveryImageLocation(text:"Choose an option")
 			Click option
 			wait 1
@@ -27,6 +29,6 @@ to preCheck
 		End repeat
 	end if
 	
-	WaitFor 10, "addtobasket"
+	WaitFor 5, "addtobasket"
 	CaptureScreen
 end preCheck

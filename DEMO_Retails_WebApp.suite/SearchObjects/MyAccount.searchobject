@@ -1,48 +1,48 @@
 {
-  "lastmodifieddate" : 1647354563.2872391,
-  "ocrcapturestring" : "O Login",
+  "lastmodifieddate" : 1649107142.7747431,
+  "ocrcapturestring" : "My Account",
   "testlocationdata" : [
     {
-      "connectionserverid" : "18.134.142.108",
+      "connectionserverid" : "52.56.118.62",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
-      "connectionname" : "SUT - Web APP",
+      "connectionname" : "SUT WebAPP",
       "connectionportnum" : 3389,
       "connectiontype" : "RDP",
-      "capturedocrtext" : "O Login",
+      "capturedocrtext" : "My Account",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
         "SearchType" : "Smoothed for Text",
         "Discrepancy" : "_0",
         "Tolerance" : "_64",
-        "HotSpot" : "[51,12]",
+        "HotSpot" : "[46,11]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
-      "name" : "login.png",
+      "name" : "MyAccount.png",
       "capturerect" : [
-        1432,
-        264,
-        69,
-        19
+        1490,
+        205,
+        87,
+        18
       ]
     }
   ],
-  "createddate" : 1647354563.2872391,
+  "createddate" : 1649107142.7747421,
   "lastfoundlocation" : [
-    1432,
-    264,
-    69,
-    19
+    1490,
+    205,
+    87,
+    18
   ],
   "originalcapturelocation" : [
-    1432,
-    264,
-    69,
-    19
+    1490,
+    205,
+    87,
+    18
   ],
-  "lastfounddate" : 1649109277.674258,
-  "name" : "login"
+  "lastfounddate" : 1649109276.4738069,
+  "name" : "MyAccount"
 }

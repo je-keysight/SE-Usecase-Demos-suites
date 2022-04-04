@@ -6,7 +6,7 @@
 	Click text:"Password"
 	typetext password
 	
-	Click text:"Register"
+	Click "Register_1"
 	
 	wait 3
 	
@@ -14,7 +14,7 @@
 
 	set the SearchRectangle to empty
 	
-	return true
+	return True
 	CaptureScreen
 end register
 
@@ -35,6 +35,6 @@ to login username,password
 
 	set the SearchRectangle to empty
 	
-	return true
+	return True
 	CaptureScreen
 end login
