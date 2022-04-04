@@ -1,25 +1,15 @@
 ﻿to basket
 	ScrollWheelUp 200
-	Click text:"Cart", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"0"pooo]p
+	Click text:"Cart", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"0"
 	WaitFor 10, "yourbasket"
+	CaptureScreen
 end basket
 
-to contactUs
-	ScrollWheelUp 200
-	Click (Text:"CONTACT US", contrastColor:(227,178,27), contrastTolerance:"99", WaitFor:8, contrast:"On")
-	
-	WaitFor 10.0, {Text:"CONTACT US", contrastColor:[255,93,41], contrastTolerance:"60", contrast:"On"}
-end contactUs
+to goHome
 
-to myaccount loggedin
-	click text:"My Account"
-	if loggedin equals "true" then
-		log "fill out later"		
-	Else
-		Click "login"
-	End if
-	wait 1
-end myaccount
+	WaitFor 10.0, {Text:"CONTACT US", contrastColor:[255,93,41], contrastTolerance:"60", contrast:"On"}
+	CaptureScreen
+end goHome
 
 to search searchterm
 	

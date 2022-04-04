@@ -17,9 +17,11 @@
 	TypeText "Message test"
 	
 	Click Text:"Send", contrastColor:[57,57,58], contrastTolerance:"45", WaitFor:2, contrast:"On"
+	CaptureScreen
 end contactForm
 
 to back
 	Click "chrome/back"
 	WaitFor 10, "chrome/refresh"
+	CaptureScreen
 end back

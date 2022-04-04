@@ -1,48 +1,48 @@
 {
-  "lastmodifieddate" : 1647350967.494031,
-  "ocrcapturestring" : "Basket",
+  "lastmodifieddate" : 1649090141.6691918,
+  "ocrcapturestring" : "m My Account",
   "testlocationdata" : [
     {
-      "connectionserverid" : "18.134.142.108",
+      "connectionserverid" : "52.56.118.62",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
-      "connectionname" : "SUT - Web APP",
+      "connectionname" : "SUT WebAPP",
       "connectionportnum" : 3389,
       "connectiontype" : "RDP",
-      "capturedocrtext" : "Basket",
+      "capturedocrtext" : "m My Account",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
         "SearchType" : "Smoothed for Text",
         "Discrepancy" : "_0",
         "Tolerance" : "_64",
-        "HotSpot" : "[39,11]",
+        "HotSpot" : "[28,6]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
-      "name" : "yourbasket.png",
+      "name" : "mMyAccount.png",
       "capturerect" : [
-        296,
-        291,
-        78,
-        19
+        1432,
+        264,
+        114,
+        18
       ]
     }
   ],
-  "createddate" : 1647350967.49403,
+  "createddate" : 1649090141.6691909,
   "lastfoundlocation" : [
-    296,
-    291,
-    78,
-    19
+    1432,
+    264,
+    114,
+    18
   ],
   "originalcapturelocation" : [
-    296,
-    291,
-    78,
-    19
+    1432,
+    264,
+    114,
+    18
   ],
-  "lastfounddate" : 1648808347.2495821,
-  "name" : "yourbasket"
+  "lastfounddate" : 1649090189.229929,
+  "name" : "mMyAccount"
 }

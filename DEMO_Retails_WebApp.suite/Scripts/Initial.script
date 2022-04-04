@@ -13,3 +13,13 @@
 	WaitFor 20, "logo"
 	return false
 end openBrowser
+
+to generateUsername isCreated, username_passed
+	if isCreated then
+		set username to "test" & random(0,10000) & "@eggplant.com"
+	else
+		set username to username_passed
+	end if
+	
+	return username
+end generateUsername

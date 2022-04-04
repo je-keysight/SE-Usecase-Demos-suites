@@ -1,0 +1,48 @@
+{
+  "lastmodifieddate" : 1648671516.878325,
+  "ocrcapturestring" : "Return to shop",
+  "testlocationdata" : [
+    {
+      "connectionserverid" : "35.176.72.204",
+      "sutinfo" : {
+        "type" : "Unknown RDP"
+      },
+      "connectionname" : "SUT WebAPP",
+      "connectionportnum" : 3389,
+      "connectiontype" : "RDP",
+      "capturedocrtext" : "Return to shop",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Smoothed for Text",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_43",
+        "HotSpot" : "[54,11]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "name" : "Returntoshop.png",
+      "capturerect" : [
+        306,
+        442,
+        109,
+        23
+      ]
+    }
+  ],
+  "createddate" : 1648671516.878325,
+  "lastfoundlocation" : [
+    306,
+    442,
+    109,
+    23
+  ],
+  "originalcapturelocation" : [
+    306,
+    442,
+    109,
+    23
+  ],
+  "lastfounddate" : 1648671563.06352,
+  "name" : "Returntoshop"
+}

@@ -1,48 +1,46 @@
 {
-  "lastmodifieddate" : 1647350043.704016,
-  "ocrcapturestring" : "c",
+  "lastmodifieddate" : 1648808167.494436,
   "testlocationdata" : [
     {
-      "connectionserverid" : "18.134.142.108",
+      "name" : "removeQuantity.png",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
-      "connectionname" : "SUT - Web APP",
+      "connectionname" : "SUT WebAPP",
       "connectionportnum" : 3389,
       "connectiontype" : "RDP",
-      "capturedocrtext" : "c",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
         "SearchType" : "Tolerant of Background",
         "Discrepancy" : "_0",
         "Tolerance" : "_45",
-        "HotSpot" : "[10,8]",
+        "HotSpot" : "[20,20]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
-      "name" : "refresh\/refresh.png",
+      "connectionserverid" : "52.56.118.62",
       "capturerect" : [
-        77,
-        42,
-        20,
-        20
+        1005,
+        372,
+        40,
+        40
       ]
     }
   ],
-  "createddate" : 1647349841.0984921,
+  "createddate" : 1648808167.4944348,
   "lastfoundlocation" : [
-    92,
-    58,
-    20,
-    20
+    1005,
+    372,
+    40,
+    40
   ],
   "originalcapturelocation" : [
-    77,
-    42,
-    20,
-    20
+    1005,
+    372,
+    40,
+    40
   ],
-  "lastfounddate" : 1648669513.9194489,
-  "name" : "refresh"
+  "lastfounddate" : 1648808347.21277,
+  "name" : "removeQuantity"
 }
