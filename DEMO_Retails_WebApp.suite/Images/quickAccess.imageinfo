@@ -1,0 +1,24 @@
+﻿{
+    CaptureDate = "2022-04-05 19:05:39 +0000";
+    CaptureHost = "SUT WebAPP";
+    CaptureScreenSize = (
+        "1920",
+        "1200");
+    HasAlpha = 1;
+    HotSpotX = 16;
+    HotSpotY = 17;
+    IgnoreColor = (
+        "#737573");
+    IgnoreColorTolerance = (
+        74);
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1173;
+    OriginalLocationY = 286;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "quickAccess";
+    tags = ();
+}
