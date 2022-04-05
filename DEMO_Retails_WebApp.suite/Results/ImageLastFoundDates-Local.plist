@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Addtobasket/Addtobasket.png</key>
-	<string>2022-04-04 22:14 +0000</string>
+	<string>2022-04-05 19:29 +0000</string>
 	<key>Addtobasket/Addtobasket2.png</key>
-	<string>2022-04-04 21:05 +0000</string>
+	<string>2022-04-05 19:29 +0000</string>
 	<key>CountryRegion.png</key>
-	<string>2022-04-04 20:51 +0000</string>
+	<string>2022-04-05 19:38 +0000</string>
 	<key>MyAccount.png</key>
 	<string>2022-04-04 21:54 +0000</string>
 	<key>Register.png</key>
@@ -19,13 +19,13 @@
 	<key>addQuantity.png</key>
 	<string>2022-04-01 10:20 +0000</string>
 	<key>addedttobasket.png</key>
-	<string>2022-04-04 22:14 +0000</string>
+	<string>2022-04-05 19:37 +0000</string>
 	<key>addtobasket/Addtobasket2.png</key>
 	<string>2022-04-04 21:15 +0000</string>
 	<key>basket.png</key>
 	<string>2022-04-04 22:14 +0000</string>
 	<key>chrome/back.png</key>
-	<string>2022-04-04 22:14 +0000</string>
+	<string>2022-04-05 19:29 +0000</string>
 	<key>chrome/maximize.png</key>
 	<string>2022-03-30 19:45 +0000</string>
 	<key>chrome/minimize.png</key>
@@ -33,15 +33,17 @@
 	<key>chrome/refresh/refresh.png</key>
 	<string>2022-03-30 19:45 +0000</string>
 	<key>chrome/refresh/refresh_incognito.png</key>
-	<string>2022-04-04 22:14 +0000</string>
+	<string>2022-04-05 19:37 +0000</string>
 	<key>isempty.png</key>
 	<string>2022-03-16 21:38 +0000</string>
 	<key>login.png</key>
 	<string>2022-04-04 21:54 +0000</string>
 	<key>logo.png</key>
-	<string>2022-04-04 22:00 +0000</string>
+	<string>2022-04-05 19:37 +0000</string>
 	<key>mMyAccount.png</key>
 	<string>2022-04-04 16:36 +0000</string>
+	<key>quickAccess.png</key>
+	<string>2022-04-05 19:29 +0000</string>
 	<key>refresh/refresh.png</key>
 	<string>2022-03-15 13:12 +0000</string>
 	<key>refresh/refresh_incognito.png</key>
@@ -51,12 +53,12 @@
 	<key>removeitem.png</key>
 	<string>2022-04-01 10:19 +0000</string>
 	<key>search.png</key>
-	<string>2022-04-04 22:14 +0000</string>
+	<string>2022-04-05 19:37 +0000</string>
 	<key>windowslogo.png</key>
-	<string>2022-04-04 22:00 +0000</string>
+	<string>2022-04-05 19:37 +0000</string>
 	<key>yourbasket/yourbasket.png</key>
 	<string>2022-04-04 22:14 +0000</string>
 	<key>yourbasket/yourbasket_1.png</key>
-	<string>2022-04-04 22:06 +0000</string>
+	<string>2022-04-05 19:37 +0000</string>
 </dict>
 </plist>

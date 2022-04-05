@@ -1,48 +1,46 @@
 {
-  "lastmodifieddate" : 1647350050.2579188,
-  "ocrcapturestring" : "0",
+  "lastmodifieddate" : 1649185608.9956231,
   "testlocationdata" : [
     {
-      "connectionserverid" : "18.134.142.108",
+      "name" : "quickAccess.png",
       "sutinfo" : {
         "type" : "Unknown RDP"
       },
-      "connectionname" : "SUT - Web APP",
+      "connectionname" : "SUT WebAPP",
       "connectionportnum" : 3389,
       "connectiontype" : "RDP",
-      "capturedocrtext" : "0",
       "properties" : {
         "Rotate" : 0,
         "Scale" : "    1",
         "SearchType" : "Tolerant of Background",
         "Discrepancy" : "_0",
         "Tolerance" : "_45",
-        "HotSpot" : "[8,10]",
+        "HotSpot" : "[16,17]",
         "CropRectangle" : "[0,0,0,0]"
       },
       "type" : 1,
-      "name" : "refresh\/refresh_incognito.png",
+      "connectionserverid" : "52.56.118.62",
       "capturerect" : [
-        522,
-        313,
-        16,
-        20
+        1173,
+        286,
+        33,
+        34
       ]
     }
   ],
-  "createddate" : 1647350050.2579179,
+  "createddate" : 1649185539.4746618,
   "lastfoundlocation" : [
-    80,
-    43,
-    16,
-    20
+    1552,
+    286,
+    33,
+    34
   ],
   "originalcapturelocation" : [
-    522,
-    313,
-    16,
-    20
+    1173,
+    286,
+    33,
+    34
   ],
-  "lastfounddate" : 1649187452.740953,
-  "name" : "refresh\/refresh_incognito"
+  "lastfounddate" : 1649186965.996347,
+  "name" : "quickAccess"
 }
