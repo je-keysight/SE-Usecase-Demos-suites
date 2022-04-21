@@ -35,5 +35,6 @@ end goHome
 
 to cleanUp
 	TypeText altKey,F4
+	set the SearchRectangle to empty
 	CaptureScreen
 end goHome
