@@ -11,7 +11,7 @@ end selectitem
 
 to addtobasket itemsincart
 	Log "select random Item and add to basket"
-	If ImageFound(text:"Add to basket") is not true then
+	If ImageFound(text:"Add to basket cart") is not true then
 		MoveTo [200,200]
 		ScrollWheelDown 2
 	end if

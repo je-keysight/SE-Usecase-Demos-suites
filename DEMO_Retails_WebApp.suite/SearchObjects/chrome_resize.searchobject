@@ -30,10 +30,10 @@
   ],
   "createddate" : 1647350132.7052841,
   "lastfoundlocation" : [
-    1364,
-    23,
-    18,
-    18
+    1766,
+    1174,
+    10,
+    10
   ],
   "originalcapturelocation" : [
     1822,
@@ -41,6 +41,6 @@
     18,
     18
   ],
-  "lastfounddate" : 1648669514.611258,
+  "lastfounddate" : 1649929212.830672,
   "name" : "chrome_resize"
 }
