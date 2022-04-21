@@ -1,0 +1,3 @@
+﻿2022-04-14 10:47:41.875 +0100	START		Running codeAPI.apitest
+2022-04-14 10:47:42.476 +0100	EndTestCase		(Duration:"0.593363", Errors:"0", Exceptions:"0", StartTime:"2022-04-14 10:47:41 +0100", Successes:"1", TestCase:"codeAPI.apitest", Warnings:"0")
+2022-04-14 10:47:42.525 +0100	SUCCESS		Execution Time 0:00:00 codeAPI.apitest

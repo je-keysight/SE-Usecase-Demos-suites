@@ -1,0 +1,10 @@
+﻿2022-03-15 13:12:46.664 +0000	START		Running test.script
+2022-03-15 13:12:46.947 +0000	show		remote	2	on_openbrowser	Initial.script
+2022-03-15 13:12:46.970 +0000	moveto		at (1, 200)	3	on_openbrowser	Initial.script
+2022-03-15 13:12:47.004 +0000	waitfor	windowslogo	found at (27, 1179)	4	on_openbrowser	Initial.script
+2022-03-15 13:12:47.701 +0000	typetext		[windowsKey]r	5	on_openbrowser	Initial.script
+2022-03-15 13:12:49.137 +0000	typetext		chrome http://3.8.203.160/ -incognito --start-maximized[returnKey]	6	on_openbrowser	Initial.script
+2022-03-15 13:13:09.544 +0000	LogWarning		Unable to Find Image(s): refresh.png -- AutoUpdate engaged	7	on_openbrowser	Initial.script
+2022-03-15 13:13:11.137 +0000	Exception	Refresh	Unable To Find Any Image On Screen "Refresh" within 20.00 seconds	7	on_openbrowser	Initial.script
+2022-03-15 13:13:11.606 +0000	EndTestCase		(Duration:"24.939425", Errors:"1", Exceptions:"1", StartTime:"2022-03-15 13:12:46 +0000", Successes:"0", TestCase:"test.script", Warnings:"1")
+2022-03-15 13:13:11.756 +0000	FAILURE	Screen_Error.png	Image Not Found: waitfor Error - Unable To Find Any Image On Screen "Refresh" within 20.00 seconds -- Execution Time 0:00:24 test.script

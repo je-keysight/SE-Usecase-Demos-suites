@@ -1,0 +1,20 @@
+{
+  "entries" : [
+    {
+      "identifier" : "START",
+      "message" : "Running codeAPI.apitest",
+      "timestamp" : "2022-04-14 10:47:41.875 +0100"
+    },
+    {
+      "identifier" : "EndTestCase",
+      "message" : "(Duration:\"0.593363\", Errors:\"0\", Exceptions:\"0\", StartTime:\"2022-04-14 10:47:41 +0100\", Successes:\"1\", TestCase:\"codeAPI.apitest\", Warnings:\"0\")",
+      "timestamp" : "2022-04-14 10:47:42.476 +0100"
+    },
+    {
+      "identifier" : "SUCCESS",
+      "message" : "Execution Time 0:00:00 codeAPI.apitest",
+      "timestamp" : "2022-04-14 10:47:42.525 +0100"
+    }
+  ],
+  "createdTimestamp" : "2022-04-14 10:47:41.879 +0100"
+}

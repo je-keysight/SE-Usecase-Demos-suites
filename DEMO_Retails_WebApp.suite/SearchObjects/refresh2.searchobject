@@ -1,0 +1,48 @@
+{
+  "lastmodifieddate" : 1649929318.944381,
+  "ocrcapturestring" : "c",
+  "testlocationdata" : [
+    {
+      "connectionserverid" : "18.169.16.82",
+      "sutinfo" : {
+        "type" : "Unknown RDP"
+      },
+      "connectionname" : "SUT WebAPP",
+      "connectionportnum" : 3389,
+      "connectiontype" : "RDP",
+      "capturedocrtext" : "c",
+      "properties" : {
+        "Rotate" : 0,
+        "Scale" : "    1",
+        "SearchType" : "Tolerant of Background",
+        "Discrepancy" : "_0",
+        "Tolerance" : "_45",
+        "HotSpot" : "[13,14]",
+        "CropRectangle" : "[0,0,0,0]"
+      },
+      "type" : 1,
+      "name" : "refresh.png",
+      "capturerect" : [
+        77,
+        42,
+        20,
+        20
+      ]
+    }
+  ],
+  "createddate" : 1649929318.944381,
+  "lastfoundlocation" : [
+    77,
+    42,
+    20,
+    20
+  ],
+  "originalcapturelocation" : [
+    77,
+    42,
+    20,
+    20
+  ],
+  "lastfounddate" : 1649929503.0668302,
+  "name" : "refresh2"
+}
