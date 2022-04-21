@@ -32,3 +32,8 @@ to goHome
 	WaitFor 20.0, {Text:"All Products", contrastColor:[255,190,24], contrastTolerance:"73", contrast:"On"}
 	CaptureScreen
 end goHome
+
+to cleanUp
+	TypeText altKey,F4
+	CaptureScreen
+end goHome

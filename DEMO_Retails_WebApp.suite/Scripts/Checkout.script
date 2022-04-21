@@ -16,7 +16,7 @@
 	
 	Checkout.checkField "Email address", username
 	
-	Click text:"I have read and agree", caseSensitive: True
+	--Click text:"I have read and agree", caseSensitive: True
 	
 	Click text:"Place order", caseSensitive: True
 end checkOut
