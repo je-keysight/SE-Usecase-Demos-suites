@@ -14,7 +14,7 @@ to quickAccess
 	Log "select random Item and go"
 	set objects to EveryImageLocation("quickAccess")
 	put the number of items in objects into objects_nbr
-	Click (item random(1,objects_nbr) of objects + [-50,100])
+	Click (item random(1,objects_nbr) of objects + [-50,50])
 	waitFor 5, Image:"Addtobasket"
 	CaptureScreen
 end quickAccess

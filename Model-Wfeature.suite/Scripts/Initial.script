@@ -1,0 +1,6 @@
+﻿to openBrowser
+	typetext windowskey,"r"
+	wait 5
+	typetext "chrome" && "https://www.google.com"
+	typetext return
+end openBrowser

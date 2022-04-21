@@ -9,7 +9,7 @@ end wishlist
 
 to myaccount loggedin
 	Click "MyAccount"
-
+	
 	if loggedin equals "true" then
 		Click "mMyAccount"
 	Else
