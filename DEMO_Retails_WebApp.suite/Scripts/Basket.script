@@ -1,5 +1,5 @@
 ﻿to isEmpty isempty
-	if ImageFound(text:"Your basket is currently empty",waitFor:3)
+	if ImageFound(text:"Your cart is currently empty",waitFor:3)
 		set isempty to True
 	else
 		set isempty to False

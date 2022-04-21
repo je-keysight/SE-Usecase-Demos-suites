@@ -1,7 +1,7 @@
 ﻿to addtobasket itemsincart
 	Log "Add the item to the basket"
-	Click {text:"Add to basket"}
-	waitFor 10, text:"has been added to your basket"
+	Click {text:"Add to cart"}
+	waitFor 10, text:"has been added to your cart"
 	return (itemsincart +1)
 	CaptureScreen
 end addtobasket
