@@ -10,7 +10,7 @@
 	
 	wait 3
 	
-	waitFor 5, Text:"My account", contrast:"On", contrastColor:[33,36,41], contrastTolerance:"45", caseSensitive:"Yes"
+	waitFor 5, Text:"My Account", contrast:"On", contrastColor:[33,36,41], contrastTolerance:"45", caseSensitive:"Yes"
 
 	set the SearchRectangle to empty
 	
@@ -31,7 +31,7 @@ to login username,password
 	
 	wait 3
 	
-	waitFor 5, Text:"My account", contrast:"On", contrastColor:[33,36,41], contrastTolerance:"45", caseSensitive:"Yes"
+	waitFor 5, Text:"My Account", contrast:"On", contrastColor:[33,36,41], contrastTolerance:"45", caseSensitive:"Yes"
 
 	set the SearchRectangle to empty
 	
