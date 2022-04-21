@@ -16,8 +16,13 @@
 	Click text:"Your Message",waitFor:2, contrastColor:[130,134,141], contrastTolerance:"99", contrast:"On"
 	TypeText "Message test"
 	
-	Click Text:"Send", contrastColor:[57,57,58], contrastTolerance:"45", WaitFor:2, contrast:"On"
+	If ImageFound(Text:"Send", contrastColor:[57,57,58], contrastTolerance:"45", WaitFor:2, contrast:"On") is not true then
+		ScrollWheelDown 5
+	End If
+	
+	Click FoundImageLocation()
 	CaptureScreen
+	ScrollWheelDown 100
 end contactForm
 
 to back
