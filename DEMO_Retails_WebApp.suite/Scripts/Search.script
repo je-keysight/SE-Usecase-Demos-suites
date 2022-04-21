@@ -11,11 +11,11 @@ end selectitem
 
 to addtobasket itemsincart
 	Log "select random Item and add to basket"
-	If ImageFound(text:"Add to basket cart") is not true then
+	If ImageFound(text:"Add to cart") is not true then
 		MoveTo [200,200]
 		ScrollWheelDown 2
 	end if
-	set objects to EveryImageLocation(text:"Add to basket")
+	set objects to EveryImageLocation(text:"Add to cart")
 	put the number of items in objects into objects_nbr
 	Click  item random(1,objects_nbr) of objects
 	waitFor 10, "addedttobasket"
