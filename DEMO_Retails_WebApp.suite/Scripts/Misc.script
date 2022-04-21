@@ -34,7 +34,8 @@ to goHome
 end goHome
 
 to cleanUp
+	CaptureScreen
 	TypeText altKey,F4
 	set the SearchRectangle to empty
-	CaptureScreen
+	--test
 end cleanUp
