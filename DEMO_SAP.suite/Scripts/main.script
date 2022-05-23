@@ -1,0 +1,20 @@
+﻿SetupEnvironment
+OpenBrowser
+Login "SMITHDE"
+CreateIncident
+logout
+Login "WANGCA"
+DispatchIncident
+updateIncident
+logout
+Login "SMITHDE"
+checkIncident
+logout
+Login "WANGCA"
+DispatchIncident
+closeIncident
+logout
+Login "SMITHDE"
+AcknowledgeCloseIncident
+logout
+typetext altKey,F4

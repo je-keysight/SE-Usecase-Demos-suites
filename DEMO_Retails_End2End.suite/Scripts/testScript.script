@@ -1,0 +1,14 @@
+﻿Connect "SUT WebAPP"
+
+-- Run an API call to select a random Item in the product list - this can be replace by a list of objects to check or database connection.
+Run core.getRandomProduct
+
+-- Open the Browser
+Run core.launchApp(the suitevariables.id)
+
+-- Verify the Data - Gather data from the API for the product selected randomly and check Image/Name/Price
+Run core.verifyData(the suitevariables.id)
+
+Run core.addToBasket
+
+Run core.endScenario

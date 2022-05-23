@@ -1,0 +1,41 @@
+﻿to openMyIncidents
+	Click text:"My Incidents"
+	WaitFor 20, text:"Search"
+end openMyIncidents
+
+to createIncident priority, category
+	Click text:"Create Incident", WaitFor:20
+	Click text:"SMIN", WaitFor:20
+	WaitFor 60.0, text:"Description"
+	Click text:"Title"
+	TypeText "Toastie Incident - " & date
+	
+	Click ImageLocation(text:"Priority") + [100,0]
+	Click text:priority
+	
+	Click ImageLocation(text:"Category") + [100,0]
+	Click text:category
+	
+	Click ImageLocation(text:"Description") + [0,100]
+	TypeText "System is not working"
+	
+	Click (Text:"Create", contrastColor:(81,150,206), contrastTolerance:"45", WaitFor:8, contrast:"On")
+	
+	WaitFor 20, Text:"My Incidents"
+	
+	Click "MyIncidentsButton"
+	WaitFor 8.0, "HomeButton"
+	Click "HomeButton"
+end createIncident
+
+On ValidateIncidents
+	Click FoundImageLocation()
+	waitfor 20 ,(text:"Denise Smith"),( text:"Carmen Wang")
+End ValidateIncidents
+
+On CloseMyIncident
+	Click "ConfirmButton"
+	WaitFor 20.0, "ConfirmIncidentpopup"
+	Click "YesButton"
+	wait 5
+End CloseMyIncident

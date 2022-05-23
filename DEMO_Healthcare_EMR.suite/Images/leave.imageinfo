@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2022-05-18 07:52:08 +0000";
+    CaptureHost = "SUT WebAPP";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 37;
+    HotSpotY = 20;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1023;
+    OriginalLocationY = 182;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "leave";
+    tags = ();
+}

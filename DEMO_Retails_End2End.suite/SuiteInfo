@@ -1,0 +1,13 @@
+﻿{
+    EPVersionNumber = 2111121958;
+    Schedules =     (
+    );
+    ScriptMetaData =     {
+    };
+    SuiteEncodedTextKey = "#i\":<NrqlPE$E$G.";
+    SuiteVariables = "{\n id:38,\n permalink:@\"http://18.130.252.73/product/winter-hoodie/\"\n}";
+    helpedSuitesInfo =     (
+    );
+    helperSuitesInfo =     (
+    );
+}

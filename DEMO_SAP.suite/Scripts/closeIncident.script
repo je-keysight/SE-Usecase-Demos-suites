@@ -1,0 +1,17 @@
+﻿Click (Image:"EditIncident", WaitFor:20)
+moveto foundimagelocation()+(0,50)
+wait 2
+ScrollWheelUp 20
+wait 2
+Click "Statusfield"
+Click (Image:"ProposedSolutionSelection", WaitFor:20)
+wait 2
+Click (Image:"SaveButtons", WaitFor:20)
+moveto FoundImageLocation()-(0,30)
+if imagefound (3, "OK")
+	click "OK"
+end if
+
+waitfor 20,text:"Transaction 800000"
+
+typetext controlKey,"w"

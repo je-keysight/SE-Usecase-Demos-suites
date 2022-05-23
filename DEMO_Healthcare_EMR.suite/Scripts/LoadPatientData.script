@@ -1,0 +1,6 @@
+﻿set MyExcelFile to Workbook(ResourcePath("Patients.xlsx"))
+set worksheet1 to Worksheet(MyExcelFile, 1)
+put Cell(worksheet1, [2, 1]) into Title
+put Cell(worksheet1, [2, 2]) into FirstName
+put Cell(worksheet1, [2, 3]) into LastName
+put Cell(worksheet1, [2, 4]) into DOB

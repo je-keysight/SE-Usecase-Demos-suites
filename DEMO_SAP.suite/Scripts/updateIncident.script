@@ -1,0 +1,31 @@
+﻿waitfor 20, "EditIncident"
+wait 2
+Click (Image:"EditIncident", WaitFor:20)
+moveto foundimagelocation()+(0,50)
+wait 3
+ScrollWheelUp 20
+wait 3
+Click "Statusfield"
+Click "InProcessSelection"
+wait 3
+ScrollWheelUp 20
+wait 4
+Click "AddTextButton"
+Click "ReplySelection"
+wait 4
+ScrollWheelUp 20
+wait 4
+Click "ReplyField"
+TypeText "try rebooting"
+
+
+Click (Image:"SaveButtons", WaitFor:20)
+moveto FoundImageLocation()-(0,30)
+if imagefound (3,"OK")
+	click "OK"
+end if
+
+waitfor 20,text:"Transaction 800000"
+
+
+typetext controlKey,"w"

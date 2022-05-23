@@ -1,0 +1,10 @@
+﻿to openBrowser url, browser
+	TypeText WindowsKey,"r"
+	TypeText browser&& url,returnkey
+end openBrowser
+
+to setupEnv
+	show remoteScreen
+	if the remotescreensize <> [1920,1200] then logerror "wrong resolution needs to be 1920,1200"
+end setupEnv
+

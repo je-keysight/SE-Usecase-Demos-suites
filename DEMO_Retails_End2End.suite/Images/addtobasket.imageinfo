@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-04-20 11:40:37 +0000";
+    CaptureHost = "Windows_10";
+    CaptureScreenSize = (
+        "1920",
+        "1200");
+    HasAlpha = 1;
+    HotSpotX = 52;
+    HotSpotY = 9;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1129;
+    OriginalLocationY = 517;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "addtobasket";
+    tags = ();
+}

@@ -1,0 +1,14 @@
+﻿to setUsername uname
+	Click text:"User", caseSensitive:true
+	TypeText uname
+end setUsername
+
+to setPassword password
+	Click text:"Password", caseSensitive:true
+	TypeText DecodeText(password)
+end SetPassword
+
+to doLogin
+	Click text:"Log On", contrast:"On", contrastColor:"#5296CE", contrastTolerance:"45"
+	WaitFor 10, text:"Home"
+end doLogin

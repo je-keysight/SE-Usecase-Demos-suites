@@ -42,3 +42,9 @@ to search searchterm
 	End if
 	
 end search
+
+
+to rechercher
+	Click "icon"
+	TypeText "XXXXX"
+end rechercher

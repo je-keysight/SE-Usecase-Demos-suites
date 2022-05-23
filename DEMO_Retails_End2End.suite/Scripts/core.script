@@ -1,0 +1,90 @@
+﻿to launchApp id
+	Log id
+	put JSONValue(Product().responseBody).permalink into url
+	
+	TypeText windowsKey, r
+	wait 0.5
+	
+	TypeText "chrome " & url , returnKey
+	wait 3
+	
+	WaitFor 20.0, "HOMEVWISHLIST"
+end launchApp
+
+to getRandomProduct
+	put JSONValue(Products().responseBody) into resultJson
+	put any item of resultJson into randomItem
+	
+	--Store in Suite Variables
+	set the suitevariables.id to randomItem.id
+	
+	-- Ensure we have an id return if not exit the script - This could return an error
+	if id = 0 then exit all
+	
+	return randomItem.id
+end getRandomProduct
+
+to verifyData id
+	Log id
+	
+	put JSONValue(Product().responseBody) into resultJson
+	wait 0.5
+	WaitFor 10.0, "refresh"
+	
+	put first item of resultJson.images into image
+	
+	//Check the Price
+	put resultJson.prices.currency_prefix before resultJson.prices.price
+	delete the last 2 characters of resultJson.prices.price
+	
+	set the SearchRectangle to[932,217,1546,1125]
+	if ImageFound(text:resultJson.prices.price)then log "the Price is correct"
+	
+	//Check the Name
+	if ImageFound(text:resultJson.name) then log "the Name is correct"
+	
+	//Check the Categories 
+	repeat with each item of resultJson.categories
+		if ImageFound(text:it.name)then log "The category : " & it.name && "is correct"
+	end repeat
+	
+	
+	Set the SearchRectangle to empty
+	
+	// Image
+	delete folder (suiteinfo().imagesFolder&"/temp")
+	create folder (suiteinfo().imagesFolder&"/temp")
+	
+	shell("cd" && suiteinfo().imagesFolder & "/temp; curl -O " & image.src)
+	
+	wait 5
+	set the AdaptiveImageTolerance to 65
+	if ImageFound(Image:"temp/",SearchType: "Adaptive")  then log "the Image is correct"
+	
+	
+	//Take screenshot
+	CaptureScreen ( "screen")
+end verifyData
+
+to addToBasket 
+	Click {Image:"addtobasket", WaitFor:6.5}
+	waitFor 20, text:"has been added to your cart"
+	
+	Click {Image:"basket", WaitFor:10}
+	waitFor 20,Image:"checkout"
+	
+	Click {Image:"checkout", WaitFor:10}
+	WaitFor 10, "placeorder"
+	
+	Click {Image:"placeorder", WaitFor:10}
+end addToBasket
+
+to endScenario
+	TypeText controlKey,F4
+	TypeText returnKey
+end endScenario
+
+
+to action6 variable1
+	Log "test"
+end action6

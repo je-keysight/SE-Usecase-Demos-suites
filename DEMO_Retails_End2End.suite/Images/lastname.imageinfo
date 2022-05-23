@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-04-20 11:42:07 +0000";
+    CaptureHost = "Windows_10";
+    CaptureScreenSize = (
+        "1920",
+        "1200");
+    HasAlpha = 1;
+    HotSpotX = 17;
+    HotSpotY = 55;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 732;
+    OriginalLocationY = 457;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "person-woman-leather-model-fashion-clothing-1064192-pxhere.com__new";
+    tags = ();
+}

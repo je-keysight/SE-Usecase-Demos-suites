@@ -1,0 +1,162 @@
+﻿to handle LauchApplication browserType
+	log browserType
+	typetext windowsKey, "r"
+	TypeText browserType, returnKey
+	waitFor 20, "refresh"
+end LauchApplication
+
+to handle Login url
+	set the SearchRectangle to Functions.ScreenPart("WholeScreen")
+	TypeText url, returnKey
+	
+	WaitFor 8.0, text: "Username"
+	TypeText "WK"
+	wait 1
+	Click text:"Password", waitFor: 1
+	TypeText DecodeText("^Z/0/W6QDUib"), returnKey
+	
+	set the SearchRectangle to empty
+	
+	Wait 1
+end login
+
+to handle Patient
+	WaitFor 8.0, "MiniLogo"
+	Click text: "Patient"
+end Patient
+
+to handle CreateNewPatient FirstName, LastName, DOB, Gender
+
+	--set the SearchRectangle to Functions.ScreenPart("TopHalf")
+	WaitFor 8.0, "MiniLogo"
+	Click text: "Patient"
+	Click text: "New/Search"
+	Wait 1
+	
+	set MyExcelFile to Workbook(ResourcePath("Patients.xlsx"))
+	set worksheet1 to Worksheet(MyExcelFile, 1)
+	put Cell(worksheet1, [2, 1]) into Title
+	put Cell(worksheet1, [2, 2]) into FirstName
+	put Cell(worksheet1, [2, 3]) into LastName
+	put Cell(worksheet1, [2, 4]) into DOB
+	put Cell(worksheet1, [2, 5]) into Sex
+
+	WaitFor 10, text:"Create New Patient"
+	Click text: "Unassigned"
+	
+	if imageFound(text:Title, caseSensitive:Yes , contrast:"On", contrastColor:"#FF9919", contrastTolerance:"70") then
+		Click FoundImageLocation()
+	else
+		Click text: Title, caseSensitive:Yes
+	end if
+	
+	//	Click text: "Mr.", TextStyle:"OpenEMR_Orange", contrastColor:"#FD9A18"	
+	Click text: "First Name"
+	TypeText FirstName
+	
+	Click "LastName"
+	TypeText LastName
+	
+	Click text: "Birth First Name"
+	TypeText FirstName
+	
+	Click text: "Birth Last Name"
+	TypeText LastName, tabkey
+	
+	--Click text: "DOB"
+	TypeText DOB, tabkey
+	
+	TypeText spacebar
+	Click text:Sex, caseSensitive:True
+	
+	ScrollWheelDown 5
+	set the SearchRectangle to Functions.ScreenPart("BottomHalf")
+	
+	Click text: "Create New Patient"
+	
+end CreateNewPatient
+
+to handle SearchPatient
+	WaitFor 8.0, "MiniLogo"
+	set the SearchRectangle to Functions.ScreenPart("TopHalf")
+	
+	Click text: "Patient"
+	Click text: "New/Search"	
+	
+	Click text: "First Name"
+	TypeText "Neil"
+	
+	Click "LastName"
+	TypeText "Armstrong"
+	
+	ScrollWheelDown 5
+	set the SearchRectangle to Functions.ScreenPart("BottomHalf")
+	Click "Search"
+	
+	(*
+	if ImageFound(text:"Armstrong", SearchRectangle:[610,114,1306,614]) then log "success" else log "failed"
+end SearchPatient
+	*)
+end SearchPatient
+
+to handle NewAppointment
+	Click "NewAppointment"
+	Click text:"Title"
+	TypeText "Office Visit Michael"
+	
+	set the SearchRectangle to [ImageLocation("topLeft"), ImageLocation("bottomright")]
+
+	Click text:"Patient:", caseSensitive:True
+	
+	TypeText "Michael",returnkey
+	
+	Click the second item of EveryImageLocation(Text:"Name") + [0,30]
+
+	--Appointement Date
+	Click text:"Date"
+	TypeText controlKey, a
+	TypeText "2022-05-18"
+	
+	-- Appointment Time
+	TypeText tabkey, tabkey
+	TypeText 10, tabkey
+	TypeText 30, tabkey
+	TypeText 30
+	
+	-- Room Number
+	Click ImageLocation(text:"Room Number") + [0,50]
+	Click text:"Room 2"
+	
+	Click text:"Save"
+end NewAppointment
+
+to handle Calendar
+	WaitFor 8.0, "MiniLogo"
+	Click text: "Calendar"
+end Calendar
+
+to handle Finder
+	WaitFor 8.0, "MiniLogo"
+	Click text: "Finder"
+end Finder
+
+to handle Flow
+	WaitFor 8.0, "MiniLogo"
+	Click text: "Flow"
+end Flow
+
+to handle Recalls
+	WaitFor 8.0, "MiniLogo"
+	Click text: "Recalls"
+end Recalls
+
+to handle Messages
+	WaitFor 8.0, "MiniLogo"
+	Click text: "Messages"
+end Messages
+
+to handle CloseApplication
+	typetext altkey,f4
+	Click "leave"
+	set the SearchRectangle to empty
+end CloseApplication

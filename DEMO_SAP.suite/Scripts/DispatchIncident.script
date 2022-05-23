@@ -1,0 +1,9 @@
+﻿Click text:"Dispatcher", WaitFor:20
+Click image:"DescriptionDispatcher",Waitfor:60
+put foundImagelocation().y into startdisplay
+Click Image:"CustomSelection", WaitFor:20
+wait 2
+TypeText "Toastie Incident"
+Click "Filter"
+wait 4
+Click "800000"
