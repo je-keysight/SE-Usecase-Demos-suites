@@ -1,0 +1,54 @@
+﻿--Open APp
+TypeText windowsKey, "r"
+TypeText "C:\OSGeo4W\bin\qgis-ltr-bin.exe", returnkey
+waitFor 20,text:"Recent Projects"
+
+-- Open Project
+Click "projectEdit"
+Click "openFolder"
+Click "selectfolder"
+wait 0.5
+TypeText "C:\Users\eggplant-admin\Downloads\packages\Natural_Earth_quick_start",returnkey
+Click "Filename"
+TypeText "Natural_Earth_quick_start_for_QGIS_v3", returnkey
+waitFor 20, "KeepUnavailableLayers"
+Click FoundImageLocation()
+
+
+--Ensure the map is loaded wait for a city or country to load.
+waitFor 20, text:"OMAN"
+
+
+--Navigate to coordonate and set scale
+Run Core.ScreenPart "BottomQuadrant"
+Click "Coordinate"
+TypeText controlkey, "a"
+TypeText "262000,6551000", returnkey
+
+Click "Scale"
+TypeText controlkey, "a"
+TypeText "1:4622324", returnkey
+Set the SearchRectangle to empty
+
+
+--Get all the capitals in the picture
+set Capitals to Core.getCapitals("Capital")
+
+-- Go into drawing mode
+Click "drawmode"
+waitFor 10, "drawingvectors"
+Click FoundImageLocation()
+
+--Draw
+repeat for each item capital of capitals
+	repeat for each item capital_tmp of capitals
+		if capital is not equal capital_tmp then
+			Click capital
+			Click capital_tmp
+		end if
+	end repeat
+end repeat
+
+
+
+

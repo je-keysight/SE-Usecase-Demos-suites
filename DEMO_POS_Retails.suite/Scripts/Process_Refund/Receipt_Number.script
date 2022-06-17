@@ -1,0 +1,4 @@
+﻿Click (Image:"field_ReceiptNumber", WaitFor:3)
+
+TypeText "12598"
+

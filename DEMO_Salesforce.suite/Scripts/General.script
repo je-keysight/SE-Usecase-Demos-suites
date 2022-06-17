@@ -1,0 +1,16 @@
+﻿to openSalesforceURL url
+	typetext windowsKey,"r"
+	typetext "chrome" && url, returnkey
+	waitFor 10, "refresh"
+end openSalesforceURL
+
+to loginSalesforce username, password
+	Click text:"Username", caseSensitive: true
+	TypeText username
+	Click text:"Password",caseSensitive: true
+	TypeText DecodeText(password)
+	Click text:"Log In"
+	wait 1
+	waitFor 10, "refreshing"
+	WaitFor 10, "refresh"
+end loginSalesforce

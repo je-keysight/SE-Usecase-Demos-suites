@@ -1,0 +1,100 @@
+﻿to openApp
+	TypeText windowsKey, "r"
+	TypeText "C:\OSGeo4W\bin\qgis-ltr-bin.exe", returnkey
+	waitFor 20,text:"Recent Projects"
+end openApp
+
+to openProject name, path
+	log path
+	Click "projectEdit"
+	Click "openFolder"
+	Click "selectfolder"
+	replace "\\" in path with "\"
+	Log path
+	wait 0.5
+	TypeText path,returnkey
+	Click "Filename"
+	TypeText name, returnkey
+	waitFor 20, "KeepUnavailableLayers"
+	Click FoundImageLocation()
+end openProject
+
+to navigateCoordinates coordinates
+	Run Core.ScreenPart "BottomQuadrant"
+	Click "Coordinate"
+	TypeText controlkey, "a"
+	TypeText coordinates, returnkey
+	Set the SearchRectangle to empty
+end navigateCoordinates
+
+to setScale scale
+	Run Core.ScreenPart "BottomQuadrant"
+	Click "Scale"
+	TypeText controlkey, "a"
+	TypeText scale, returnkey
+	Set the SearchRectangle to empty
+end setScale
+
+to drawMode
+	Click "drawmode"
+	waitFor 10, "drawingvectors"
+	Click FoundImageLocation()
+end drawMode
+
+to getCapitals
+	universal univ_capitals
+	set univ_capitals to EveryImageLocation("Capital")
+	return univ_capitals
+end getCapitals
+
+to linkCapitals capitals
+	universal univ_capitals
+	if capitals is empty then set capitals to univ_capitals
+	
+	repeat for each item capital of capitals
+		repeat for each item capital_tmp of capitals
+			if capital is not equal capital_tmp then
+				Click capital
+				Click capital_tmp
+			end if
+		end repeat
+	end repeat
+end linkCapitals
+
+to ScreenPart Portion
+	// Set up an easy-to-maintain property list that stores the necessary multipliers for the specified screen portion parameter value
+	set screenPortions to {
+		TopHalf: [[0,0],[1,.5]],
+		TopQuadrant:[[0,0],[1,.25]],
+		BottomQuadrant: [[0,.75],[1,1]],
+		BottomHalf: [[0,.5],[1,1]],
+		LeftHalf: [[0,0],[.5,1]],
+		RightHalf: [[.5,0],[1,1]],
+		HorizontalMiddle: [[0,.25],[1,.75]],
+		VerticalMiddle:[[.25,0],[.75,1]],
+		TopLeftQuadrant:[[0,0],[.5,.5]],
+		TopRightQuadrant:[[.5,0],[1,.5]],
+		BottomLeftQuadrant:[[0,.5],[.5,1]],
+		BottomRightQuadrant:[[.5,.5],[1,1]],
+		Center:[[.25,.25],[.75,.75]],
+	}
+	
+	set multiplier to screenPortions.(Portion) // Retrieves the value for the key in the property list. The name of the key is passed as a parameter into the function.
+	
+	// Error handling is needed in the event that an unrecognized parameter is passed to the function
+	
+	if multiplier is empty then
+		
+		throw "Parameter error", Portion && "is not a recognized screen portion."
+		
+	end if
+	
+	return (the remoteScreenSize,the remotescreenSize) * multiplier
+	
+End ScreenPart
+
+
+
+to ouput
+
+end ouput

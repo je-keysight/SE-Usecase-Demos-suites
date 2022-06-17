@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2022-06-09 10:21:05 +0000";
+    CaptureHost = "Backup SUT";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 52;
+    HotSpotY = 11;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 423;
+    OriginalLocationY = 588;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "LogIntoSandbox";
+}

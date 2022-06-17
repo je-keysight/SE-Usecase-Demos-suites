@@ -1,0 +1,17 @@
+﻿to cleanUp
+	set the SearchRectangle to empty
+	TypeText altKey, f4
+end cleanUp
+
+to setSeachRectangle
+	set the SearchRectangle to [ImageRectangle("popin/topright").TopLeft, ImageRectangle("popin/bottomleft").BottomLeft]
+end setSeachRectangle
+
+to findLabel label
+	repeat until ImageFound(text:label,waitFor:2,caseSensitive:true)
+		MoveTo [0.5,0.5] * RemoteScreenSize()
+		ScrollWheelDown 3
+		wait 0.5
+	end repeat
+	Click FoundImageLocation()
+end findLabel

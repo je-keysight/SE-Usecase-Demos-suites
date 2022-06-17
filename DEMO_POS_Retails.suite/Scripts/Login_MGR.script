@@ -1,0 +1,3 @@
+﻿TypeText "eggplant", returnKey
+
+WaitFor 10, image: "Productname"

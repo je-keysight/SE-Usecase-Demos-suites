@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-06-07 12:43:17 +0000";
+    CaptureHost = "Backup SUT";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 27;
+    HotSpotY = 8;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 818;
+    OriginalLocationY = 814;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "KeepUnavailableLayers";
+    tags = ();
+}

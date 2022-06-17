@@ -1,0 +1,168 @@
+{
+    "data": {
+        "Accounts": {
+            "name": "Account",
+            "label": "Account",
+            "label_plural": "Accounts",
+            "fields_type":[
+                    {"label":"Account Name","type": "text"},
+                    {"label":"KT Account Name","type": "text"},
+                    {"label":"KT Customer","type": "text"},
+                    {"label":"Account Tier","type": "dropdown"},
+                    {"label":"Company Name","type": "text"},
+                    {"label":"Consultant","type": "search"},
+                    {"label":"Architect","type": "search"},
+                    {"label":"Account Currency","type": "dropdown"},
+                    {"label":"Engagement Level","type": "dropdown"},
+                    {"label":"Check-In Cadence","type": "dropdown"}
+            ],
+            
+            "test_data": [
+                {
+                    "test_data_id": "example_testcase",
+                    "data": [
+                        {"label":"Account Name","value": "Account - 1"},
+                        {"label":"KT Account Name","value": "KT Account - 1"},
+                        {"label":"KT Customer","value": "00011112222"},
+                        {"label":"Account Tier","value": "Tier 3"},
+                        {"label":"Company Name","value": "Eggplant and Co"},
+                        {"label":"Consultant","value": "Mark Fernee"},
+                        {"label":"Architect","value": "Sebastien Morgant"},
+                        {"label":"Account Currency","value": "EUR"},
+                        {"label":"Engagement Level","value": "Mega Accounts"},
+                        {"label":"Check-In Cadence","value": "Monthly"}
+                    ]
+                },
+                {
+                    "test_data_id": "example_testcase_edit",
+                    "data": [
+                        {"label":"Account Name","value": "Account - 1"},
+                        {"label":"KT Account Name","value": "KT Account - 1"},
+                        {"label":"KT Customer Number","value": "00011112222"},
+                        {"label":"Account Tier","value": "Tier 3"},
+                        {"label":"Company Name","value": "Eggplant and Co"},
+                        {"label":"Technical Consultant","value": "Mark Fernee"},
+                        {"label":"Solution Architect","value": "Sebastien Morgant"},
+                        {"label":"Account Currency","value": "EUR"},
+                        {"label":"Engagement Level","value": "Mega Accounts"},
+                        {"label":"Check-In Cadence","value": "Monthly"}
+                    ]
+                },
+                {
+                    "test_data_id": "example_testcase_failure",
+                    "data": [
+                        {"label":"Account Name","value": "Account - 1"},
+                        {"label":"KT Account Name","value": "KT Account - 1"},
+                        {"label":"KT Customer Number","value": "00011112222"},
+                        {"label":"Account Tier","value": "Tier 3"},
+                        {"label":"Technical Consultant","value": "Mark Fernee"},
+                        {"label":"Solution Architect","value": "Sebastien Morgant"},
+                        {"label":"Account Currency","value": "EUR"},
+                        {"label":"Engagement Level","value": "Mega Accounts"},
+                        {"label":"Check-In Cadence","value": "Monthly"}
+                    ]
+                }
+            ]
+        },
+        "Contacts": {
+            "name": "Contact",
+            "label": "Contact",
+            "label_plural": "Contacts",
+            "fields_type":[
+                    {"label":"Salutation","type": "dropdown"},
+                    {"label":"First Name","type": "text"},
+                    {"label":"Last Name","type": "text"},
+                    {"label":"Organisation Level","type": "dropdown"},
+                    {"label":"Account Name","type": "search"},
+                    {"label":"Phone","type": "text"},
+                    {"label":"Contact - State","type": "text"}
+            ],
+            
+            "test_data": [
+                {
+                    "test_data_id": "example_testcase",
+                    "data": [
+                        {"label":"Salutation","value": "Mr"},
+                        {"label":"First Name","value": "John"},
+                        {"label":"Last Name","value": "Doe"},
+                        {"label":"Organisation Level","value": "Manager"},
+                        {"label":"Account Name","value": "Account Name 4"},
+                        {"label":"Phone","value": "0111111111"},
+                        {"label":"Contact - State","value": "NA"}
+                    ]
+                },
+                {
+                    "test_data_id": "example_testcase_edit",
+                    "data": [
+                        {"label":"Salutation","value": "Mr"},
+                        {"label":"First Name","value": "John"},
+                        {"label":"Last Name","value": "Doe"},
+                        {"label":"Organisation Level","value": "Manager"},
+                        {"label":"Account Name","value": "Account Name 4"},
+                        {"label":"Phone","value": "0111111111"},
+                        {"label":"Location of Contact","value": "NA"}
+                    ]
+                },
+                {
+                    "test_data_id": "example_testcase_failure",
+                    "data": [
+                        {"label":"Salutation","value": "Mr"},
+                        {"label":"First Name","value": "John"},
+                        {"label":"Organisation Level","value": "Manager"},
+                        {"label":"Account Name","value": "Account Name 4"},
+                        {"label":"Phone","value": "0111111111"},
+                        {"label":"Location of Contact","value": "NA"}
+                    ]
+                }
+            ]
+        },
+        "Opportunities": {
+            "name": "Opportunity",
+            "label": "Opportunity",
+            "label_plural": "Opportunities",
+            "fields_type":[
+                    {"label":"Account Name","type": "search"},
+                    {"label":"Close Date","type": "date"},
+                    {"label":"Stage","type": "dropdown"},
+                    {"label":"Opportunity Name","type": "text"},
+                    {"label":"Opportunity Type","type": "dropdown"},
+                    {"label":"How will this be paid","type": "dropdown"}
+            ],
+            
+            "test_data": [
+                {
+                    "test_data_id": "example_testcase",
+                    "data": [
+                        {"label":"Account Name","value": "Account Name 4"},
+                        {"label":"Close Date","value": "01/05/2022"},
+                        {"label":"Stage","value": "STAGE 1"},
+                        {"label":"Opportunity Name","value": "OPP-123456789"},
+                        {"label":"Opportunity Type","value": "Renewal"},
+                        {"label":"How will this be paid","value": "Upfront"}
+                    ]
+                },
+                {
+                    "test_data_id": "example_fails",
+                    "data": [
+                        {"label":"Account Name","value": "Account Name 4"},
+                        {"label":"Close Date","value": "01/05/2022"},
+                        {"label":"Stage","value": "STAGE 3"},
+                        {"label":"Opportunity Name","value": "OPP-123456789"},
+                        {"label":"Opportunity Type","value": "Renewal"},
+                        {"label":"How will this be paid","value": "Upfront"}
+                    ]
+                },
+                {
+                    "test_data_id": "example_3",
+                    "data": [
+                        {"label":"Account Name","value": "Account Name 4"},
+                        {"label":"Close Date","value": "Account Name 4"},
+                        {"label":"Stage","value": "STAGE 3"},
+                        {"label":"Opportunity Name","value": "OPP-123456789"},
+                        {"label":"How will this be paid","value": "Upfront"}
+                    ]
+                }
+            ]
+        }
+    }
+}

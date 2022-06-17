@@ -1,0 +1,25 @@
+﻿to getModuleData sf_module, sf_dataset_id
+--	set sf_module to "Contacts"
+--	set sf_dataset_id to "example_testcase"
+	
+	universal current_module_data
+	universal current_module_fields
+	
+	set metadata_fname to ResourcePath("test_data.json")
+	
+	if file metadata_fname does not exist then
+		throw "FileNotFoundError", \
+				!"test_data.json cannot be found in the included suite. " \
+				"Please check it is named correctly and uploaded to DAI successfully."
+	end if
+	
+	set data_object to JSONValue(file metadata_fname)	
+	
+	set current_module_fields to data_object.data.(sf_module).fields_type
+	set temp to the nextValue of (each item of data_object.data.(sf_module).test_data where each.test_data_id equals sf_dataset_id)
+	set current_module_data to temp.data
+	
+	Log current_module_fields
+	Log current_module_data
+	
+end getModuleData

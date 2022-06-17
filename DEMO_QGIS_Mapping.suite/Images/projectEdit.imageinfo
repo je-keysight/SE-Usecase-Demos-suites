@@ -1,0 +1,21 @@
+﻿{
+    CaptureDate = "2022-06-07 12:01:15 +0000";
+    CaptureHost = "Backup SUT";
+    CaptureScreenSize = (
+        "1920",
+        "1200");
+    HasAlpha = 1;
+    HotSpotX = 22;
+    HotSpotY = 9;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 9;
+    OriginalLocationY = 25;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "ProjectEdit";
+    tags = ();
+}

@@ -1,0 +1,3 @@
+﻿Click (Image:"Payment_Type/button_DebitCard", WaitFor:3)
+
+Click (Image:"Done", WaitFor:3)

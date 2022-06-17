@@ -1,0 +1,5 @@
+﻿Click (Image:"button_Discount", WaitFor:3)
+
+Click (Image:"button_keypad_1", WaitFor:3)
+Click (Image:"button_keypad_0", WaitFor:3)
+Click (Image:"button_keypad_returnKey", WaitFor:3)

@@ -1,0 +1,3 @@
+﻿DoubleClick "chrome"
+WaitFor 20.0, "refresh"
+

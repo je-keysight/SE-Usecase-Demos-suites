@@ -1,5 +1,0 @@
-﻿Run BInitiate.initiate "IOS-Iphone8"
-
-Run CHome.joinTable
-
-Run DGame.gameBetOrRaise

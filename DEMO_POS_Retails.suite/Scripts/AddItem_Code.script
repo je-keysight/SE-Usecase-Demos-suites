@@ -1,0 +1,24 @@
+﻿params itemCode
+(*Click (Image:"Code", WaitFor:3)
+Click (Image:"Code_selected", WaitFor:3)*)
+
+If ImageFound(image: "Code_selected")
+else if imageFound(image: "Code")
+	Click FoundImageLocation()
+End If
+
+Click "Icon_MagnifyingGlass"
+TypeText ControlKey,"a"
+TypeText DeleteKey
+
+TypeText itemCode
+
+Wait 2
+
+TypeText returnKey
+
+Wait 2
+
+TypeText returnKey
+
+Wait 2

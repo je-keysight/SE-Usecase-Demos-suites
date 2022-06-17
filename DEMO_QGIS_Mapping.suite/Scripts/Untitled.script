@@ -1,0 +1,10 @@
+(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2022-06-09 11:21:02
+  From session:  untitled session
+  Captured on:  2022-06-09 11:20:20
+  From server:  BackupSUT
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+DoubleClick "image0001"
+Click (Image:"image0002", WaitFor:3)
+Click (Image:"LogIntoSandbox", WaitFor:3)

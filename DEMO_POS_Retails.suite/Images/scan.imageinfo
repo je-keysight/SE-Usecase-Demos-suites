@@ -1,0 +1,18 @@
+﻿{
+    CaptureDate = "2019-10-10 15:44:18 +0000";
+    CaptureHost = "Win7_SUT";
+    CaptureScreenSize =     (
+        1440,
+        810
+    );
+    HasAlpha = 1;
+    HotSpotX = 14;
+    HotSpotY = 9;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 16;
+    OriginalLocationY = 41;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+}

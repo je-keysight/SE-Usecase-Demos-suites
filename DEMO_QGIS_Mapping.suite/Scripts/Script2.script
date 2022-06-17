@@ -1,0 +1,24 @@
+﻿--Start the App
+Run Core.openApp
+
+--Open the project
+Run Core.openProject "Natural_Earth_quick_start_for_QGIS_v3","C:\Users\eggplant-admin\Downloads\packages\Natural_Earth_quick_start"
+
+--Ensure the map is loaded wait for a city or country to load.
+waitFor 20, text:"OMAN"
+
+--Navigate to coordonate and scale
+Run Core.navigateCoordinates "262000,6551000"
+Run Core.setScale "1:4622324"
+
+--Get all the capitals in the picture
+set Capitals to Core.getCapitals()
+
+-- Go into drawing mode
+Run Core.drawMode
+
+--Draw
+Run Core.linkCapitals Capitals
+
+
+

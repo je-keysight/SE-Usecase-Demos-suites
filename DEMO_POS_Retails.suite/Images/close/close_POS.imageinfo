@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2019-12-15 22:54:18 +0000";
+    CaptureHost = "Eggplant_Server";
+    CaptureScreenSize =     (
+        1920,
+        1080
+    );
+    HasAlpha = 1;
+    HotSpotX = 10;
+    HotSpotY = 13;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1887;
+    OriginalLocationY = 2;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    tags =     (
+    );
+}

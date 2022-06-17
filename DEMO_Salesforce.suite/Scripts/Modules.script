@@ -1,0 +1,145 @@
+﻿to openModule sf_module
+	CaptureScreen ("Open Module" && sf_module)
+	--WaitFor 10.0, (Text:"Tell Me More")
+	
+	wait 2
+	set sf_menu_location to ImageRectangle(Image:"sf_menu")
+	
+	Click the center of sf_menu_location
+	set the SearchRectangle to [the BottomLeft of sf_menu_location,RemoteScreenSize()]
+	waitFor 10, text:"Apps", caseSensitive:true
+	TypeText sf_module
+	wait 0.5
+	TypeText returnkey
+	set the SearchRectangle to empty
+	if sf_module is not "ClosePlan" then
+		replace the last "ies" in sf_module by ""
+		replace the last "s" in sf_module by ""
+		WaitFor 10, text:sf_module & "/list"
+		MoveTo [300,300]
+	end if
+	
+end openModule
+
+to openSubModule
+	CaptureScreen ("Open Sub Module" && sf_module)
+	Click text:"ClosePlan App"
+	WaitFor 10, text:"/TSPC_CP"
+end openSubModule
+
+to checkModule sf_module
+	CaptureScreen ("Wait For Module" && sf_module)
+	universal header_location
+	set header_location to [ImageRectangle("sf_menu").BottomLeft,[the first item of RemoteScreenSize(),ImageRectangle(text:"Search this list").Top]]
+	set the SearchRectangle to header_location
+	waitFor 20, text:sf_module
+	set the SearchRectangle to empty
+end checkModule
+
+to createNewItem
+	CaptureScreen ("Create New Object")
+	
+	universal header_location
+	set the SearchRectangle to header_location
+	Click text:"New"
+	set the SearchRectangle to empty
+end createNewItem
+
+to cancel
+	CaptureScreen ("Cancel Object creation")
+	Click text:"Cancel"
+end cancel
+
+to save
+	CaptureScreen ("Save Object")
+	Click text:"Save", contrast:"On", contrastColor:"#6C4E8C", contrastTolerance:"35"
+end save
+
+to editHandler
+	CaptureScreen ("Edit Object")
+	Click text:"Edit"
+end editHandler
+
+to viewAccount
+	CaptureScreen ("Open Object")
+	universal current_module_data
+	
+	Log EveryImageLocation(text:(the first item of current_module_data).label)
+	
+	set the SearchRectangle to empty
+	
+	Click text:"Search this list"
+	TypeText (the first item of current_module_data).value, returnkey
+	Click (the first item of EveryImageLocation(text:(the first item of current_module_data).label)) + [0,30]
+
+end viewAccount
+
+to deleteObject
+	Click "delete-arrow"
+	Click text:"Delete"
+	waitFor 10, text:"Are you sure you want to delete"
+end deleteObject
+
+to confirmDelete
+	Click the third item of EveryImageLocation(text:"Delete")
+end confirmDelete
+
+to successCreation
+	CaptureScreen ("Object created")
+	set the SearchRectangle to empty
+	waitFor 20, text:"was created"
+end successCreation
+
+to errorCheck
+	if ImageFound (Text:"We hit a snag", contrastColor:[175,44,49], contrastTolerance:"55", contrast:"On",WaitFor:1) then
+		return false
+	else
+		return true
+	end if
+end errorCheck
+
+to enterDataDetails
+	--Run Utils.setSeachRectangle
+	universal current_module_data
+	universal current_module_fields
+	
+	Repeat with each item it of current_module_fields
+		
+		set current_row to item 1 of (each item of current_module_data where trim(each.label) equals it.label)
+		Log it
+		If it.type = ...
+			... "text" :
+				Log it.type && it.label
+				Run Utils.findLabel it.label
+				TypeText current_row.value
+				Click [0.5,0.5] * RemoteScreenSize()
+				wait 0.2
+			... "date" :
+				Log it.type && it.label
+				Run Utils.findLabel it.label
+				TypeText current_row.value
+				Click [0.5,0.5] * RemoteScreenSize()
+				wait 0.2
+			... "dropdown" :
+				Log it.type && it.label
+				Run Utils.findLabel it.label
+				TypeText current_row.value
+				Click text:current_row.value
+				Click [0.5,0.5] * RemoteScreenSize()
+				wait 1
+			... "search" :
+				Log it.type && it.label
+				Run Utils.findLabel it.label
+				TypeText current_row.value
+				wait 1
+				waitFor 10, text:"Show All Results", caseSensitive:true
+				Click "search"
+				Click [0.5,0.5] * RemoteScreenSize()
+				wait 0.2
+			... Else
+				LogError "Type Not Set"
+				exit all
+		End if
+	End repeat
+	
+end enterDataDetails

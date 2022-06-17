@@ -1,0 +1,6 @@
+﻿--Click (Image:"close/close_POS", WaitFor:5)
+TypeText WindowsKey, "r"
+
+TypeText "C:\Program Files\Aronium\Aronium.Pos.exe", returnKey
+
+WaitFor 15, "AroniumLogo"
