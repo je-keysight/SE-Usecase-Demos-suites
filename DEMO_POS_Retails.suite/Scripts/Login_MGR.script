@@ -1,3 +1,9 @@
-﻿TypeText "eggplant", returnKey
+﻿params password
+
+CaptureScreen
+
+TypeText DecodeText(password), returnKey
 
 WaitFor 10, image: "Productname"
+
+CaptureScreen

@@ -6,7 +6,7 @@ If lineitems > 0
 	Click "Delete"
 End If
 
-If ImageFound(image:"Noitems")
+If ImageFound(text:"No items", waitFor:3)
 	Set cartempty to true
 	return cartempty
 else

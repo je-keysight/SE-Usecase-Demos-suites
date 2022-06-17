@@ -4,7 +4,7 @@ Put the number of items in addeditems into lineitems
 If lineitems > 0
 	Click item random(lineitems) of addeditems
 	Click "QuantityBtn"
-	
-	TypeText random(5), returnKey
+	TypeText random(2,5), returnKey
 End If
 
+CaptureScreen

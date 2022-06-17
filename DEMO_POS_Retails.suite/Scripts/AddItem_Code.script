@@ -1,4 +1,5 @@
 ﻿params itemCode
+CaptureScreen
 (*Click (Image:"Code", WaitFor:3)
 Click (Image:"Code_selected", WaitFor:3)*)
 
@@ -12,9 +13,7 @@ TypeText ControlKey,"a"
 TypeText DeleteKey
 
 TypeText itemCode
-
 Wait 2
-
 TypeText returnKey
 
 Wait 2
@@ -22,3 +21,4 @@ Wait 2
 TypeText returnKey
 
 Wait 2
+CaptureScreen
