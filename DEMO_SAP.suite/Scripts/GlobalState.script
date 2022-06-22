@@ -1,6 +1,7 @@
 ﻿to cleanUp
 	typetext altKey,F4
 	set the SearchRectangle to empty
+	StopMovie
 end cleanUp
 
 to logout

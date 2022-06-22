@@ -1,14 +1,13 @@
 ﻿{
     CaptureDate = "2019-07-03 10:16:04 +0000";
-    CaptureHost = WinSUT;
-    CaptureScreenSize =     (
-        1920,
-        1440
-    );
+    CaptureHost = "WinSUT";
+    CaptureScreenSize = (
+        "1920",
+        "1440");
     HasAlpha = 1;
     HotSpotX = 43;
     HotSpotY = 10;
-    ImageDescription = {length = 0, bytes = 0x};
+    ImageDescription = <>;
     LastKnownLocationX = 0;
     LastKnownLocationY = 0;
     OriginalLocationX = 435;
@@ -16,6 +15,5 @@
     Precise = 0;
     Pulsing = 0;
     Scale = 1;
-    tags =     (
-    );
+    tags = ();
 }

@@ -21,12 +21,57 @@ to createIncident priority, category
 	
 	Click (Text:"Create", contrastColor:(81,150,206), contrastTolerance:"45", WaitFor:8, contrast:"On")
 	
-	WaitFor 20, Text:"My Incidents"
+	WaitFor 30, Image:"incidentDetails"
 	
-	Click "MyIncidentsButton"
+	Repeat while ImageFound(text:"No data", caseSensitive:true, waitFor:3)
+		Log "Loading - let's wait"
+	End repeat
+	
+	Click (Image:"incidentDetails", WaitFor:3.4)
+	
+	set incidentNbrLabel to ImageRectangle(text:"Incident Number:", caseSensitive:true)
+	Set incidentNbr to ReadText(the topRight of IncidentNbrLabel , the bottomRight of IncidentNbrLabel + [300,0])
+	
+	Log incidentNbr
+	
+	set logolocation to ImageRectangle("sap-logo")
+	set the SearchRectangle to [the topright of logolocation, the bottomRight of logolocation + [300,0]]
+	
+	WaitFor 20, Text:"My Incidents"
+	Click Text:"My Incidents"
+	
+	set the SearchRectangle to empty
+	
 	WaitFor 8.0, "HomeButton"
 	Click "HomeButton"
+	return incidentNbr
 end createIncident
+
+to dispatcher incidentID
+	Click text:"Dispatcher", WaitFor:20
+	
+	set the SearchRectangle to empty
+	
+	set logolocation to ImageRectangle(Image:"sap-logo", waitFor: 20)
+	set the SearchRectangle to [the bottomLeft of logolocation, [300,the RemoteScreenSize.y]]
+
+	Click Image:"incidentManagement"
+	Click text:"Incidents", caseSensitive: True
+	set the SearchRectangle to empty
+	
+	Click "IncidentID"
+	TypeText incidentID
+	
+	set searchbutton to ImageRectangle(Image:"Search")
+	
+	Click FoundImageLocation()
+	
+	set the SearchRectangle to [the bottomLeft of searchbutton, the RemoteScreenSize]
+	
+	Click text:incidentID
+	
+	set the SearchRectangle to empty
+end dispatcher
 
 On ValidateIncidents
 	Click FoundImageLocation()
@@ -38,4 +83,5 @@ On CloseMyIncident
 	WaitFor 20.0, "ConfirmIncidentpopup"
 	Click "YesButton"
 	wait 5
+	if ImageFound(text:"Confirm error") then Click text:"Close"
 End CloseMyIncident

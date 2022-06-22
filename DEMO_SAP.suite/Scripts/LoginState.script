@@ -1,14 +1,39 @@
 ﻿to setUsername uname
+	set logolocation to ImageRectangle("sap-logo")
+	set copyrightlocation to ImageRectangle("copyright")
+	set the SearchRectangle to [the bottomRight of logolocation, the topLeft of copyrightlocation]
+
 	Click text:"User", caseSensitive:true
 	TypeText uname
+	
+	set the SearchRectangle to empty
 end setUsername
 
 to setPassword password
+	set logolocation to ImageRectangle("sap-logo")
+	set copyrightlocation to ImageRectangle("copyright")
+	set the SearchRectangle to [the bottomRight of logolocation, the topLeft of copyrightlocation]
+
 	Click text:"Password", caseSensitive:true
 	TypeText DecodeText(password)
+	
+	set the SearchRectangle to empty
 end SetPassword
 
 to doLogin
+	set logolocation to ImageRectangle("sap-logo")
+	set copyrightlocation to ImageRectangle("copyright")
+	set the SearchRectangle to [the bottomRight of logolocation, the topLeft of copyrightlocation]
+
 	Click text:"Log On", contrast:"On", contrastColor:"#5296CE", contrastTolerance:"45"
+	
+	set the SearchRectangle to empty
+	
+	set logolocation to ImageRectangle("sap-logo")
+	set the SearchRectangle to [the topright of logolocation, the bottomRight of logolocation + [300,0]]
+	
 	WaitFor 10, text:"Home"
+	
+	set the SearchRectangle to empty
+	
 end doLogin

@@ -1,19 +1,18 @@
 ﻿{
-    CaptureDate = "2022-06-21 14:45:06 +0000";
+    CaptureDate = "2022-06-21 14:34:48 +0000";
     CaptureHost = "CloudSUT-1";
     CaptureScreenSize = (
         1920,
         1200);
     HasAlpha = 1;
-    HotSpotX = 396;
-    HotSpotY = 5;
+    HotSpotX = 24;
+    HotSpotY = 7;
     LastKnownLocationX = 0;
     LastKnownLocationY = 0;
-    OriginalLocationX = 217;
-    OriginalLocationY = 405;
+    OriginalLocationX = 15;
+    OriginalLocationY = 115;
     Precise = 0;
     Pulsing = 0;
     Scale = 1;
-    SearchAlgorithm = "TextSmoothSquare";
-    tags = ();
+    SearchObjectName = "sap-logo";
 }
