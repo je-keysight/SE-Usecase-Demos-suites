@@ -1,0 +1,7 @@
+﻿Click "FW Assignment Camera Positions/Grade 1 RH FW"
+Wait 1
+Click  "FW Inspection Attribuites/GradeDropDown Selector"
+Click "Generic Grades/Grade1Option"
+Click "FW Inspection Attribuites/PrimarySurfaceTypeDropDownSelector"
+Click "FW Primary Surface Types/CobblestoneSettsPrimarySurfaceType"
+Click "FW Inspection Attribuites/FW InspectionPanelSaveButton"

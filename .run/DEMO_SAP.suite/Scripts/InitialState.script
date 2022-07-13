@@ -1,0 +1,12 @@
+﻿to openBrowser url, browser
+	TypeText WindowsKey,"r"
+	wait 0.5
+	TypeText browser&& url,returnkey
+end openBrowser
+
+to setupEnv debug
+	show remoteScreen
+	if the remotescreensize <> [1920,1200] then logerror "wrong resolution needs to be 1920,1200"
+	if debug then StartMovie "Recording-Movie"
+end setupEnv
+

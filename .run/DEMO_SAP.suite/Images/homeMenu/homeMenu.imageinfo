@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-05-19 19:47:38 +0000";
+    CaptureHost = "SUT WebAPP";
+    CaptureScreenSize = (
+        "1920",
+        "1200");
+    HasAlpha = 1;
+    HotSpotX = 9;
+    HotSpotY = 10;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 270;
+    OriginalLocationY = 116;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "homeMenu";
+    tags = ();
+}

@@ -1,0 +1,24 @@
+﻿{
+    CaptureDate = "2019-07-03 09:33:35 +0000";
+    CaptureHost = WinSUT;
+    CaptureScreenSize =     (
+        1920,
+        1440
+    );
+    HasAlpha = 1;
+    HotSpotX = 21;
+    HotSpotY = 12;
+    ImageDescription = {length = 0, bytes = 0x};
+    ImageTolerance = 77;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 501;
+    OriginalLocationY = 285;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = TextSmoothSquare;
+    SearchObjectName = TitleField;
+    tags =     (
+    );
+}

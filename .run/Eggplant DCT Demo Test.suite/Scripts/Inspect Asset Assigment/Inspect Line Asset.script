@@ -1,0 +1,9 @@
+﻿Click "Asset Shape Button/Line Shape"
+Wait 0.5
+Click  "Asset Camera Shape Poitions/Line Shape Point 1"
+DoubleClick   "Asset Camera Shape Poitions/Line Shape Point 2"
+Wait 1
+Click "Asset Category Buttons/OnStreetParkingButton"
+Click "Asset Category Fields/ParkingDetailsField"
+TypeText 123456
+Click "Asset Inspection Panel Controls/Asset Inspection Save Button"

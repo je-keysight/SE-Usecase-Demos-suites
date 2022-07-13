@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2022-06-21 21:14:43 +0000";
+    CaptureHost = "CloudSUT-1";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 33;
+    HotSpotY = 22;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 866;
+    OriginalLocationY = 285;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "incidentDetails";
+    tags = ();
+}

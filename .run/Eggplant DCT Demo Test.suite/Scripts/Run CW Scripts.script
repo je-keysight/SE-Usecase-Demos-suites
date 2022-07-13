@@ -1,0 +1,15 @@
+﻿Run AccessDCTAssignmentsPage
+Run "Open A CW Assignment"
+Wait 3
+Run "Inspect CW Assignment/Inspect CW Grade 1 Record"
+Wait .5
+Run "Inspect CW Assignment/Inspect CW Grade 2 Record"
+Wait .5
+Run "Inspect CW Assignment/Inspect CW Grade 3 Record"
+Wait .5
+Run "Inspect CW Assignment/Inspect CW Grade 4 Record"
+Wait .5
+Run "Inspect CW Assignment/Inspect CW Grade 5 Record"
+Wait .5
+Run "Inspect CW Assignment/Inspect CW UTS Record"
+Run "Exit Assignment"

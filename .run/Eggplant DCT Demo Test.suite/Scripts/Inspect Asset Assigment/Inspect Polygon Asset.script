@@ -1,0 +1,17 @@
+﻿Click  "Generic Camera View Controls/MoveForward5mButton"
+Wait 1
+Click "Asset Shape Button/Polygon Shape Button"
+Wait 1
+
+Click "Asset Camera Shape Poitions/Square Shape Point 1"
+Click "Asset Camera Shape Poitions/Square Shape Point 2"
+Click  "Asset Camera Shape Poitions/Square Shape Point 3"
+Click  "Asset Camera Shape Poitions/Square Shape Point 4"
+Click "Asset Camera Shape Poitions/Square Shape Point 1"
+
+
+Wait 1
+Click  "Asset Category Buttons/AntiSkidButton"
+Click "Asset Category Fields/AntiSkidTickBox"
+
+Click "Asset Inspection Panel Controls/Asset Inspection Save Button"

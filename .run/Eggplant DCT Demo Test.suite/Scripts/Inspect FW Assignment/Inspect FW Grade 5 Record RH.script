@@ -1,0 +1,11 @@
+﻿Click  "Generic Camera View Controls/MoveForward5mButton"
+Wait 2
+Click "FW Assignment Camera Positions/Grade 5 RH FW"
+Click  "FW Inspection Attribuites/GradeDropDown Selector"
+Click  "Generic Grades/Grade5Option"
+Click "FW Inspection Attribuites/PrimarySurfaceTypeDropDownSelector"
+Click "FW Primary Surface Types/BituminousPrimarySurfaceType"
+Click "FW Inspection Attribuites/DamageAreaDropDownSelector"
+Click "Generic DamageAreaValues/75% to 100%"
+Click "FW Priamry Damage Types/FrettingPrimaryDamageType"
+Click "FW Inspection Attribuites/FW InspectionPanelSaveButton"

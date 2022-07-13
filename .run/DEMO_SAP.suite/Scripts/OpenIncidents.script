@@ -1,0 +1,7 @@
+﻿to closeMyIncident
+	Click "ConfirmButton"
+	WaitFor 20.0, text:"Confirm Incident", caseSensitive:True
+	Click "YesButton"
+	wait 5
+--if ImageFound(text:)
+End closeMyIncident

@@ -1,0 +1,3 @@
+﻿Run "Post New Team"
+
+Assert that api().statusCode is 200

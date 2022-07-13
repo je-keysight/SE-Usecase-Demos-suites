@@ -1,0 +1,21 @@
+﻿Click  "Generic Camera View Controls/MoveForward5mButton"
+Wait 2
+Click "FW Assignment Camera Positions/Grade 2 RH FW"
+Click  "FW Inspection Attribuites/GradeDropDown Selector"
+Click "Generic Grades/Grade2Option"
+Click "FW Inspection Attribuites/PrimarySurfaceTypeDropDownSelector"
+ScrollWheelDown 1
+Click "FW Primary Surface Types/ConcretePrimarySurfaceType"
+Click "FW Inspection Attribuites/SecondarySurfaceTypeDropDownSelector"
+Click "FW Secondary Damage Types/AggregateNonBoundSecondaryDamageType"
+Click "FW Inspection Attribuites/DamageAreaDropDownSelector"
+Click "Generic DamageAreaValues/5% to 25%"
+Click "FW Priamry Damage Types/ChippinglossPrimaryDamageType"
+Click "FW Secondary Damage Types/HeaveSecondaryDamageType"
+Click "FW Inspection Attribuites/FW InspectionPanelSaveButton"
+
+
+
+
+
+

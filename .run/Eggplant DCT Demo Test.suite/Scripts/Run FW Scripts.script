@@ -1,0 +1,22 @@
+﻿Run AccessDCTAssignmentsPage
+
+Run "Open a FW Assignment"
+
+Run "Inspect FW Assignment/Inspect FW Grade 1 Record RH"
+Run "Inspect FW Assignment/Inspect FW Grade 1 Record LH"
+Run "Inspect FW Assignment/Inspect FW Grade 2 Record RH"
+Run "Inspect FW Assignment/Inspect FW Grade 2 Record LH"
+Run "Inspect FW Assignment/Inspect FW Grade 3 Record RH"
+Run "Inspect FW Assignment/Inspect FW Grade 3 Record LH"
+Run "Inspect FW Assignment/Inspect FW Grade 4 Record RH"
+Run "Inspect FW Assignment/Inspect FW Grade 4 Record LH"
+Run "Inspect FW Assignment/Inspect FW Grade 5 Record RH"
+Run "Inspect FW Assignment/Inspect FW Grade 5 Record LH"
+Run "Inspect FW Assignment/Inspect FW UTS Record RH"
+Run "Inspect FW Assignment/Inspect FW UTS Record LH"
+
+
+Run "Exit Assignment"
+
+
+

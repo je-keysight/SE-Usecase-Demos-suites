@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2022-07-11 10:28:50 +0000";
+    CaptureHost = "CloudSUT-1";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 6;
+    HotSpotY = 10;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 15;
+    OriginalLocationY = 1171;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "windowsLogo";
+    tags = ();
+}

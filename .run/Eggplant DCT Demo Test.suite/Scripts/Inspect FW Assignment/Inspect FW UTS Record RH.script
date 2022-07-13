@@ -1,0 +1,7 @@
+﻿Click  "Generic Camera View Controls/MoveForward5mButton"
+Wait 2
+Click "FW Assignment Camera Positions/UTS RH FW"
+Click "FW Inspection Attribuites/UnableToSurveyTickBox"
+Click "FW Inspection Attribuites/CommentsDropDownSelector"
+Click "FW UTS Reasons/UnabletoSurveyNoVideoFootage"
+Click "FW Inspection Attribuites/FW InspectionPanelSaveButton"

@@ -1,0 +1,16 @@
+﻿Click "Generic Camera View Controls/MoveForward5mButton"
+Wait 1
+Click  "CW Camera Icons Positions/CameraIconCWRecordGrade2"
+Wait 1
+Click "CW Inspection Attributes/GradeDropdownSelector"
+Click  "Generic Grades/Grade2Option"
+Click "CW Inspection Attributes/PrimarySurfaceTypeDropDownSelector"
+ScrollWheelDown 4
+Click "CW Primary Surface Types/PatternImprintedConcretePrimarySurfaceTypeOption"
+Click  "CW Inspection Attributes/SecondarySurfaceTypeDropDownSelector"
+ScrollWheelDown 2
+Click "CW Secondary Surface Type/HRASecondarySurfaceTypeOptions"
+click "CW Inspection Attributes/DamageAreaDropDownSelector"
+Click  "Generic DamageAreaValues/Less than 5%"
+Click  "CW Primary Damage Type/CrackinqsealedPrimaryDamageType"
+click "CW Inspection Attributes/InspectionPanelSaveButton"

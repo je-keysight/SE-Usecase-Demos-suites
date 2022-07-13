@@ -1,0 +1,31 @@
+﻿Click text:"Dispatcher", WaitFor:20
+
+set the SearchRectangle to empty
+
+set logolocation to ImageRectangle(Image:"sap-logo", waitFor: 20)
+set the SearchRectangle to [the bottomLeft of logolocation, [300,the RemoteScreenSize.y]]
+
+Click Image:"incidentManagement"
+Click text:"Incidents", caseSensitive: True
+set the SearchRectangle to empty
+
+Click image:"DescriptionDispatcher",Waitfor:60
+wait 1
+TypeText "Toastie Incident"
+
+Click image:"statussearch"
+ScrollWheelDown 10
+Click Image:"NewZMINZIncident"
+
+set searchbutton to ImageRectangle(Image:"Search")
+
+Click FoundImageLocation()
+
+set the SearchRectangle to [the bottomLeft of searchbutton, the RemoteScreenSize]
+
+Click Text:"Created On"
+Click text:"Sort Descending"
+
+Click text:"800000"
+
+set the SearchRectangle to empty
