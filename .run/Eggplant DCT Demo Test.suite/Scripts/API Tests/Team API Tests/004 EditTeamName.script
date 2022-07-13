@@ -1,2 +1,0 @@
-﻿Run "PutUpdate Team Name"
-Assert that api().statusCode is 200

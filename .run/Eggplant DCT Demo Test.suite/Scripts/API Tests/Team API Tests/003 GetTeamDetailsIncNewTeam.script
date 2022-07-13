@@ -1,9 +1,0 @@
-﻿Run "Get Team Details"
-Assert that api().statusCode is 200
-
-
-Assert that api().responseBody  contains "SB"
-Assert that api().responseBody  contains "Team 2"
-Assert that api().responseBody  contains "Team 3"
-
-Assert that api().responseBody contains "New Team"

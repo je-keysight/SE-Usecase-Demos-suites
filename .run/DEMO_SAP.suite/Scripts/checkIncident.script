@@ -1,4 +1,0 @@
-﻿Click (Image:"MyIncidents", WaitFor:20)
-WaitFor 20, text:"Toastie Incident"
-Click FoundImageLocation()
-waitfor 20 ,(text:"Denise Smith"),( text:"Carmen Wang")

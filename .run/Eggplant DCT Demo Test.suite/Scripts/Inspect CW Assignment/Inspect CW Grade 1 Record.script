@@ -1,9 +1,0 @@
-﻿Click  "CW Camera Icons Positions/CameraIconCWRecordGrade1"
-wait 2
-
-
-Click  "CW Inspection Attributes/GradeDropdownSelector", 
-Click  "Generic Grades/Grade1Option"
-Click  "CW Inspection Attributes/PrimarySurfaceTypeDropDownSelector"
-Click  "CW Primary Surface Types/ColouredBituminousPrimarySurfaceTypeOption"
-Click "CW Inspection Attributes/InspectionPanelSaveButton"

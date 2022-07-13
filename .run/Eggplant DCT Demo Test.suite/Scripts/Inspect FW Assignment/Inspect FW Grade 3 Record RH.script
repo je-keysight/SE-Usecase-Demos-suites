@@ -1,9 +1,0 @@
-﻿Click  "Generic Camera View Controls/MoveForward5mButton"
-Wait 2
-Click  "FW Assignment Camera Positions/Grade 3 RH FW"
-Click  "FW Inspection Attribuites/GradeDropDown Selector"
-Click "Generic Grades/Grade3Option"
-Click "FW Inspection Attribuites/PrimarySurfaceTypeDropDownSelector"
-ScrollWheelDown 3
-Click "FW Priamry Damage Types/UnmadeFootwayPrimaryDamageType"
-Click "FW Inspection Attribuites/FW InspectionPanelSaveButton"

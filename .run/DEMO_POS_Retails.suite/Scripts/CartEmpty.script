@@ -1,6 +1,0 @@
-﻿If ImageFound(image:"Noitems")
-	Set cartempty to true
-else
-	Set cartempty to false
-	return cartempty
-End If

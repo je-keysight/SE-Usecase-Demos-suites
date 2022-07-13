@@ -1,6 +1,0 @@
-﻿Run AccessDCTAssignmentsPage
-Run "Open An Asset Assignment"
-Run "Inspect Asset Assigment/Inspect Line Asset"
-Run "Inspect Asset Assigment/Inspect Polygon Asset"
-Run "Inspect Asset Assigment/Inspect Point Asset"
-Run "Exit Assignment"

@@ -1,7 +1,0 @@
-﻿
-Run "API Tests/Team API Tests/001 GetTeamDetails"
-Run "API Tests/Team API Tests/002 SetUpNewTeam"
-Run "API Tests/Team API Tests/003 GetTeamDetailsIncNewTeam"
-Run "API Tests/Team API Tests/004 EditTeamName"
-Run "API Tests/Team API Tests/005 GetTeamDetailsEditTeamName"
-Run "API Tests/Team API Tests/006 ResetTeamName"

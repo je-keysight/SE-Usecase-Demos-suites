@@ -1,3 +1,0 @@
-﻿Click (Image:"Payment_Type/button_Check", WaitFor:3)
-
-Click (Image:"Done", WaitFor:3)

@@ -1,3 +1,0 @@
-﻿Click (Text:"CASH", WaitFor:3)
-
-Click (Image:"button_OK", WaitFor:3)

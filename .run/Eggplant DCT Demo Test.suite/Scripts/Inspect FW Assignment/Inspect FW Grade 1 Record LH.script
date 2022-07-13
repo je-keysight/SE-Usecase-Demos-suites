@@ -1,9 +1,0 @@
-﻿Click "FW Assignment Camera Positions/Grade 1 LH FW"
-Wait 1
-Click "FW Inspection Attribuites/GradeDropDown Selector"
-Click "Generic Grades/Grade1Option"
-Click "FW Inspection Attribuites/PrimarySurfaceTypeDropDownSelector"
-Click "FW Primary Surface Types/FlagsPrimarySurfaceType"
-
-Click "FW Inspection Attribuites/FW InspectionPanelSaveButton"
-

@@ -1,5 +1,0 @@
-﻿--Click "close/close_POS"
-
-
-Click (Image:"AroniumPOS", WaitFor:2)
-Click (Image:"XClose", WaitFor:2)
