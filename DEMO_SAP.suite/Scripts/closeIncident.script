@@ -14,4 +14,19 @@ end if
 
 waitfor 20,text:"Transaction 800000"
 
-typetext controlKey,"w"
+Click text:"Log off"
+
+if ImageFound("OKButton2") then Click FoundImageLocation()
+wait 2
+
+--typetext controlKey,"w"
+typeText altKey,f4
+Run InitialState.openBrowser "https://www.sapsolutionmanagerdemo.com/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html","chrome"
+
+(*waitFor 10, "UserIcon"
+Click Image:"refresh"
+wait 2
+moveto [200,200]
+waitFor 30, "loading"*)
+
+waitFor 120, "refresh"
