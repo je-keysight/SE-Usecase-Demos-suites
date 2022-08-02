@@ -5,15 +5,15 @@
 	waitFor 20, "refresh"
 end LauchApplication
 
-to handle Login url
+to handle Login url, username, password
 	set the SearchRectangle to Functions.ScreenPart("WholeScreen")
 	TypeText url, returnKey
 	
 	WaitFor 8.0, text: "Username"
-	TypeText "WK"
+	TypeText username
 	wait 1
 	Click text:"Password", waitFor: 1
-	TypeText DecodeText("^Z/0/W6QDUib"), returnKey
+	TypeText DecodeText(password), returnKey
 	
 	set the SearchRectangle to empty
 	
