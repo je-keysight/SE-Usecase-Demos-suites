@@ -1,18 +1,1 @@
-﻿Run General.openSalesforceURL "https://eggplant--marktest.my.salesforce.com"
 
-
-Run General.loginSalesforce "sebastien.morgant@keysight.com.marktest", "S;q{s7"
-
-
-Run Modules.openModule "Contacts"
-
-WaitFor 10, text:"Contact/list"
-Set it.label to "Account Currency"
-set current_row.value to "EUR"
-
-
-Run Utils.findLabel it.label
-TypeText current_row.value
-Click text:current_row.value
-
-StopMovie
