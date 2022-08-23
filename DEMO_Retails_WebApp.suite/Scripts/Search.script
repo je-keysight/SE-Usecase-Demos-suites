@@ -11,11 +11,11 @@ end selectitem
 
 to addtobasket itemsincart
 	Log "select random Item and add to basket"
-	If ImageFound(text:"Add to cart") is not true then
+	If ImageFound(text:"Add to basket") is not true then
 		MoveTo [200,200]
 		ScrollWheelDown 2
 	end if
-	set objects to EveryImageLocation(text:"Add to cart")
+	set objects to EveryImageLocation(text:"Add to basket")
 	put the number of items in objects into objects_nbr
 	Click  item random(1,objects_nbr) of objects
 	waitFor 10, "addedttobasket"
@@ -25,7 +25,7 @@ end addtobasket
 to basket
 	ScrollWheelUp 200
 	wait 1
-	Click text:"Cart", contrast:"On"
+	Click text:"Cart", contrast:"On", SearchRectangle:[[0,50],[the first item of the RemoteScreenSize,200]]
 	WaitFor 10, "yourbasket"
 end basket
 

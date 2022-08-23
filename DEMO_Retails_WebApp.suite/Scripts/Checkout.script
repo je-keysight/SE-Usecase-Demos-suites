@@ -25,6 +25,7 @@ to checkField fieldName, value
 	set the RemoteClipboard to empty
 	Repeat until ImageFound(text:fieldname, caseSensitive: True, waitFor:3)
 		ScrollWheelDown 5
+		wait 1
 	End Repeat
 	Click FoundImageLocation()
 	--Click text:fieldName, caseSensitive: True
