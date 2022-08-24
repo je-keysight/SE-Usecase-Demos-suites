@@ -9,6 +9,7 @@
 	wait 3
 	
 	WaitFor 20.0, "HOMEVWISHLIST"
+	CaptureScreen Name: "LaunchApp￼"
 end launchApp
 
 to getRandomProduct
@@ -16,10 +17,10 @@ to getRandomProduct
 	put any item of resultJson into randomItem
 	
 	--Store in Suite Variables
-	set the suitevariables.id to randomItem.id
+	--set the suitevariables.id to randomItem.id
 	
 	-- Ensure we have an id return if not exit the script - This could return an error
-	if id = 0 then exit all
+	if randomItem.id = 0 then exit all
 	
 	return randomItem.id
 end getRandomProduct
@@ -37,7 +38,7 @@ to verifyData id
 	put resultJson.prices.currency_prefix before resultJson.prices.price
 	delete the last 2 characters of resultJson.prices.price
 	
-	set the SearchRectangle to[932,217,1546,1125]
+	set the SearchRectangle to [the topleft of ImageRectangle("topleft"),the RemoteScreenSize]
 	if ImageFound(text:resultJson.prices.price)then log "the Price is correct"
 	
 	//Check the Name
@@ -68,7 +69,7 @@ end verifyData
 
 to addToBasket 
 	Click {Image:"addtobasket", WaitFor:6.5}
-	waitFor 20, text:"has been added to your cart"
+	waitFor 20, text:"has been added to your basket"
 	
 	Click {Image:"basket", WaitFor:10}
 	waitFor 20,Image:"checkout"
@@ -82,9 +83,5 @@ end addToBasket
 to endScenario
 	TypeText controlKey,F4
 	TypeText returnKey
+	set the SearchRectangle to empty
 end endScenario
-
-
-to action6 variable1
-	Log "test"
-end action6

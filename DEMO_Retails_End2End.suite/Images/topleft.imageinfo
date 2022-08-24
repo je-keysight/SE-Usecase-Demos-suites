@@ -1,19 +1,19 @@
 ﻿{
-    CaptureDate = "2022-08-23 21:57:43 +0000";
+    CaptureDate = "2022-08-23 22:08:15 +0000";
     CaptureHost = "Cloud SUT";
     CaptureScreenSize = (
         1920,
         1200);
     HasAlpha = 1;
-    HotSpotX = 17;
-    HotSpotY = 10;
+    HotSpotX = 24;
+    HotSpotY = 8;
     LastKnownLocationX = 0;
     LastKnownLocationY = 0;
-    OriginalLocationX = 1490;
-    OriginalLocationY = 237;
+    OriginalLocationX = 295;
+    OriginalLocationY = 333;
     Precise = 0;
     Pulsing = 0;
     Scale = 1;
-    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "topleft";
     tags = ();
 }

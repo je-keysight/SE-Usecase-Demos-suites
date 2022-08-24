@@ -36,7 +36,7 @@
 	<key>testScript</key>
 	<string></string>
 	<key>url</key>
-	<string>http://18.130.252.73/wp-json/wc/store/v1/cart</string>
+	<string>http://3.9.116.176/wp-json/wc/store/v1/cart</string>
 	<key>userName</key>
 	<string></string>
 </dict>
