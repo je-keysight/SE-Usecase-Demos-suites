@@ -1,1 +1,6 @@
-﻿TypeText altKey, F4
+﻿if ImageFound(image:"windowslogo",waitFor:10) then
+	TypeText altKey, F4
+else
+	Click image:"closeBrowser",waitFor:3
+end if
+set the SearchRectangle to empty

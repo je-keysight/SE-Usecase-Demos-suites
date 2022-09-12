@@ -2,7 +2,10 @@
 	log browserType
 	typetext windowsKey, "r"
 	TypeText browserType, returnKey
+	wait 2
 	waitFor 20, "refresh"
+	
+	CaptureScreen Name: "Application Launch"
 end LauchApplication
 
 to handle Login url, username, password
@@ -18,6 +21,7 @@ to handle Login url, username, password
 	set the SearchRectangle to empty
 	
 	Wait 1
+	CaptureScreen Name: "Logged In"
 end login
 
 to handle Patient
@@ -157,6 +161,8 @@ end Messages
 
 to handle CloseApplication
 	typetext altkey,f4
-	Click "leave"
+	
+	if ImageFound(image:"leave",waitFor:5) then Click "leave"
+	
 	set the SearchRectangle to empty
 end CloseApplication

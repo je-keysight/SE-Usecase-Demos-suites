@@ -7,8 +7,8 @@
 	Click "CountryRegion"
 	Click text:"United Kingdom"
 	
-	Checkout.checkField "Street address", value
-	Checkout.checkField "Town / City", value
+	Checkout.checkField "Street address", "Buckingham Palace"
+	Checkout.checkField "Town / City", "London"
 	
 	Checkout.checkField "Postcode", "RR11 1RR"
 	
@@ -31,11 +31,9 @@ to checkField fieldName, value
 	--Click text:fieldName, caseSensitive: True
 	TypeText controlKey, "a"
 	wait 0.5
-	TypeText controlKey, "c"
-	if the RemoteClipboard is empty then
-		TypeText value
-	end if
+	//TypeText controlKey, "c"
+	//if the RemoteClipboard is empty then
+	TypeText value
+	//end if
 	wait 1
 end checkField
-
-Run Checkout.checkOut "test@eggplant.com"

@@ -5,10 +5,10 @@
         "1920",
         "1200");
     HasAlpha = 0;
-    HotSpotX = 82;
-    HotSpotY = 34;
+    HotSpotX = 100;
+    HotSpotY = 26;
     ImageDescription = <>;
-    ImageTolerance = 41;
+    ImageTolerance = 46;
     LastKnownLocationX = 0;
     LastKnownLocationY = 0;
     OriginalLocationX = 297;

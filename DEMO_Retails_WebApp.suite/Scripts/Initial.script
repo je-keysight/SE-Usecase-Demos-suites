@@ -1,14 +1,25 @@
 ﻿to openBrowser url
 	show remote
 	moveto (1,200)
-	waitfor 30, "windowslogo"
-	typetext windowskey,"r"
-	typetext "chrome" && url && "-incognito --start-maximized",returnkey
-	waitfor 20, "chrome/refresh"
-	if imagefound (4, "chrome/maximize")
-		click foundimagelocation()
-		MoveTo [200,200]
-		waitfor 20, "chrome/minimize"
+	if ImageFound(image:"windowslogo",waitFor:10) then
+		typetext windowskey,"r"
+		typetext "chrome" && url && "-incognito --start-maximized",returnkey
+		waitfor 20, "chrome/refresh"
+		if imagefound (4, "chrome/maximize")
+			click foundimagelocation()
+			MoveTo [200,200]
+			waitfor 20, "chrome/minimize"
+		end if
+	else
+		waitFor 30, "WelcometoChrome"
+		if ImageFound(text:"chrome://welcome",waitFor:3) then
+			Click FoundImageLocation()
+		end if
+		if ImageFound(text:"Search Google",waitFor:3) then
+			Click FoundImageLocation()
+		end if
+		TypeText url, returnkey
+		waitfor 20, "chrome/refresh"
 	end if
 	WaitFor 20, "logo"
 	return false

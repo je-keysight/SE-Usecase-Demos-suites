@@ -25,7 +25,8 @@ end addtobasket
 to basket
 	ScrollWheelUp 200
 	wait 1
-	Click text:"Cart", contrast:"On", SearchRectangle:[[0,50],[the first item of the RemoteScreenSize,200]]
+	Click text:"Cart", contrast:"On", SearchRectangle:[[0,50],[the first item of the RemoteScreenSize,200]],waitFor: 5, ValidWords:"*"
+
 	WaitFor 10, "yourbasket"
 end basket
 
