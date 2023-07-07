@@ -1,0 +1,18 @@
+﻿{
+    CaptureDate = "2023-06-22 11:30:47 +0000";
+    CaptureHost = "CloudSUT-5";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 10;
+    HotSpotY = 6;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1114;
+    OriginalLocationY = 326;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "OK_4";
+}

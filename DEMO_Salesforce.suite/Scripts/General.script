@@ -1,7 +1,7 @@
 ﻿to openSalesforceURL url
 	typetext windowsKey,"r"
-	typetext "chrome" && url, returnkey
-	waitFor 10, "refresh"
+	typetext "chrome --incognito" && url, returnkey
+	waitFor 60, "refresh"
 end openSalesforceURL
 
 to loginSalesforce username, password
@@ -9,7 +9,7 @@ to loginSalesforce username, password
 	TypeText username
 	Click text:"Password",caseSensitive: true
 	TypeText DecodeText(password)
-	Click text:"Log In"
+	Click text:"Log In",caseSensitive: true
 	wait 1
 	waitFor 10, "refreshing"
 	WaitFor 10, "refresh"

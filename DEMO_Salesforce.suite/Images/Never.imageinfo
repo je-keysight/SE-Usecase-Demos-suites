@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-12-06 15:24:41 +0000";
+    CaptureHost = "CloudSUT-4";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 14;
+    HotSpotY = 7;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1744;
+    OriginalLocationY = 350;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "Never";
+    tags = ();
+}

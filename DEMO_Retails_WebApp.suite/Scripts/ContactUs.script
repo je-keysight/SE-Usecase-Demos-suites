@@ -1,6 +1,6 @@
 ﻿to contactForm
 	repeat until ImageFound(text:"Your Name",waitFor:2, contrastColor:[130,134,141], contrastTolerance:"99", contrast:"On")
-		ScrollWheelDown 5
+		TypeText pageDown
 		wait 1
 	end repeat
 	
@@ -17,12 +17,14 @@
 	TypeText "Message test"
 	
 	If ImageFound(Text:"Send", contrastColor:[57,57,58], contrastTolerance:"45", WaitFor:2, contrast:"On") is not true then
-		ScrollWheelDown 5
+		TypeText pageDown
+		wait 2
 	End If
 	
-	Click FoundImageLocation()
+	Click (Text:"Send", contrastColor:[57,57,58], contrastTolerance:"45", WaitFor:2, contrast:"On")
 	CaptureScreen
-	ScrollWheelDown 100
+	wait 1
+	TypeText pageUp,pageUp
 end contactForm
 
 to back

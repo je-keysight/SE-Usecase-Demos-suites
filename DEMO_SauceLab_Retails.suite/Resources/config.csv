@@ -1,0 +1,3 @@
+﻿Device,Platform,App,Username,Password
+Iphone.14,iOS,https://github.com/saucelabs/my-demo-app-rn/releases/download/v1.3.0/iOS-Real-Device-MyRNDemoApp.1.3.0-162.ipa,bob@example.com,10203040
+Google Pixel 5.*,Android,https://github.com/saucelabs/my-demo-app-rn/releases/download/v1.3.0/Android-MyDemoAppRN.1.3.0.build-244.apk,bob@example.com,10203040

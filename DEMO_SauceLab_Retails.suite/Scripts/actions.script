@@ -1,0 +1,161 @@
+﻿to startMobile plat
+	if (["android","ios"] contains plat) is not true then LogError "platform not. recognized"
+	global platform
+	set platform to plat	
+	sauceLab.connectDevice(config().(platform).connection)
+end startMobile
+
+to login username, password
+	global platform
+	CaptureScreen {Name: "Login Start"}
+
+	common.navigate "icons/menu", "Geo Location"
+	common.navigate "Log In", "Login"
+	common.textField "Username", username, config().(platform).form.textField
+	common.passwordField "Password", password, config().(platform).form.textField
+	common.navigate "Login", "Products", config().(platform).elements.buttons
+	
+	CaptureScreen {Name: "Login End"}
+	wait 1
+end login
+
+to catalogAdd item
+	global platform
+	CaptureScreen {Name: "catalogAdd Start"}
+
+	If ConnectionInfo().PlatformName is "iOS" then
+		common.navigate "Catalog", null, config().(platform).elements.menu
+	Else if ConnectionInfo().PlatformName is "Android"
+		common.navigate "icons/menu", "Geo Location"
+		common.navigate "Catalog"
+	Else
+		LogError "Device Type not android or ios"
+		exit all
+	End if
+	
+	repeat until ImageFound(text:"Products",waitFor: 2)
+		swipeDown
+	end repeat
+	
+	common.navigateDown item,"Add To Cart",null, config().(platform).elements.buttons
+	common.navigate "Add To Cart", null, config().(platform).elements.buttons
+	
+	
+	CaptureScreen {Name: "catalogAdd End"}
+	wait 1
+end catalogAdd
+
+to openCart
+	CaptureScreen {Name: "openCart Start"}
+
+	common.navigate "icons/cart", "My Cart"
+	
+	CaptureScreen {Name: "openCart End"}
+end openCart
+
+to cartCheckOut
+	global platform
+	CaptureScreen {Name: "cartCheckOut Start"}
+	
+	common.navigate "Proceed To Checkout", "Checkout"
+	
+	common.textField "Full Name*", "John Doe", config().(platform).form.textField
+	common.textField "Address Line 1*", "18 Test Address", config().(platform).form.textField
+	common.textField "City*", "London", config().(platform).form.textField
+	common.textField "State/Region", "London", config().(platform).form.textField
+	common.textField "Zip Code*", "ZW100 10AB", config().(platform).form.textField
+	common.textField "Country*", "UK", config().(platform).form.textField
+	
+	wait 2
+	
+	common.navigate "To Payment", "Enter a payment method",config().(platform).elements.buttons
+	
+	CaptureScreen {Name: "cartCheckOut End"}
+end cartCheckOut
+
+to paymentProcessing
+	global platform
+	CaptureScreen {Name: "paymentProcessing Start"}
+	
+	common.textField "Full Name*", "John Doe", config().(platform).form.textField
+	common.textField "Card Number*", "1412983264735636", config().(platform).form.textField
+	common.textField "Expiration Date*", "01/25", config().(platform).form.textField
+	common.textField "Security Code*", "424", config().(platform).form.textField
+	
+	wait 2
+	
+	if ImageFound(text:"Value looks invalid",waitFor:2)
+		common.navigate "Review Order", null, config().(platform).elements.buttons
+	end if
+	
+	common.navigate "Review Order", "Review your order",config().(platform).elements.buttons
+	
+	CaptureScreen {Name: "paymentProcessing End"}
+end paymentProcessing
+
+to placeOrder
+	common.navigate "Place Order", "Checkout Complete",config().(platform).elements.buttons
+	common.navigate "Continue Shopping", "Products",config().(platform).elements.buttons
+end placeOrder
+
+to goToDrawing
+	global platform
+	CaptureScreen {Name: "goToDrawing Start"}
+
+	common.navigate "icons/menu", "Geo Location"
+	common.navigate "Drawing", "Clear", null, config().(platform).elements.buttons
+	
+	CaptureScreen {Name: "goToDrawing End"}
+end goToDrawing
+
+to testSuccess
+	sauceLab.closeTestSuccess
+end testSuccess
+
+to testFailure
+	sauceLab.closeTestFailure
+end testFailure
+
+to backHome
+	global platform
+	If ConnectionInfo().PlatformName is "iOS" then
+		common.navigate "Catalog", "", config().(platform).elements.menu
+	Else if ConnectionInfo().PlatformName is "Android"
+		common.navigate "icons/menu", "Geo Location"
+		common.navigate "Catalog"
+	Else
+		LogError "Device Type not android or ios"
+		exit all
+	End if
+	
+	repeat until ImageFound(text:"Products",waitFor: 2)
+		swipeDown
+	end repeat
+end backHome
+
+to drawSquare
+	set x_zero to (the first item of the remoteScreenSize / 3)
+	set x_one to (the first item of the remoteScreenSize / 3) * 2
+	set y_zero to (the second item of the remoteScreenSize / 2)
+	set y_one to (y_zero + x_one - x_zero)
+	
+	Drag [x_zero,y_zero]
+	wait 1
+	Drop [x_one + 10,y_zero]
+	wait 1
+	Drag [x_one,y_zero]
+	wait 1
+	Drop [x_one,y_one + 10]
+	wait 1
+	Drag [x_one,y_one]
+	wait 1
+	Drop [x_zero - 10,y_one]
+	wait 1
+	Drag [x_zero,y_one]
+	wait 1
+	Drop [x_zero,y_zero - 10]
+end drawSquare
+
+to clearDrawing
+	common.navigate "Clear", "", config().(platform).elements.buttons
+end clearDrawing

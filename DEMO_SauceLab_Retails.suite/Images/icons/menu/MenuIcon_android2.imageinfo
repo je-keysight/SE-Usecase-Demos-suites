@@ -1,0 +1,18 @@
+﻿{
+    CaptureDate = "2023-04-04 07:05:13 +0000";
+    CaptureHost = "MCB-android";
+    CaptureScreenSize = (
+        540,
+        1170);
+    HasAlpha = 1;
+    HotSpotX = 22;
+    HotSpotY = 8;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 24;
+    OriginalLocationY = 88;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "MenuIcon/MenuIcon_android";
+}

@@ -1,0 +1,17 @@
+﻿actions.startMobile "Android"
+
+actions.login "bob@example.com", "10203040"
+
+actions.catalogAdd "Sauce Labs Onesie"
+
+actions.catalogAdd "Sauce Labs Bike Light"
+
+actions.openCart
+
+actions.cartCheckOut
+
+actions.paymentProcessing
+
+actions.placeOrder
+
+actions.testSuccess

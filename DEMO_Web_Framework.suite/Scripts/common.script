@@ -1,0 +1,104 @@
+﻿to openBrowserInco url
+	typetext windowskey,"r"
+	typetext "chrome" && url && "-incognito --start-maximized",returnkey
+	waitFor 60, "framework/chrome/refresh"
+end openBrowserInco
+
+to openBrowser url
+	typetext windowskey,"r"
+	typetext "chrome" && url && "--start-maximized",returnkey
+	waitFor 60, "framework/chrome/refresh"
+end openBrowser
+
+to handlePopUp validate, close, configValidate, configClose
+	if (SuiteInfo().imagesFolder & "/" & validate) is a folder or (SuiteInfo().imagesFolder & "/" & validate & ".png") is a file then
+		if configValidate is not empty then common.setStyle(configValidate)
+		if ImageFound(image:validate, waiFor:2)
+			if configClose is not empty then common.setStyle(configClose)
+			if (SuiteInfo().imagesFolder & "/" & close) is a folder or (SuiteInfo().imagesFolder & "/" & close & ".png") is a file then
+				Click Image:close
+			else
+				Click text:close, caseSensitive:true
+			end if
+		else
+			Log "no-popup"
+		end if
+		set the textstyle to "Default"
+	else
+		if configValidate is not empty then common.setStyle(configValidate)
+		if ImageFound(text:validate, waitFor:2, caseSensitive:true)
+			if configClose is not empty then common.setStyle(configClose)
+			if (SuiteInfo().imagesFolder & "/" & close) is a folder or (SuiteInfo().imagesFolder & "/" & close & ".png") is a file then
+				Click Image:close
+			else
+				Click text:close, caseSensitive:true
+			end if
+			else
+			Log "no-popup"
+		end if
+		set the textstyle to "Default"
+	end if	
+end handlePopUp
+
+to cleanUp
+	TypeText altKey, F4
+	set the SearchRectangle to empty
+end cleanUp
+
+to textField label, data, config
+	if there is a property offset of config
+		set offset to config.offset
+	else
+		set offset to [0,0]
+	end if
+	
+	Click ImageLocation(text:label, caseSensitive:true) + offset
+	wait 0.5
+	TypeText data
+	wait 0.5
+end textField
+
+to navigate navigate, validate, configNavigate, configValidate
+	if configNavigate is not empty then common.setStyle(configNavigate)
+	if (SuiteInfo().imagesFolder & "/" & navigate) is a folder or (SuiteInfo().imagesFolder & "/" & navigate & ".png") is a file		
+		Click image:navigate
+	else
+		if configNavigate is not empty and there is a property offset of configNavigate then
+			set offset to configNavigate.offset
+		else
+			set offset to [0,0]
+		end if
+		
+		Click ImageLocation(text:navigate, caseSensitive:true) + offset
+	end if
+	set the textstyle to "Default"
+	
+	wait 2
+	
+	if validate is not empty and validate is not null
+		if configValidate is not empty then common.setStyle(configValidate)
+		
+		if (SuiteInfo().imagesFolder & "/" & validate) is a folder or (SuiteInfo().imagesFolder & "/" & validate & ".png") is a file
+			waitFor 120, image:validate
+		else
+			waitFor 120, text:validate, caseSensitive:true
+		end if
+		set the textstyle to "Default"
+	end if
+end navigate
+
+
+
+to setStyle config
+	-- Idealy we would jsut want to loop through the list and add any attributes to the textStyle
+	if there is a property parameters of config and there is a property searchRectangle of config then set the textstyle to config.parameters
+	If there is a property parameters of config and there is a property searchRectangle of config then
+		set the textstyle to config.parameters &&& {searchRectangle: config.searchRectangle}
+	Else if (there is a property parameters of config and there is not a property searchRectangle of config)
+		set the textstyle to config.parameters
+	Else if (there is not a property parameters of config and there is a property searchRectangle of config)
+	set the textstyle to {searchRectangle: config.searchRectangle}
+	Else
+		Log "Style not set as there is no property in the config"
+	End if
+end setStyle

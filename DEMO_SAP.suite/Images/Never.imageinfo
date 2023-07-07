@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2023-01-23 08:25:07 +0000";
+    CaptureHost = "CloudSUT-3";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 18;
+    HotSpotY = 7;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1745;
+    OriginalLocationY = 332;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "Never";
+    tags = ();
+}

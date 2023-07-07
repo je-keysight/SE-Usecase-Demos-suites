@@ -1,20 +1,25 @@
-﻿waitfor 20, "EditIncident"
-Click (Image:"EditIncident", WaitFor:20)
-moveto foundimagelocation()+[0,50]
-Click "Statusfield"
-Click "InProcessSelection"
+﻿CaptureScreen
+waitfor 20, "EditIncident"
+Click {Image:"EditIncident", WaitFor:20}
+wait 3
+Click text:"Status:", caseSensitive:true
+Click text:"In Process", caseSensitive:true
+wait 2
 Click "AddTextButton"
-Click "ReplySelection"
-Click "ReplyField"
-TypeText "try rebooting"
+Click text:"Reply", caseSensitive:true
+Click ImageLocation(text:"Description of Change", caseSensitive:true) + [0,100]
+TypeText "Try rebooting"
 
 Click (Image:"SaveButtons", WaitFor:20)
+MoveTo [200,200]
+(*
 moveto FoundImageLocation()-(0,30)
 if imagefound (3,"OK")
 	click "OK"
 end if
+*)
 
-waitfor 20,text:"Transaction 800000"
+waitfor 20,text:"Transaction 80000"
 
 Click text:"Log off"
 
@@ -31,4 +36,5 @@ wait 2
 moveto [200,200]
 waitFor 30, "loading"*)
 
-waitFor 120, "refresh"
+waitFor 120, "sap-logo"
+CaptureScreen

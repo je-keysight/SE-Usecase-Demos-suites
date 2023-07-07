@@ -1,0 +1,24 @@
+﻿params phone
+
+Connect phone
+--Connect "IPhone.*", (Image:"url/url3_4", WaitFor:6.7)
+
+CaptureScreen
+
+if phone contains "IOS" then
+	killApp "com.apple.mobilesafari"
+	wait 1
+	LaunchApp "com.apple.mobilesafari"
+	Click image: "url",waitFor: 3
+else
+	LaunchApp "com.android.chrome"
+	if ImageFound(Image:"android/newtab") then Click FoundImageLocation()
+	Click text:"Search or type"
+	wait 2
+end if
+
+RefreshScreen
+TypeText "http://nopcommerce.testplant.com/banking-app.html", returnkey
+
+CaptureScreen
+

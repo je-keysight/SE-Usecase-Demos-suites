@@ -1,0 +1,7 @@
+﻿params field,info
+
+Log field
+Log info
+
+click text:field
+if info is not empty then TypeText info

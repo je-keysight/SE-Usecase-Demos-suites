@@ -33,7 +33,8 @@ to doLogin
 	set the SearchRectangle to [the topright of logolocation, the bottomRight of logolocation + [300,0]]
 	
 	WaitFor 10, text:"Home"
-	
 	set the SearchRectangle to empty
+	if ImageFound(text:"Change your password",caseSensitive:true,waitFor:3) then click "OK_4"
+	if ImageFound(text:"Save password",caseSensitive:true,waitFor:3) then click "Never"
 	
 end doLogin

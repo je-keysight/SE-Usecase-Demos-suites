@@ -1,0 +1,64 @@
+﻿launchApplication "C:\Program Files\wx3270\wx3270.exe"
+connectEnvd
+
+enterCommand (config().user),("ENTER CURRENT PASSWORD FOR HERC02")
+enterCommand (config().password),("Welcome to the TSO system on TK4")
+enterCommand (1),("Another bit of wisdom from the fortune cookie jar")
+enterCommand (2),("Enter X to Terminate")
+enterCommand ("x"),("READY")
+enterCommand ("Logoff"),("Logon")
+
+CaptureScreen
+
+
+
+
+
+
+to launchApplication app
+	typetexts windowskey,"r"
+	wait 0.3
+	typetext app,returnkey
+	waitfor 20, logos
+	typetext windowskey,uparrow
+end launchApplication
+
+
+to enterCommand action,verification
+	typetext action,returnkey
+	wait 1
+	waitfor 10, text:verification,searchRectangle:(0,61,1006,699),contrast:"On", contrastColor:"#000000", contrastTolerance:"0",textDifference:1
+end enterCommand
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+to connectEnv
+	click "icons/Connect"
+	wait 0.3
+	click text:"Connect"
+	wait 0.3
+	click text:"3.8.200.104",searchRectangle:(0,59,1006,701)
+	waitfor 20, text:"Logon",searchRectangle:(0,59,1006,701)
+end connectEnv

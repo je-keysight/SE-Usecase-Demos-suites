@@ -5,6 +5,7 @@
 	wait 2
 	waitFor 20, "refresh"
 	
+	
 	CaptureScreen Name: "Application Launch"
 end LauchApplication
 
@@ -45,7 +46,7 @@ to handle CreateNewPatient FirstName, LastName, DOB, Gender
 	put Cell(worksheet1, [2, 4]) into DOB
 	put Cell(worksheet1, [2, 5]) into Sex
 
-	WaitFor 10, text:"Create New Patient"
+	WaitFor 10, text:"Search or Add Patient", caseSensitive:true
 	Click text: "Unassigned"
 	
 	if imageFound(text:Title, caseSensitive:Yes , contrast:"On", contrastColor:"#FF9919", contrastTolerance:"70") then
@@ -78,6 +79,10 @@ to handle CreateNewPatient FirstName, LastName, DOB, Gender
 	
 	Click text: "Create New Patient"
 	
+	set the SearchRectangle to empty
+	
+	if ImageFound(text:"Confirm Create New Patient",waitFor: 3) then Click FoundImageLocation()
+	
 end CreateNewPatient
 
 to handle SearchPatient
@@ -97,15 +102,16 @@ to handle SearchPatient
 	set the SearchRectangle to Functions.ScreenPart("BottomHalf")
 	Click "Search"
 	
-	(*
-	if ImageFound(text:"Armstrong", SearchRectangle:[610,114,1306,614]) then log "success" else log "failed"
-end SearchPatient
-	*)
+	set the SearchRectangle to empty
+	
+	if ImageFound(image:"closePopup", waitFor:3) then click "closePopup"
+	
 end SearchPatient
 
 to handle NewAppointment
 	Click "NewAppointment"
 	Click text:"Title"
+	TypeText controlKey, a
 	TypeText "Office Visit Michael"
 	
 	set the SearchRectangle to [ImageLocation("topLeft"), ImageLocation("bottomright")]
@@ -132,6 +138,8 @@ to handle NewAppointment
 	Click text:"Room 2"
 	
 	Click text:"Save"
+	set the SearchRectangle to empty
+	If ImageFound(text:"Provider not available", caseSensitive:true) then Click "OK"
 end NewAppointment
 
 to handle Calendar
@@ -161,8 +169,20 @@ end Messages
 
 to handle CloseApplication
 	typetext altkey,f4
-	
 	if ImageFound(image:"leave",waitFor:5) then Click "leave"
-	
 	set the SearchRectangle to empty
 end CloseApplication
+
+to handle savePasswordPopUp
+	if ImageFound(image:"SaveButton",waitFor:4) then Click "Never"
+end savePasswordPopUp
+
+to handle searchAppointment
+	set the SearchRectangle to empty
+	Click "searchButton"
+	waitFor 10, text:"Searching for appointments", caseSensitive:true
+	Click text:"For", caseSensitive:true
+	TypeText returnkey
+	Click text:"All Providers", caseSensitive:true
+	Click "QSearch"
+end searchAppointment

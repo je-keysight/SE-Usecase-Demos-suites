@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2022-12-14 12:17:50 +0000";
+    CaptureHost = "CloudSUT-3";
+    CaptureScreenSize = (
+        "1920",
+        "1200");
+    HasAlpha = 1;
+    HotSpotX = 14;
+    HotSpotY = 15;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 629;
+    OriginalLocationY = 320;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "chrome";
+    tags = ();
+}

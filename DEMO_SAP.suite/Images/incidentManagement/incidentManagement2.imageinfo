@@ -1,0 +1,17 @@
+﻿{
+    CaptureDate = "2023-01-09 18:07:33 +0000";
+    CaptureHost = "CloudSUT-1";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 11;
+    HotSpotY = 13;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 227;
+    OriginalLocationY = 386;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+}

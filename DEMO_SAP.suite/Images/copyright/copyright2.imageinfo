@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2023-01-23 08:19:45 +0000";
+    CaptureHost = "CloudSUT-3";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 113;
+    HotSpotY = 8;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1616;
+    OriginalLocationY = 1129;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "copyright/copyright2";
+    tags = ();
+}

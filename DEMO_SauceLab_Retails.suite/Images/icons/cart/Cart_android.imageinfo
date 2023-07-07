@@ -1,0 +1,22 @@
+﻿{
+    Bitmask = <ffff0f00 00feff1f 0000fcff 3f0000f8 ff7f0000 f0ffff00 00e0ffff 0100c0ff ff030080 ffff0700 00ffff0f 0000feff 0f0000fc ff1f0000 f8ff3f00 00f0ff7f 0000e0ff 3f0000c0 ff7f0000 80ffff00 0000ffff 010000fe ff030000 fcff0700 00f8ff0f 0000f0ff 1f0000e0 ff3f0000 c0ffff01 0080ffff 030000ff ffff0100 feffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffff1f>;
+    BitmaskSize = "41,45";
+    CaptureDate = "2023-04-04 07:39:15 +0000";
+    CaptureHost = "MCB-android";
+    CaptureScreenSize = (
+        "540",
+        "1170");
+    HasAlpha = 1;
+    HotSpotX = 20;
+    HotSpotY = 22;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 478;
+    OriginalLocationY = 77;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "Cart/Cart_android";
+    tags = ();
+}

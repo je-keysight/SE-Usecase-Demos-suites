@@ -1,0 +1,15 @@
+﻿actions.openApp "C:\FRSAddressbook\FRSAddressbook.exe", "icons/addButton"
+
+actions.addContact
+
+actions.textFieldFRS "city"
+
+actions.textFieldFRS "street"
+
+actions.textFieldFRS "zip"
+
+actions.save
+
+actions.stopApp
+
+actions.cleanUp

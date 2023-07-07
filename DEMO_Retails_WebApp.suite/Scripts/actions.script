@@ -1,0 +1,45 @@
+﻿to confirmOrder
+	waitFor 120, text:"Order received", caseSensitive:true
+	CaptureScreen
+end confirmOrder
+
+to openBrowser url
+	common.openBrowser url
+	waitFor 60, text:"NewStore", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"4", caseSensitive:true
+	CaptureScreen
+end openBrowser
+
+to searchItem item
+	common.navigate "NewStore", null, config().elements.websiteLogo
+	wait 2
+	click "icons/search"
+	typetext controlKey,"a"
+	wait 0.5
+	typetext item
+	wait 2
+	waitFor 60, "icons/search"
+	wait 2
+	typeText returnkey
+	waitFor 60, {text:"Home >"}, {text:"Home > Clothing"}
+	if ImageFound(text:"SEARCH RESULTS" ,waitFor:3)
+		return "searchResults"
+	else
+		return "itemView"
+	end if
+	CaptureScreen
+end searchItem
+
+to checkOut
+	common.navigate "Proceed to checkout", "Billing details", config().elements.buttons
+	CaptureScreen
+end checkOut
+
+to isBasketEmpty
+	if ImageFound(text:"Your basket is currently empty",waitFor:3)
+		set isempty to True
+	else
+		set isempty to False
+	end if
+	return isempty
+	CaptureScreen
+end isBasketEmpty

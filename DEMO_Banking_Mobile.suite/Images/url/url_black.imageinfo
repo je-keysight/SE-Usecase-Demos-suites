@@ -1,0 +1,25 @@
+﻿{
+    CaptureDate = "2022-10-05 21:29:27 +0000";
+    CaptureHost = "iPhone.*";
+    CaptureScreenSize = (
+        "585",
+        "1266");
+    HasAlpha = 1;
+    HotSpotX = 158;
+    HotSpotY = 18;
+    IgnoreColor = (
+        "#40738D");
+    IgnoreColorTolerance = (
+        98);
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 22;
+    OriginalLocationY = 86;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "url/url_black";
+    tags = ();
+}

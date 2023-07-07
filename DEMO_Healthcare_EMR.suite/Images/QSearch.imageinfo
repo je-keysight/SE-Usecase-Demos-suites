@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2023-03-17 21:48:59 +0000";
+    CaptureHost = "CloudSUT-2";
+    CaptureScreenSize = (
+        1920,
+        1080);
+    HasAlpha = 1;
+    HotSpotX = 36;
+    HotSpotY = 10;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 416;
+    OriginalLocationY = 603;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "QSearch";
+    tags = ();
+}

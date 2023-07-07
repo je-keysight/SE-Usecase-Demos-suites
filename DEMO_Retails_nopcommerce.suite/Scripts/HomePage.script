@@ -1,0 +1,11 @@
+﻿to navComputer
+	core.navigate "Computers", "computer_img"
+end navComputer
+
+to navElect
+	core.navigate "Electronics", "camera_img"
+end navElect
+
+to navApparel
+	log test
+end navApparel

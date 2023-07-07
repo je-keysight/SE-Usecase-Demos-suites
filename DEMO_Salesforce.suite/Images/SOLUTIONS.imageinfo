@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2022-12-14 12:28:32 +0000";
+    CaptureHost = "CloudSUT-3";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 50;
+    HotSpotY = 8;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 519;
+    OriginalLocationY = 374;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "SOLUTIONS";
+}

@@ -1,0 +1,38 @@
+﻿to openBrowser browser,url
+	//valid browser values on windows - chrome / iexplore / firefox
+	TypeText windowsKey, "r"
+	wait 0.5
+	typetext browser && url , returnkey
+	
+	waitFor 60, "refresh"
+	
+	CaptureScreen 
+end openBrowser
+
+
+to navigate action, validation
+	set waitTime to 1
+	
+	if SuiteInfo().imagesFolder & "/" & action & ".png" is a file or SuiteInfo().imagesFolder  & "/" & action is a folder
+		repeat until ImageFound(image:action, waitFor:waitTime)
+			TypeText pageDown
+		end repeat
+		Click image:action, waitFor:waitTime
+	else
+		repeat until ImageFound(text:action, waitFor:waitTime, caseSensitive:true)
+			TypeText pageDown
+		end repeat
+		Click text:action, waitFor:waitTime, caseSensitive:true
+	end if
+	
+	
+	if validation is empty
+		if SuiteInfo().imagesFolder & "/" & validation & ".png" is a file or SuiteInfo().imagesFolder  & "/" & validation is a folder
+			waitFor 60, image:validation
+		else
+			waitFor 60, text:validation, caseSensitive:true
+		end if
+	end if
+	
+	CaptureScreen 
+end navigate

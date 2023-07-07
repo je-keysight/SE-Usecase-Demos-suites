@@ -1,0 +1,10 @@
+﻿to openUrl url
+	waitFor 20, "windowsMenu"
+	TypeText windowsKey, "r"
+	wait 0.5
+	TypeText "chrome" && url, returnkey
+	waitFor 20, "websiteLogo"
+	wait 2
+	CaptureScreen
+	wait 1
+end openUrl

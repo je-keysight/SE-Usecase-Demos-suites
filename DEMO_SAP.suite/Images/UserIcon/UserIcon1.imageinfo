@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2023-01-09 17:33:56 +0000";
+    CaptureHost = "CloudSUT-1";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 15;
+    HotSpotY = 15;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1832;
+    OriginalLocationY = 125;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "UserIcon/UserIcon1";
+    tags = ();
+}

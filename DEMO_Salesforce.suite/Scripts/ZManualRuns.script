@@ -1,1 +1,12 @@
+﻿General.openSalesforceURL "https://eggplant--marktest.my.salesforce.com"
 
+set the WebDriver's url to "https://eggplant--marktest.my.salesforce.com"
+
+General.loginSalesforce "mark.fernee@eggplant.io.marktest", "RDfIr8w3WJ,"
+--AxjlnvNoAY1
+CaptureScreen
+
+Click webXPath: "/html/body/div[4]/div[1]/section/div[1]/div[1]/one-appnav/div/div/div/div/one-app-launcher-header/button"
+
+
+Log the RemoteClipboard

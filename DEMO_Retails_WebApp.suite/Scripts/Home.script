@@ -14,33 +14,32 @@ to quickAccess
 	Log "select random Item and go"
 	set objects to EveryImageLocation("quickAccess")
 	put the number of items in objects into objects_nbr
+	MoveTo (item random(1,objects_nbr) of objects + [-40,40])
+	wait 1
+	set objects to EveryImageLocation("quickAccess")
+	put the number of items in objects into objects_nbr
 	Click (item random(1,objects_nbr) of objects + [-40,40])
 	waitFor 5, Image:"Addtobasket"
 	CaptureScreen
 end quickAccess
 
 to search searchterm
-	
-	click "search"
+	Click text:"NewStore", contrast:"On", contrastColor:"AutoDetect", contrastTolerance:"4", caseSensitive:true
+	wait 2
+	click "icons/search"
 	typetext controlKey,"a"
 	wait 0.5
-	typetext searchterm,returnkey
+	typetext searchterm
 	wait 2
-	waitFor 10, "chrome/refresh"
-	if ImageFound(text:"SEARCH RESULTS" ,waitFor:10)
+	waitFor 60, "icons/search"
+	wait 2
+	typeText returnkey
+	waitFor 60, {text:"Home >"}, {text:"Home > Clothing"}
+	if ImageFound(text:"SEARCH RESULTS" ,waitFor:3)
 		return "searchResults"
 	else
 		return "itemView"
 	end if
-	
-	If ImageFound(text:"SEARCH RESULTS" ,waitFor:2) then
-		return "searchResults"
-	Else if ImageFound(text:"/product/" ,waitFor:2)
-		return "itemView"
-	Else
-		return false
-	End if
-	
 end search
 
 

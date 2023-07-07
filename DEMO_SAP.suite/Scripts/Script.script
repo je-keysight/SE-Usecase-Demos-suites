@@ -1,0 +1,19 @@
+﻿
+
+
+
+
+to newfunctoin username
+	Click {Text:username}
+
+	waitFor 60, ImageFoun
+	TypeText "SMITHDE"
+	
+	
+	Click (Text:"Password")
+	
+	Click "LogOn"
+end newfunctoin
+
+newfunctoin "john"
+"image0001"

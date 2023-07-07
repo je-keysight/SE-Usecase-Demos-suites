@@ -18,7 +18,7 @@
 	
 	--Click text:"I have read and agree", caseSensitive: True
 	
-	Click text:"Place order", caseSensitive: True
+	Click text:"Place order", caseSensitive: True, contrast:"On", contrastColor:"#FFBE16", contrastTolerance:"45"
 end checkOut
 
 to checkField fieldName, value

@@ -1,6 +1,13 @@
 ﻿{
-    EPVersionNumber = 2111121958;
+    EPVersionNumber = 202304070413;
     Schedules =     (
+                {
+            ChangeCount = 6;
+            Name = "Schedule 1";
+            Path = "~~schedule~~Schedule 1";
+            Schedule =             (
+            );
+        }
     );
     ScriptMetaData =     {
     };

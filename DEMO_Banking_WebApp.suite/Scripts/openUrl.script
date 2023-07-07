@@ -1,0 +1,7 @@
+﻿Initiate.openUrl "http://52.56.157.27/index.html"
+
+Log apitest().responseBody
+
+Shell("py ......")
+
+ODBC

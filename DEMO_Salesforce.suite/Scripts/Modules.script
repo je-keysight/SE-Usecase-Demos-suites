@@ -2,7 +2,7 @@
 	CaptureScreen ("Open Module" && sf_module)
 	--WaitFor 10.0, (Text:"Tell Me More")
 	
-	wait 2
+	wait 3
 	set sf_menu_location to ImageRectangle(Image:"sf_menu")
 	
 	Click the center of sf_menu_location
@@ -44,6 +44,15 @@ to createNewItem
 	Click text:"New"
 	set the SearchRectangle to empty
 end createNewItem
+
+to selectNewItemType
+	CaptureScreen ("Select new item type")
+	
+	If ImageFound(text:"Select a record type", caseSensitive:true)
+		Click "Next"
+	End If
+	set the SearchRectangle to empty
+end selectNewItemType
 
 to cancel
 	CaptureScreen ("Cancel Object creation")
@@ -87,7 +96,7 @@ end confirmDelete
 to successCreation
 	CaptureScreen ("Object created")
 	set the SearchRectangle to empty
-	waitFor 20, text:"was created"
+	waitFor 60, text:"was created"
 end successCreation
 
 to errorCheck

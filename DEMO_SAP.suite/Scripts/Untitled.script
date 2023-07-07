@@ -1,0 +1,12 @@
+﻿(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2023-06-22 13:40:45
+  From session:  untitled session
+  Captured on:  2023-06-22 13:40:05
+  From server:  CloudSUT-5
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+Click "MyIncidents"
+Click (Image:"image0002", WaitFor:7)
+
+
+Api_call1[john]

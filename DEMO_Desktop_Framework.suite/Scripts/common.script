@@ -1,0 +1,69 @@
+﻿to openApp path, validate
+	TypeText windowsKey, "r"
+	wait 0.5
+	TypeText path, returnkey
+	wait 0.5
+	
+	if validate is not empty and validate is not null
+		if (SuiteInfo().imagesFolder & "/" & validate) is a folder or (SuiteInfo().imagesFolder & "/" & validate & ".png") is a file
+			waitFor 60, image:validate
+		else
+			waitFor 60, text:validate, caseSensitive:true
+		end if
+	end if
+end openApp
+
+to textField label, data, config
+	if there is a property offset of config
+		set offset to config.offset
+	else
+		set offset to [0,0]
+	end if
+	
+	Click ImageLocation(text:label, caseSensitive:true) + offset
+	wait 0.5
+	TypeText data
+	wait 0.5
+	Click ImageLocation(text:label, caseSensitive:true)
+	wait 1
+end textField
+
+to stopApp confirmation
+	TypeText altkey,f4
+	set the SearchRectangle to empty
+	
+	if confirmation is not empty and confirmation is not null
+		if (SuiteInfo().imagesFolder & "/" & confirmation) is a folder or (SuiteInfo().imagesFolder & "/" & confirmation & ".png") is a file
+			Click {image:confirmation}
+		else
+			Click {text:confirmation, caseSensitive:true}
+		end if
+	end if
+end stopApp
+
+to navigate navigate, validate, configNavigate, configValidate
+
+	if configNavigate is not empty then common.setStyle(configNavigate)
+	if (SuiteInfo().imagesFolder & "/" & navigate) is a folder or (SuiteInfo().imagesFolder & "/" & navigate & ".png") is a file
+		Click {image:navigate}
+	else
+		Click {text:navigate, caseSensitive:true}
+	end if
+	set the textstyle to "Default"
+	
+	if validate is not empty and validate is not null
+		if configValidate is not empty then common.setStyle(configValidate)
+		
+		if (SuiteInfo().imagesFolder & "/" & validate) is a folder or (SuiteInfo().imagesFolder & "/" & validate & ".png") is a file
+			waitFor 60, image:validate
+		else
+			waitFor 60, text:validate, caseSensitive:true
+		end if
+		set the textstyle to "Default"
+	end if
+	
+end navigate
+
+to cleanUp
+	set the SearchRectangle to empty
+end cleanUp

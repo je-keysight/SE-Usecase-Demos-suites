@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2022-10-06 14:49:33 +0000";
+    CaptureHost = "IOS-Iphone13";
+    CaptureScreenSize = (
+        1170,
+        2532);
+    HasAlpha = 1;
+    HotSpotX = 369;
+    HotSpotY = 34;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 66;
+    OriginalLocationY = 183;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "url/url3_4";
+    tags = ();
+}

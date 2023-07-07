@@ -1,5 +1,5 @@
 ﻿{
-    EPVersionNumber = 2111121958;
+    EPVersionNumber = 202304070413;
     Schedules =     (
     );
     ScriptMetaData =     {
@@ -8,5 +8,8 @@
     helpedSuitesInfo =     (
     );
     helperSuitesInfo =     (
+                {
+            filePath = "/Users/sebamorg/Documents/GitHub/SE-Usecase-Demos-suites/DEMO_Web_Framework.suite";
+        }
     );
 }

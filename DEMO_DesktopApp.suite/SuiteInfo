@@ -1,0 +1,15 @@
+﻿{
+    EPVersionNumber = 202304070413;
+    Schedules =     (
+    );
+    ScriptMetaData =     {
+    };
+    SuiteEncodedTextKey = "qpi/3sO8eq8:1Kc8";
+    helpedSuitesInfo =     (
+    );
+    helperSuitesInfo =     (
+                {
+            filePath = "/Users/sebamorg/Documents/GitHub/SE-Usecase-Demos-suites/DEMO_Desktop_Framework.suite";
+        }
+    );
+}

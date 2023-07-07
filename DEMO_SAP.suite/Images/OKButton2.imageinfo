@@ -1,19 +1,18 @@
 ﻿{
-    CaptureDate = "2022-06-21 22:37:39 +0000";
-    CaptureHost = "CloudSUT-2";
+    CaptureDate = "2023-01-09 19:51:23 +0000";
+    CaptureHost = "CloudSUT-1";
     CaptureScreenSize = (
         1920,
         1200);
     HasAlpha = 1;
-    HotSpotX = 37;
-    HotSpotY = 18;
+    HotSpotX = 31;
+    HotSpotY = 28;
     LastKnownLocationX = 0;
     LastKnownLocationY = 0;
-    OriginalLocationX = 1023;
-    OriginalLocationY = 168;
+    OriginalLocationX = 1063;
+    OriginalLocationY = 244;
     Precise = 0;
     Pulsing = 0;
     Scale = 1;
-    SearchObjectName = "OKButton2";
     tags = ();
 }

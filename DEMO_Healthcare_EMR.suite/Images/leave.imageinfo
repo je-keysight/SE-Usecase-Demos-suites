@@ -2,11 +2,13 @@
     CaptureDate = "2022-05-18 07:52:08 +0000";
     CaptureHost = "SUT WebAPP";
     CaptureScreenSize = (
-        1920,
-        1200);
+        "1920",
+        "1200");
+    CropRectangle = "15,10,54,24";
     HasAlpha = 1;
     HotSpotX = 37;
     HotSpotY = 20;
+    ImageDescription = <>;
     LastKnownLocationX = 0;
     LastKnownLocationY = 0;
     OriginalLocationX = 1023;

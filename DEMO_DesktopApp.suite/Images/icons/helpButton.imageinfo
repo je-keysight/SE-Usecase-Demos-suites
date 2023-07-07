@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2023-06-23 13:50:06 +0000";
+    CaptureHost = "CloudSUT-5";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 14;
+    HotSpotY = 10;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1425;
+    OriginalLocationY = 189;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "icons/helpButton";
+    tags = ();
+}

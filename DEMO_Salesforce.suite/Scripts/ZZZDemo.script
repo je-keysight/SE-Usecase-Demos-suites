@@ -1,0 +1,36 @@
+﻿Click {Text:"Username"}
+
+TypeText "mark.fernee@eggplant.io.marktest"
+
+Click {Text:"Password"}
+
+TypeEncodedText "RDfIr8w3WJ,"
+
+Click (Text:"Log In to Sandbox")
+
+WaitFor 60, "menu_Sf"
+
+Log ImageFound(text:"Sandbox: MarkTest")
+
+If ImageFound(text:"Sandbox: MarkTest") then
+	￹$statementsWhenTrue￺TP-EPF-TOKEN￻
+Else
+	￹statementsWhenFalse￺TP-EPF-TOKEN￻
+End if
+
+Click text:"Accounts"
+
+WaitFor 60, "accounts_Image"
+
+
+
+to login username, password
+	Click {Text:"Username"}
+	TypeText username
+	Click {Text:"Password"}
+	TypeEncodedText password
+end login
+
+login "mark.fernee@eggplant.io.marktest", "RDfIr8w3WJ,"
+
+

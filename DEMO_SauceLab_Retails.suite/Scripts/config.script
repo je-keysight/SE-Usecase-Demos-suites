@@ -1,0 +1,67 @@
+﻿return { 
+	android:{
+		connection:{
+			device:"Google Pixel 5.*",
+			app:"storage:9996a5f0-51a0-41ee-b099-94742fd3bab8",
+			dataCenter:"eu-central-1",
+			platform:"Android"
+		},
+		form:{
+			textField:{
+				offset:[0,50]
+			},
+			passwordField:{
+				offset:[0,50]
+			}
+		},
+		elements:{
+			buttons:{
+				parameters:{
+					contrastColor:[215,12,21],
+					contrastTolerance:"70",
+					contrast:"On",
+					WaitFor: 3
+				}
+			},
+			menu:{
+			}
+		}
+	},
+	ios:{
+		connection:{
+			device:"Iphone.14",
+			app:"storage:36b344c6-50ff-4734-95fd-673bb3c64aac",
+			dataCenter:"eu-central-1",
+			platform:"iOS"
+		},
+		form:{
+			textField:{
+				offset:[0,50]
+			},
+			passwordField:{
+				offset:[0,50]
+			}
+		},
+		elements:{
+			buttons:{
+				parameters:{
+					contrastColor:[215,12,21],
+					contrastTolerance:"70",
+					contrast:"On",
+					WaitFor: 3
+				}
+			},
+			links:{
+				parameters:{
+					contrastColor:[215,12,21],
+					contrastTolerance:"70",
+					contrast:"On",
+					WaitFor: 3
+				}
+			},
+			menu:{
+				searchRectangle:[0,1100,585,1266]
+			}
+		}
+	}
+}

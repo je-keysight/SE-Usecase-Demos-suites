@@ -1,0 +1,15 @@
+﻿(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2022-12-05 13:27:45
+  From session:  keysight
+  Captured on:  2022-12-05 13:25:23
+  From server:  CloudSUT-4
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+DoubleClick "chrome"
+
+WaitFor 15, "refresh"
+
+TypeText "https://www.keysight.com",Return
+
+
+Click Text:"Read the executive insight"

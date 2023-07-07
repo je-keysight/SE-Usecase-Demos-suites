@@ -1,0 +1,6 @@
+﻿params accountType
+
+--set accountType to "Savings"
+
+Click text:accountType
+WaitFor 30, text:"Back to your accounts"

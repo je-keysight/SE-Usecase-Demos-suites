@@ -7,3 +7,5 @@ TypeText DecodeText(password), returnKey
 WaitFor 10, image: "Productname"
 
 CaptureScreen
+
+Log decodetext("@lmIFP,I")

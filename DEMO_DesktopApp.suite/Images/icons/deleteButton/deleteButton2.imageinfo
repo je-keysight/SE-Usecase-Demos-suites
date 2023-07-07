@@ -1,0 +1,18 @@
+﻿{
+    CaptureDate = "2023-06-23 20:47:42 +0000";
+    CaptureHost = "CloudSUT-6";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 18;
+    HotSpotY = 22;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 852;
+    OriginalLocationY = 388;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "icons/deleteButton";
+}

@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2023-06-30 17:38:31 +0000";
+    CaptureHost = "CloudSUT-7";
+    CaptureScreenSize = (
+        "1920",
+        "1200");
+    HasAlpha = 1;
+    HotSpotX = 9;
+    HotSpotY = 9;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 76;
+    OriginalLocationY = 43;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "refresh";
+    tags = ();
+}

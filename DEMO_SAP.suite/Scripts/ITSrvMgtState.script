@@ -1,6 +1,7 @@
 ﻿to openMyIncidents
 	Click text:"My Incidents"
 	WaitFor 20, text:"Search"
+	CaptureScreen
 end openMyIncidents
 
 to createIncident priority, category
@@ -19,7 +20,7 @@ to createIncident priority, category
 	Click ImageLocation(text:"Description") + [0,100]
 	TypeText "System is not working"
 	
-	Click (Text:"Create", contrastColor:(81,150,206), contrastTolerance:"45", WaitFor:8, contrast:"On")
+	Click {Text:"Create", contrast:"On", contrastColor:"#5296CE", contrastTolerance:"72",caseSensitive:"Yes"}
 	
 	WaitFor 30, Image:"incidentDetails"
 	
@@ -44,6 +45,7 @@ to createIncident priority, category
 	
 	WaitFor 8.0, "HomeButton"
 	Click "HomeButton"
+	CaptureScreen
 	return incidentNbr
 end createIncident
 
@@ -56,10 +58,13 @@ to dispatcher incidentID
 	set the SearchRectangle to [the bottomLeft of logolocation, [300,the RemoteScreenSize.y]]
 
 	Click Image:"incidentManagement"
-	Click text:"Incidents", caseSensitive: True
+	Click FoundImageLocation() + [80,0]
+	--Click text:"Incidents", caseSensitive: True
 	set the SearchRectangle to empty
 	
-	Click "IncidentID"
+	
+	waitFor 10, text:"Incident ID"
+	--Click "IncidentID"
 	TypeText incidentID
 	
 	set searchbutton to ImageRectangle(Image:"Search")
@@ -71,11 +76,13 @@ to dispatcher incidentID
 	Click text:incidentID
 	
 	set the SearchRectangle to empty
+	CaptureScreen
 end dispatcher
 
 On ValidateIncidents
 	Click FoundImageLocation()
 	waitfor 20 ,(text:"Denise Smith"),( text:"Carmen Wang")
+	CaptureScreen
 End ValidateIncidents
 
 On CloseMyIncident
@@ -84,4 +91,5 @@ On CloseMyIncident
 	Click "YesButton"
 	wait 5
 	if ImageFound(text:"Confirm error") then Click text:"Close"
+	CaptureScreen
 End CloseMyIncident

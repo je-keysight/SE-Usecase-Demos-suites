@@ -1,0 +1,22 @@
+﻿return { 
+	form:{
+		textField:{
+			offset:[200,0]
+		},
+		dropDown:{
+			offset:[200,0]
+		}
+	},
+	elements:{
+		buttons:{
+			parameters:{
+				contrastColor:[215,12,21],
+				contrastTolerance:"70",
+				contrast:"On",
+				WaitFor: 3
+			}
+		},
+		menu:{
+		}
+	}
+}

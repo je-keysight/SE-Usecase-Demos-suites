@@ -1,0 +1,35 @@
+﻿
+
+
+set postCode to " SW1A 0AA"
+put JSONVALUE(GET(url:"api.postcodes.io/postcodes/"&postCode).responseBody) into t 
+put (t.result.latitude, t.result.longitude) into coordinates
+put t.result.primary_care_trust into town
+
+
+launchBrowser ("iexplore.exe"),("https://www.google.co.uk/maps")
+search ("Search Google Maps"),(coordinates),(town)
+
+
+
+// Launch any Browser
+to launchBrowser browser,url
+	typetext windowskey,"r"
+	wait 0.3
+	typetext browser && url,returnkey
+	waitfor 20, "logos"
+	wait 2
+end launchBrowser
+
+to search label,input,validation
+	click text:label
+	wait 0.4
+	typetext input,returnkey
+	wait 1
+	waitfor 20,text:validation 
+	wait 2 // Highlight
+end search
+
+to closeBrowser
+	typetext altkey,f4
+end closeBrowser

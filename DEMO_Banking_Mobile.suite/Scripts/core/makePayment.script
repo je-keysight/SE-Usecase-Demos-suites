@@ -1,0 +1,13 @@
+﻿params account,sortCode,amount,reference
+
+Click text:"Account"
+TypeText account
+
+Click text:"Sort Code"
+TypeText sortCode
+
+Click text:"Amount"
+TypeText amount
+
+Click text:"Reference"
+TypeText reference

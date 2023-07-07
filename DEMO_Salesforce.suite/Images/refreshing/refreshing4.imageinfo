@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2023-04-03 08:55:48 +0000";
+    CaptureHost = "CloudSUT-1";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 16;
+    HotSpotY = 10;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 113;
+    OriginalLocationY = 68;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "refreshing/refreshing4";
+    tags = ();
+}

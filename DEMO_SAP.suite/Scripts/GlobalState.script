@@ -9,7 +9,7 @@ to logout
 	waitFor 10, text:"Sign Out", caseSensitive: true
 	Click FoundImageLocation()
 	
-	waitFor 20, text:"Are you sure you"
+	waitFor 20, text:"Are you sure you",searchRectangle:[696,468,1326,871]
 	Click text:"OK"
 	
 	waitFor 10, text:"Log On", caseSensitive: true	

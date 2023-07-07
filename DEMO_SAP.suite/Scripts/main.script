@@ -1,9 +1,9 @@
-﻿Run InitialState.setupEnv
-Run InitialState.openBrowser "https://www.sapsolutionmanagerdemo.com/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html","chrome"
+﻿InitialState.setupEnv
+InitialState.openBrowser "https://www.sapsolutionmanagerdemo.com/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html","chrome"
 
-Run LoginState.setUsername "SMITHDE"
-Run LoginState.setPassword "5Fq_0BpG"
-Run LoginState.doLogin
+LoginState.setUsername "SMITHDE"
+LoginState.setPassword "5Fq_0BpG"
+LoginState.doLogin
 
 OpenBrowser
 Login "SMITHDE"

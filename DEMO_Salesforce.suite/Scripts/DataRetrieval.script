@@ -1,6 +1,6 @@
 ﻿to getModuleData sf_module, sf_dataset_id
---	set sf_module to "Contacts"
---	set sf_dataset_id to "example_testcase"
+	--	set sf_module to "Contacts"
+	--set sf_dataset_id to "example_testcase"
 	
 	universal current_module_data
 	universal current_module_fields

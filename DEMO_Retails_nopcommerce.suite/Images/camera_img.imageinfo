@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2023-03-23 23:18:24 +0000";
+    CaptureHost = "CloudSUT-1";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 102;
+    HotSpotY = 88;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 626;
+    OriginalLocationY = 793;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "camera_img";
+    tags = ();
+}

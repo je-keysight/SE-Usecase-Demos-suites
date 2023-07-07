@@ -1,0 +1,184 @@
+﻿to openAPP app, validate
+	common.openApp app, validate
+	
+	global screenLocation
+	
+	set addButton to ImageRectangle(image:"icons/addButton")
+	set helpButton to ImageRectangle("icons/helpButton")
+	set deleteButton to ImageRectangle("icons/deleteButton")
+	set pasteButton to ImageRectangle("icons/pasteButton")
+	set bottomApp to the bottom of ImageRectangle(text:"Notes",caseSensitive:true)
+	
+	put {topMenu:[the topLeft of addButton,the bottomRight of helpButton], contactList:[the bottomLeft of addButton,[the right of deleteButton,bottomApp]], formList:[the bottomRight of deleteButton, [the Left of pasteButton, bottomApp]],save:ImageLocation(text:"FRSAddressbook")} into screenLocation
+
+end openAPP
+
+to stopApp
+	common.stopApp
+end stopApp
+
+to addContact
+	global data
+	set data to actions.loadData()
+	common.navigate "icons/addButton"
+end addContact
+
+to textFieldFRS field
+	global data
+	global screenLocation
+	
+	set the SearchRectangle to screenLocation.formList
+	
+	If field is equal ...
+		... "name" :
+			common.textField "Name", data.name, config().form.textField
+			... "street" :
+			common.textField "Street", data.street, config().form.textField
+			... "zip" :
+			common.textField "Postal Code", data.zip, config().form.textField
+			... "city" :
+			common.textField "City", data.city, config().form.textField
+			... "email" :
+			common.textField "e-mail", data.email, config().form.textField
+			... "homePhone" :
+			common.textField "Home Phone", data.homePhone, config().form.textField
+			... "workPhone" :
+			common.textField "Work Phone", data.workPhone, config().form.textField
+			... Else
+			LogError "wrong Field name"
+		End if
+		
+		set the SearchRectangle to empty
+	end textFieldFRS
+	
+to updateTextFieldFRS field, data
+	global screenLocation
+	
+	set the SearchRectangle to screenLocation.formList
+	
+	If field is equal ...
+		... "name" :
+			common.textField "Name", data, config().form.textField
+		... "street" :
+			common.textField "Street", data, config().form.textField
+		... "zip" :
+			common.textField "Postal Code", data, config().form.textField
+		... "city" :
+			common.textField "City", data.form.textField
+		... "email" :
+			common.textField "e-mail", data, config().form.textField
+		... "homePhone" :
+			common.textField "Home Phone", data, config().form.textField
+		... "workPhone" :
+			common.textField "Work Phone", data, config().form.textField
+		... Else
+			LogError "wrong Field name"
+	End if
+	
+	set the SearchRectangle to empty
+end updateTextFieldFRS
+
+to loadData rowToUse
+	-- Now we need to select some info from the Excel
+	set MyExcelFile to Workbook(ResourcePath("contacts-list.xlsx"))
+	set worksheet to Worksheet(MyExcelFile, 1)
+	
+	set row to random(10, 100)
+	
+	set data to {name:cell("A" & row) of worksheet && cell("B" & row) of worksheet, street:cell("D" & row) of worksheet, city:cell("E" & row) of worksheet, county:cell("L" & row) of worksheet, zip:cell("H" & row) of worksheet, homePhone:cell("I" & row) of worksheet, workPhone:cell("J" & row) of worksheet, email:cell("K" & row) of worksheet, state:cell("L" & row) of worksheet}
+
+	Log data
+	
+	return data
+end loadData
+
+to dropdownField label
+	global data
+	global screenLocation
+	
+	--set tmp to the SearchRectangle
+	
+	set the SearchRectangle to screenLocation.formList
+	
+	if there is a property offset of config().form.dropDown
+		set offset to config().form.dropDown.offset
+		else
+		set offset to [0,0]
+	end if
+	
+	DoubleClick ImageLocation(text:label, caseSensitive:true) + offset
+	
+	set the SearchRectangle to empty
+	set the SearchRectangle to [the topRight of ImageRectangle(text:label,SearchRectangle:screenLocation.formList), the bottomLeft of ImageRectangle(image:"icons/dropdownIcon")]
+	
+	TypeText the first character of data.state
+	wait 0.5
+	
+	Repeat until ImageFound(text:data.state,waitFor:2)
+		TypeText downArrow
+	End repeat
+	Click FoundImageLocation()
+	wait 0.5
+	
+	set the SearchRectangle to screenLocation.formList	
+	Click ImageLocation(text:label, caseSensitive:true)
+	
+end dropdownField
+
+to updateDropdownField label, data
+	global screenLocation
+	
+	--set tmp to the SearchRectangle
+	
+	set the SearchRectangle to screenLocation.formList
+	
+	if there is a property offset of config().form.dropDown
+		set offset to config().form.dropDown.offset
+	else
+		set offset to [0,0]
+	end if
+	
+	DoubleClick ImageLocation(text:label, caseSensitive:true) + offset
+	
+	set the SearchRectangle to empty
+	set the SearchRectangle to [the topRight of ImageRectangle(text:label,SearchRectangle:screenLocation.formList), the bottomLeft of ImageRectangle(image:"icons/dropdownIcon")]
+	
+	TypeText the first character of data
+	wait 0.5
+	
+	Repeat until ImageFound(text:data,waitFor:2)
+		TypeText downArrow
+	End repeat
+	Click FoundImageLocation()
+	wait 0.5
+	
+	set the SearchRectangle to screenLocation.formList	
+	Click ImageLocation(text:label, caseSensitive:true)
+	
+end updateDropdownField
+
+to saveList
+	global screenLocation
+	Click screenLocation.save
+end saveList
+
+to cleanUp
+	common.cleanUp
+end cleanUp
+
+to selectContact
+	Click ImageLocation("icons/addButton") + [0,50]
+	Repeat random(0,5) times
+		TypeText downArrow
+	End repeat
+	
+	(*	set myExcelDB to table (1) of {type: "excel", file: ResourcePath("contacts-list.xlsx")}
+	get the records of myExcelDB where first_name is "Graciela" and last_name is "Ruta"
+	Log it*)
+	
+end selectContact
+
+to deleteContact
+	common.navigate "icons/deleteButton","Remove Address"
+	click "icons/validateDelete"
+end deleteContact

@@ -1,0 +1,24 @@
+﻿{
+    EPVersionNumber = 202304070413;
+    Schedules =     (
+    );
+    ScriptMetaData =     {
+    };
+    SuiteEncodedTextKey = "_h+XYJhE@2a>8+$c";
+    helpedSuitesInfo =     (
+                {
+            filePath = "../../../../../Documents/GitHub/SE-Usecase-Demos-suites/DEMO_SauceLab_Retails.suite";
+        },
+                {
+            filePath = "../../../../../Documents/GitHub/SE-Usecase-Demos-suites/DEMO_DesktopApp.suite";
+        },
+                {
+            filePath = "../../../../../Documents/GitHub/SE-Usecase-Demos-suites/Demo_Retails_WebApp.suite";
+        },
+                {
+            filePath = "../../../../../Documents/GitHub/SE-Usecase-Demos-suites/boyles.suite";
+        }
+    );
+    helperSuitesInfo =     (
+    );
+}

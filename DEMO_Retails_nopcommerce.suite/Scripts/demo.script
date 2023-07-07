@@ -1,0 +1,15 @@
+﻿core.openBrowser "chrome --incognito", "https://demo.nopcommerce.com"
+
+
+
+Click (Text:"Computers", caseSensitive:"Yes", WaitFor:8)
+
+
+Click "computer_img"
+
+WaitFor 30, text:"Desktops"
+
+
+to clickField
+
+end clickField

@@ -1,0 +1,3 @@
+﻿to openURL
+	core.openBrowser "chrome --incognito", "https://demo.nopcommerce.com"
+end openURL

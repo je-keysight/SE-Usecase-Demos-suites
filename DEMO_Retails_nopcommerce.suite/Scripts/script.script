@@ -1,0 +1,10 @@
+﻿core.openBrowser "chrome --incognito", "https://demo.nopcommerce.com"
+
+core.navigate "Computers", "computer_img"
+
+core.navigate "computer_img", "Sort by"
+
+core.navigate "Build your own computer", "SKU: COMP_CUST"
+
+core.navigate "Build your own computer", "SKU: COMP_CUST"
+

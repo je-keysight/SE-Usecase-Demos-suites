@@ -1,0 +1,9 @@
+﻿params username,password
+
+click text:"Enter Username"
+TypeText username
+
+click text:"Enter Password"
+TypeText password
+
+Click text:"Login", contrast:"On", contrastColor:"#6070B6", contrastTolerance:"60"

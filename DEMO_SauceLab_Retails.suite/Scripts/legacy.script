@@ -1,0 +1,344 @@
+﻿to cartCheckOut
+	CaptureScreen {Name: "cartCheckOut Start"}
+	
+	Click "Cart"
+	
+	Click text:"Proceed To Checkout", caseSensitive:true
+	
+	core.textField "Full Name*", "John Doe"
+	
+	core.textField "Address Line 1*", "18 Test Address"
+	
+	core.textField "City*", "London"
+	
+	core.textField "State/Region", "London"
+	
+	core.textField "Zip Code*", "ZW100 10AB"
+	
+	core.textField "Country*", "UK"
+	
+	wait 1
+	
+	Click text:"To Payment", caseSensitive: true
+	CaptureScreen {Name: "cartCheckOut End"}
+end cartCheckOut
+
+to catalogAdd item
+	CaptureScreen {Name: "catalogAdd Start"}
+
+	If ConnectionInfo().PlatformName is "iOS" then
+		Click "catalog"
+	Else if ConnectionInfo().PlatformName is "Android"
+		Click "MenuIcon" 
+		Click text:"Catalog", caseSensitive:true
+	Else
+		LogError "Device Type not android or ios"
+		exit all
+	End if
+	
+	if ImageFound(text:"Products", waitFor:2) is not true
+		swipeDown 
+		wait 2
+	end if
+	
+	Repeat until ImageFound(text:item,waitFor: 2)
+		swipeUp
+	End repeat
+	wait 1
+	
+	Click FoundImageLocation()
+	
+	
+	Repeat until ImageFound(text:"Add To Cart", caseSensitive:true, waitFor: 2)
+		swipeUp
+	End repeat
+	wait 1
+	
+	Click FoundImageLocation()
+	
+	CaptureScreen {Name: "catalogAdd End"}
+end catalogAdd
+
+
+to connectDevice platform
+
+	if platform is "Android"
+		set device to "Google Pixel 5.*" 
+		set app to "storage:9996a5f0-51a0-41ee-b099-94742fd3bab8"
+	else if platform is "iOS"
+		set device to "Iphone.14" 
+		set app to "storage:36b344c6-50ff-4734-95fd-673bb3c64aac"
+	else
+		LogError "Neither Android or iOS device so please "
+		Exit all
+	end if
+	
+	Connect {
+		name:"SL-DEMO-" & lowercase(platform),
+		type:"SauceLabs",
+		deviceName:device,
+		platformName:platform,
+		app:app,
+		
+		apiKey: GetVaultValue("SL_API_KEY"),
+		dataCenter:"eu-central-1",
+		user:GetVaultValue("SL_USERNAME"),
+	}
+	
+	Repeat until ConnectionInfo().Connected = "True"
+		Log ConnectionInfo()
+	End repeat
+	
+	Show RemoteWindow
+	
+	CaptureScreen {Name: "connectDevice End"}
+end connectDevice
+
+to loadData row_nbr
+	global current_data
+	global appID
+	
+	set fname to ResourcePath("config.csv")
+	
+	if file fname does not exist then
+		throw "FileNotFoundError", \
+				!"datafile.csv cannot be found in the included suite. " \
+				"Please check it is named correctly."
+	end if
+	
+	repeat for each item of line 1 of file fname
+		If it = ...
+			... "Device" :
+				set DeviceColumnId to repeatIndex()
+			... "Username" :
+				set UsernameColumnId to repeatIndex()
+			... "Password" :
+				set PasswordColumnId to repeatIndex()
+			... "App" :
+				set AppColumnId to repeatIndex()
+			... "Platform" :
+				set PlatformColumnId to repeatIndex()
+			... Else
+				LogError "Column {{it}} not configured"
+		End if
+	end repeat
+	
+	set current_data to {device: item DeviceColumnId of line row_nbr of file fname, username: item UsernameColumnId of line row_nbr of file fname, password: item PasswordColumnId of line row_nbr of file fname,app: item AppColumnId of line row_nbr of file fname,platform: item PlatformColumnId of line row_nbr of file fname}
+
+end loadData
+
+to login username, password
+	
+	CaptureScreen {Name: "Login Start"}
+	
+	global current_data
+	
+	set username to current_data.username
+	set password to current_data.password
+	
+	Click "MenuIcon"
+	Click text:"Log In"
+	
+	Click ImageLocation(text:"Username", caseSensitive:true) + [0,50]
+	wait 0.5
+	sendKeys username
+	Click ImageLocation(text:"Username", caseSensitive:true)
+	wait 1
+	Click ImageLocation(text:"Password", caseSensitive:true) + [0,50]
+	wait 0.5
+	sendKeys password
+	Click ImageLocation(text:"Password", caseSensitive:true)
+	wait 1
+	
+	
+	Click {Text:"Login", contrastColor:[215,12,21], contrastTolerance:"70", WaitFor:8, contrast:"On"}
+	CaptureScreen {Name: "Login End"}
+end login
+
+to loginModel username, password
+	
+	CaptureScreen {Name: "Login Start"}
+	
+	Click "MenuIcon"
+	Click text:"Log In"
+	
+	Click ImageLocation(text:"Username", caseSensitive:true) + [0,50]
+	wait 0.5
+	sendKeys username
+	Click ImageLocation(text:"Username", caseSensitive:true)
+	wait 1
+	Click ImageLocation(text:"Password", caseSensitive:true) + [0,50]
+	wait 0.5
+	sendKeys password
+	Click ImageLocation(text:"Password", caseSensitive:true)
+	wait 1
+	
+	Click {Text:"Login", contrastColor:[215,12,21], contrastTolerance:"70", WaitFor:8, contrast:"On"}
+
+	CaptureScreen {Name: "Login End"}
+
+end loginModel
+
+to placeOrder
+	CaptureScreen {Name: "placeOrder Start"}
+
+	waitFor 30, text:"Checkout", caseSensitive:True
+	
+	core.textField "Full Name*", "John Doe"
+	
+	core.textField "Card Number*", "1111222233334444"
+	wait 0.5
+	
+	core.textField "Expiration Date*", "0325"
+	wait 0.5
+	
+	core.textField "Security Code*", "123"
+	wait 0.5
+	
+	Click text:"Review Order", caseSensitive: true
+	
+	wait 1
+	
+	if ImageFound(text:"Checkout", caseSensitive:True) then Click text:"Review Order", caseSensitive: true
+	
+	waitFor 30, text:"Review your order", caseSensitive:True
+	
+	Click text:"Place Order", caseSensitive: true
+	
+	CaptureScreen {Name: "placeOrder End"}
+end placeOrder
+
+to uploadLatestPackage
+	global appID
+	global current_data
+	
+	If the last 3 characters of current_data.app = "ipa" then
+		set file_name to "iOS-Real-Device-MyRNDemoApp.ipa"
+	Else if the last 3 characters of current_data.app = "apk"
+		set file_name to "Android-MyDemoAppRN.apk"
+	Else
+		LogError "Extension not recognized"
+		exit all
+	End if
+	
+	set local_file to ResourcePath() & "/" & file_name
+	set local_out_file to ResourcePath() & "/output.json"
+	
+	Log "Old file cleanUP"
+	
+	if there is a file local_file then delete file local_file
+	if there is a file local_out_file then delete file local_out_file
+	
+	set url to current_data.app
+	
+	shell(!<<curl -L -o "[[local_file]]" [[url]]>>)
+	
+	wait 3
+	
+	Log "Upload new APP"
+	
+	shell(!<<curl -o [[local_out_file]] -u "sebastien.morgant:d7e819d7-a99f-4973-9d46-8ddc9e37b0ec" --location \
+--request POST 'https://api.eu-central-1.saucelabs.com/v1/storage/upload' \
+--form 'payload=@"[[local_file]]"' \
+--form 'name="[[file_name]]"' \
+--form 'description="Test App"'>>)
+	
+	Log "App Uploaded"
+	
+	set config to JSONValue(file  local_out_file)
+	set appID to config.item.id
+	
+	log appID
+	return appID
+end uploadLatestPackage
+
+to uploadLatestPackageModel appURL
+
+	If the last 3 characters of appURL = "ipa" then
+		set file_name to "iOS-Real-Device-MyRNDemoApp.ipa"
+	Else if the last 3 characters of appURL = "apk"
+		set file_name to "Android-MyDemoAppRN.apk"
+	Else
+		LogError "Extension not recognized"
+		exit all
+	End if
+	
+	set local_file to ResourcePath() & "/" & file_name
+	set local_out_file to ResourcePath() & "/output.json"
+	
+	Log "Old file cleanUP"
+	
+	if there is a file local_file then delete file local_file
+	if there is a file local_out_file then delete file local_out_file
+	
+	set url to appURL
+	
+	shell(!<<curl -L -o "[[local_file]]" [[url]]>>)
+	
+	wait 3
+	
+	Log "Upload new APP"
+	
+	shell(!<<curl -o [[local_out_file]] -u "sebastien.morgant:d7e819d7-a99f-4973-9d46-8ddc9e37b0ec" --location \
+--request POST 'https://api.eu-central-1.saucelabs.com/v1/storage/upload' \
+--form 'payload=@"[[local_file]]"' \
+--form 'name="[[file_name]]"' \
+--form 'description="Test App"'>>)
+	
+	Log "App Uploaded"
+	
+	set config to JSONValue(file  local_out_file)
+	set appID to config.item.id
+	
+	log appID
+	return "storage:" & appID
+end uploadLatestPackageModel
+
+to navigateMenu info
+	Click "MenuIcon"
+	waitFor 60, text:info
+	Click text:info
+end navigateMenu
+
+to uploadQRCode platform
+	if ImageFound(text:"While using the app",caseSensitive:true,waitFor:4) then click FoundImageLocation()
+	if ImageFound(text:"Access the Camera",caseSensitive:true,waitFor:4) then click text:"OK",caseSensitive:true
+	wait 2
+	ExecuteLogo
+	wait 5
+	ExecuteQRCode
+	waitFor 60, text:"KEYSIGHT", caseSensitive:true
+	wait 2
+	if platform is "Android" then ExecuteLogo
+	Try Click image:"backButton", waitFor:3
+	Try Click text:"My Demo App",caseSensitive:true, waitFor:3
+	waitFor 60, text:"QR Code Scanner"
+	if platform is "iOS" then ExecuteLogo
+end uploadQRCode
+
+to drawSquare
+	set x_zero to (the first item of the remoteScreenSize / 3)
+	set x_one to (the first item of the remoteScreenSize / 3) * 2
+	set y_zero to (the second item of the remoteScreenSize / 2)
+	set y_one to (y_zero + x_one - x_zero)
+	Drag [x_zero,y_zero]
+	wait 1
+	Drop [x_one + 10,y_zero]
+	wait 1
+	Drag [x_one,y_zero]
+	wait 1
+	Drop [x_one,y_one + 10]
+	wait 1
+	Drag [x_one,y_one]
+	wait 1
+	Drop [x_zero - 10,y_one]
+	wait 1
+	Drag [x_zero,y_one]
+	wait 1
+	Drop [x_zero,y_zero - 10]
+end drawSquare
+
+to clearDrawing
+	Click text:"Clear", caseSensitive:true
+end clearDrawing
+
