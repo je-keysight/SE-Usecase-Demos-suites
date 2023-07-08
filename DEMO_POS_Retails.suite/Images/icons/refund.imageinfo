@@ -1,0 +1,22 @@
+﻿{
+    CaptureDate = "2022-05-24 01:04:40 -0400";
+    CaptureHost = "SUT (remote)";
+    CaptureScreenSize = (
+        "1900",
+        "1280");
+    CropRectangle = "33,18,66,43";
+    HasAlpha = 1;
+    HotSpotX = 53;
+    HotSpotY = 37;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1595;
+    OriginalLocationY = 1061;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = "TextSmoothSquare";
+    SearchObjectName = "button_Refund";
+    tags = ();
+}

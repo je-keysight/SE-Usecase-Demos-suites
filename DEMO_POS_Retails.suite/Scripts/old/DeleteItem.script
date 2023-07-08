@@ -1,0 +1,13 @@
+﻿Put everyimagelocation("itemDetail") into addeditems
+Put the number of items in addeditems into lineitems
+
+If lineitems > 0
+	Click item random(lineitems) of addeditems
+	Click "Delete"
+End If
+
+If ImageFound(text:"No items", waitFor:3)
+	return true
+else
+	return false
+End If

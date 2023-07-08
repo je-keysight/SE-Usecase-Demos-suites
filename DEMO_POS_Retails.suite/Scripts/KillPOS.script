@@ -1,5 +1,5 @@
 ﻿--Click "close/close_POS"
 
-
+TypeText altkey, f4
 Click (Image:"AroniumPOS", WaitFor:2)
 Click (Image:"XClose", WaitFor:2)

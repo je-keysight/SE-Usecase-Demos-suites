@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2023-07-07 21:31:01 +0000";
+    CaptureHost = "CloudSUT-2";
+    CaptureScreenSize = (
+        1920,
+        1200);
+    HasAlpha = 1;
+    HotSpotX = 9;
+    HotSpotY = 11;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 118;
+    OriginalLocationY = 40;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchObjectName = "icons/code/code_1";
+    tags = ();
+}

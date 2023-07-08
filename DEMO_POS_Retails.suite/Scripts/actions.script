@@ -1,0 +1,136 @@
+﻿to login password
+	CaptureScreen
+	
+	TypeText DecodeText(password), returnKey
+	
+	WaitFor 30, text: "Product name", caseSensitive:true
+	
+	CaptureScreen
+end login
+
+to paymentType paymentType
+	Click {Image:!"Payment_Type/button_[[paymentType]]", WaitFor:3}
+	--Click text:paymentType, caseSensitive:True an
+	Click {Image:"Done", WaitFor:3}
+end paymentType
+
+to processRefund refundType
+	Click {Text:refundType, WaitFor:3, caseSensitive:true}
+	
+	Click {Image:"button_OK", WaitFor:3}
+end processRefund
+
+to launchPOS
+	WaitFor 60, "logos/windowsLogo"
+	TypeText WindowsKey, "r"
+	wait 1
+	TypeText "C:\Program Files\Aronium\Aronium.Pos.exe", returnKey
+	WaitFor 60, image:"logos/aroniumLogo"
+	CaptureScreen
+end launchPOS
+
+to deleteItem
+	Put everyimagelocation("icons/itemDetail") into addeditems
+	Put the number of items in addeditems into lineitems
+	
+	If lineitems > 0
+		Click item random(lineitems) of addeditems
+		Click "Delete"
+	End If
+	
+	If ImageFound(text:"No items", waitFor:3)
+		return true
+	else
+		return false
+	End If
+end deleteItem
+
+to changeQuantity
+	Put everyimagelocation("icons/itemDetail") into addeditems
+	Put the number of items in addeditems into lineitems
+	
+	If lineitems > 0
+		Click item random(lineitems) of addeditems
+		Click "icons/quantityBtn"
+		TypeText random(2,5), returnKey
+	End If
+	
+	CaptureScreen
+end changeQuantity
+
+to isCartEmpty
+	If ImageFound(text:"No items",waitFor:3)
+		Set cartempty to true
+	else
+		Set cartempty to false
+		return cartempty
+	End If
+end isCartEmpty
+
+to addItemByCode itemCode
+	CaptureScreen
+	
+	If ImageFound(image: "icons/CodeSelected") is false
+		Click image: "icons/code"
+	End If
+	
+	Click "icons/magnifyingGlass"
+	TypeText ControlKey,"a"
+	TypeText DeleteKey
+	
+	TypeText itemCode
+	Wait 1
+	TypeText returnKey
+	Wait 1
+	TypeText returnKey
+	Wait 1
+	CaptureScreen
+end addItemByCode
+
+to addItemByName itemName
+	CaptureScreen
+	
+	If ImageFound(image: "icons/nameSelected") is false
+		Click image: "icons/code"
+	End If
+	
+	Click "icons/magnifyingGlass"
+	TypeText ControlKey,"a"
+	TypeText DeleteKey
+	
+	TypeText itemName
+	Wait 1
+	TypeText returnKey
+	Wait 1
+	TypeText returnKey
+	Wait 1
+end addItemByName
+
+to ApplyDiscount
+	CaptureScreen
+	
+	Click {Image:"button_Discount", WaitFor:3}
+
+	Click (Image:"button_keypad_1", WaitFor:3)
+	Click (Image:"button_keypad_0", WaitFor:3)
+	Click (Image:"button_keypad_returnKey", WaitFor:3)
+	
+	CaptureScreen
+	
+end ApplyDiscount
+
+to refund
+	Click {Image:"icons/refund", WaitFor:3}
+	
+	CaptureScreen
+end refund
+
+to enterReceiptNumber
+	waitFor 120, text:"Receipt number", caseSensitive:true
+	TypeText "12598"
+	
+end enterReceiptNumber
+
+to closePOS
+	typeText altkey, f4
+end closePOS
