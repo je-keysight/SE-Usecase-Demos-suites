@@ -1,0 +1,5 @@
+﻿SetVaultValue "SL_API_KEY", "<APIKEY>"
+
+SetVaultValue "SL_USERNAME", "<USERNAME>"
+
+SetVaultValue "SL_DATACENTER", "<DATACENTER>"

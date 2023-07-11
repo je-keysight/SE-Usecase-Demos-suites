@@ -8,8 +8,5 @@
     helpedSuitesInfo =     (
     );
     helperSuitesInfo =     (
-                {
-            filePath = "./DEMO_Mobile_Framework.suite";
-        }
     );
 }

@@ -1,0 +1,34 @@
+﻿to imageInsert imageBase64
+	ExecuteJavaScript(!"sauce:inject-image=[[imageBase64]]")
+end imageInsert
+
+to connectDevice config
+	Connect {
+		name:"SL-DEMO-" & lowercase(config.platform),
+		type:"SauceLabs",
+		deviceName:config.device,
+		platformName:config.platform,
+		app:config.app,
+		apiKey: GetVaultValue("SL_API_KEY"),
+		dataCenter:GetVaultValue("SL_DATACENTER"),
+		user:GetVaultValue("SL_USERNAME")
+	}
+	
+	Repeat until ConnectionInfo().Connected = "True"
+		Log ConnectionInfo()
+	End repeat
+	
+	--Show RemoteWindow
+	
+	CaptureScreen {Name: "connectDevice End"}
+
+	return true
+end connectDevice
+
+to closeTestSuccess
+	ExecuteJavaScript("sauce:job-result=passed")
+end closeTestSuccess
+
+to closeTestFailure
+	ExecuteJavaScript("sauce:job-result=failed")
+end closeTestFailure
