@@ -1,7 +1,0 @@
-﻿Click (Text:"View your messages", WaitFor:8)
-
-Click (Image:"appointment", WaitFor:5.1)
-
-WaitFor 120.0, "Appointments"
-
-

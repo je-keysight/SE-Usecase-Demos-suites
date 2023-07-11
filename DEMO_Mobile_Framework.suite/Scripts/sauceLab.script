@@ -10,8 +10,8 @@ to connectDevice config
 		platformName:config.platform,
 		app:config.app,
 		apiKey: GetVaultValue("SL_API_KEY"),
-		dataCenter:config.dataCenter,
-		user:GetVaultValue("SL_USERNAME"),
+		dataCenter:GetVaultValue("SL_DATACENTER"),
+		user:GetVaultValue("SL_USERNAME")
 	}
 	
 	Repeat until ConnectionInfo().Connected = "True"

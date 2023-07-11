@@ -1,0 +1,11 @@
+﻿actions.launchPOS
+
+actions.login
+
+actions.addItemByCode 12
+
+actions.addItemByCode "iceberg lettuce"
+
+actions.paymentType "Cash"
+
+actions.closePOS

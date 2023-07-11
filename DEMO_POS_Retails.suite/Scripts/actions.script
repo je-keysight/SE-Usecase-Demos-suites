@@ -1,8 +1,6 @@
 ﻿to login password
 	CaptureScreen
-	
 	TypeText DecodeText(password), returnKey
-	
 	WaitFor 30, text: "Product name", caseSensitive:true
 	
 	CaptureScreen
